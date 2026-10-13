@@ -1,0 +1,41 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import AnimateIn from "@/components/AnimateIn";
+
+export default function CollectionCard({ collection }) {
+  return (
+    <AnimateIn>
+      <Link
+        href={collection.href}
+        data-premium-card className="group relative block overflow-hidden rounded-[1.65rem] glass-card luxury-shadow-hover"
+      >
+        <div className="relative aspect-[3/4] md:aspect-[4/5]">
+          <Image
+            src={collection.image}
+            alt={collection.name}
+            fill
+            sizes="(max-width: 768px) 50vw, 25vw"
+            className="object-cover transition duration-1000 ease-out group-hover:scale-[1.07]"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#17130e]/88 via-[#17130e]/25 to-transparent" />
+          <motion.div
+            className="absolute inset-x-0 bottom-0 p-6"
+            whileHover={{ y: -4 }}
+          >
+            <h3 className="font-heading text-2xl font-bold text-white">{collection.name}</h3>
+            <p className="mt-2 text-sm text-white/80">{collection.description}</p>
+            <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-accent">
+              Shop Collection
+              <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+            </span>
+          </motion.div>
+        </div>
+      </Link>
+    </AnimateIn>
+  );
+}

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { categories } from "@/data/categories";
 import {
   featureOptions,
@@ -13,11 +13,13 @@ import {
 } from "@/data/shop";
 import { collectColors, countBySubcategory } from "@/lib/shop-filters";
 import { colorToHex } from "@/data/shop";
+import { SlidersHorizontal, ChevronDown } from "lucide-react";
 
 const SOFA_CATEGORIES = new Set(["Corner Sofas", "Sofas"]);
 
 export default function ShopFilters({ products, allProducts, categoryId }) {
   const catalog = allProducts || products;
+  const [mobileOpen, setMobileOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -30,6 +32,16 @@ export default function ShopFilters({ products, allProducts, categoryId }) {
   const style = searchParams.get("style") || "all";
   const feature = searchParams.get("feature") || "all";
   const sub = searchParams.get("sub") || "all";
+  const activeFilterCount = [
+    material !== "all",
+    minPrice > priceRange.min,
+    maxPrice < priceRange.max,
+    color !== "all",
+    seating !== "all",
+    style !== "all",
+    feature !== "all",
+    sub !== "all",
+  ].filter(Boolean).length;
 
   const colors = useMemo(() => collectColors(products), [products]);
   const showSofaSubs =
@@ -58,7 +70,29 @@ export default function ShopFilters({ products, allProducts, categoryId }) {
   }
 
   return (
-    <aside className="space-y-6 rounded-2xl border border-border/70 bg-surface p-5 shadow-sm lg:sticky lg:top-28">
+    <>
+      <button
+        type="button"
+        onClick={() => setMobileOpen((open) => !open)}
+        aria-expanded={mobileOpen}
+        aria-controls="shop-filter-panel"
+        className="mb-3 flex min-h-12 w-full items-center justify-between gap-3 rounded-2xl border border-border/70 bg-surface px-4 py-3 text-left text-sm font-semibold text-foreground shadow-sm transition hover:border-accent lg:hidden"
+      >
+        <span className="inline-flex items-center gap-2">
+          <SlidersHorizontal className="h-4 w-4 text-accent-dark" aria-hidden />
+          Filters and categories
+          {activeFilterCount > 0 ? (
+            <span className="inline-flex min-w-5 items-center justify-center rounded-full bg-accent px-1.5 py-0.5 text-[11px] text-white">
+              {activeFilterCount}
+            </span>
+          ) : null}
+        </span>
+        <ChevronDown className={`h-4 w-4 transition-transform ${mobileOpen ? "rotate-180" : ""}`} aria-hidden />
+      </button>
+      <aside
+        id="shop-filter-panel"
+        className={`${mobileOpen ? "block" : "hidden"} mb-4 space-y-5 rounded-2xl border border-border/70 bg-surface p-4 shadow-sm lg:sticky lg:top-28 lg:mb-0 lg:block lg:space-y-6 lg:p-5`}
+      >
       <div>
         <h3 className="text-sm font-semibold text-foreground">Categories</h3>
         <ul className="mt-3 space-y-1">
@@ -250,7 +284,8 @@ export default function ShopFilters({ products, allProducts, categoryId }) {
       >
         Clear All Filters
       </button>
-    </aside>
+      </aside>
+    </>
   );
 }
 

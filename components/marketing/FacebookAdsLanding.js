@@ -94,14 +94,15 @@ function swatchColorFor(color) {
 
 function ProductCard({ product, onQuickView }) {
   const [imageFailed, setImageFailed] = useState(false);
-  const price = getProductPrice(product);
   const offer = getFacebookOffer(product);
   const image = imageFailed ? fallbackFor(product) : product.image;
-  const colorName = product.color || "Finish options on request";
 
   useEffect(() => {
     setImageFailed(false);
   }, [product.image]);
+
+  // The Facebook Ads grid only contains products with a published catalogue price.
+  if (!offer) return null;
 
   return (
     <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-[17px] border border-[#e8dece] bg-[#fffdf9] shadow-[0_7px_22px_rgba(43,32,18,.065)] transition duration-300 sm:rounded-[22px] sm:shadow-[0_12px_32px_rgba(43,32,18,.06)] md:rounded-[24px] md:hover:-translate-y-1 md:hover:border-[#c8a96a]/70 md:hover:shadow-[0_22px_48px_rgba(43,32,18,.13)]">
@@ -133,29 +134,23 @@ function ProductCard({ product, onQuickView }) {
         <button
           type="button"
           onClick={() => onQuickView(product)}
-          className="line-clamp-2 min-h-[2.4em] text-left font-heading text-[15px] font-semibold leading-[1.18] tracking-[-.015em] text-[#27231d] transition hover:text-[#94703a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b88c45] sm:text-base md:text-lg"
+          className="min-h-[2.4em] break-words text-left font-heading text-[15px] font-semibold leading-[1.18] tracking-[-.015em] text-[#27231d] transition hover:text-[#94703a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b88c45] sm:text-base md:text-lg"
         >
           {product.name}
         </button>
 
         <div className="mt-auto border-t border-[#eadfce] pt-3 sm:pt-4">
-          {offer ? (
-            <div className="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1.5">
-              <span className="text-[11px] font-medium text-[#8b8173] line-through decoration-[#a77b45] sm:text-xs md:text-sm">
-                {formatCurrency(offer.originalPrice)}
-              </span>
-              <span className="rounded-full bg-[#f3e5cb] px-2 py-1 text-[9px] font-bold text-[#85551d] sm:text-[10px]">
-                {offer.discountPercent}% OFF
-              </span>
-              <p className="w-full truncate font-heading text-xl font-bold leading-tight text-[#29241d] sm:text-2xl md:text-[1.65rem]">
-                {formatCurrency(offer.offerPrice)}
-              </p>
-            </div>
-          ) : (
-            <p className="truncate font-heading text-lg font-semibold leading-tight text-[#29241d] sm:text-xl">
-              {price || "Ask us"}
-            </p>
-          )}
+          <div className="flex min-w-0 flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+            <span className="whitespace-nowrap text-[11px] font-medium text-[#8b8173] line-through decoration-[#a77b45] sm:text-xs md:text-sm">
+              {formatCurrency(offer.originalPrice)}
+            </span>
+            <span className="shrink-0 rounded-full bg-[#f3e5cb] px-2.5 py-1 text-[10px] font-bold text-[#85551d] sm:text-[11px]">
+              {offer.discountPercent}% OFF
+            </span>
+          </div>
+          <p className="mt-2 break-words font-heading text-2xl font-bold leading-tight text-[#29241d] sm:text-2xl md:text-[1.65rem]">
+            {formatCurrency(offer.offerPrice)}
+          </p>
         </div>
       </div>
     </article>
@@ -368,15 +363,24 @@ export default function FacebookAdsLanding({
   const [quickViewProduct, setQuickViewProduct] = useState(null);
   const [enquiryProduct, setEnquiryProduct] = useState(null);
 
-  const primaryProduct = initialProduct || catalogProducts[0];
+  // This ad catalogue only includes products with confirmed numeric catalogue prices,
+  // because unpriced/quote-only products cannot truthfully show an old price and discount.
+  const saleProducts = useMemo(
+    () => catalogProducts.filter((item) => Boolean(getFacebookOffer(item))),
+    [catalogProducts]
+  );
+  const primaryProduct =
+    (initialProduct && getFacebookOffer(initialProduct) ? initialProduct : null) ||
+    saleProducts[0] ||
+    catalogProducts[0];
 
   const categories = useMemo(() => {
-    return ["All", ...new Set(catalogProducts.map((item) => item.category).filter(Boolean))];
-  }, [catalogProducts]);
+    return ["All", ...new Set(saleProducts.map((item) => item.category).filter(Boolean))];
+  }, [saleProducts]);
 
   const visibleProducts = useMemo(() => {
     const searchTerm = search.trim().toLowerCase();
-    let list = catalogProducts.filter((item) => {
+    let list = saleProducts.filter((item) => {
       if (activeCategory !== "All" && item.category !== activeCategory) return false;
       if (!searchTerm) return true;
       const text = [
@@ -400,7 +404,7 @@ export default function FacebookAdsLanding({
       });
     }
     return list;
-  }, [catalogProducts, activeCategory, search, sort, initialProduct?.id]);
+  }, [saleProducts, activeCategory, search, sort, initialProduct?.id]);
 
   if (!catalogProducts.length) return null;
 
@@ -486,7 +490,7 @@ export default function FacebookAdsLanding({
             </div>
             <div className="flex shrink-0 items-center gap-2 self-start rounded-full border border-[#e6d9c6] bg-white/75 px-4 py-2.5 text-xs text-[#726754] shadow-sm lg:self-auto">
               <Sparkles className="h-4 w-4 text-[#aa8348]" />
-              <span><strong className="font-semibold text-[#382f22]">{catalogProducts.length}</strong> pieces in the catalogue</span>
+              <span><strong className="font-semibold text-[#382f22]">{saleProducts.length}</strong> priced offers</span>
             </div>
           </div>
 
@@ -518,7 +522,7 @@ export default function FacebookAdsLanding({
             <div className="mt-3 flex gap-2 overflow-x-auto pb-1 no-scrollbar" aria-label="Filter by category">
               {categories.map((category) => {
                 const active = activeCategory === category;
-                const count = category === "All" ? catalogProducts.length : catalogProducts.filter((item) => item.category === category).length;
+                const count = category === "All" ? saleProducts.length : saleProducts.filter((item) => item.category === category).length;
                 return (
                   <button
                     type="button"

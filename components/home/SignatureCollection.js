@@ -43,7 +43,7 @@ export default function SignatureCollection({ products, section = defaultSection
     <article className="flex h-full min-w-0 flex-col overflow-hidden rounded-2xl bg-white p-2.5 text-foreground shadow-[0_16px_48px_rgba(0,0,0,0.25)] sm:p-3.5">
       <Link
         href={`/product/${product.slug}`}
-        className="group relative block w-full aspect-[4/3] overflow-hidden rounded-xl bg-muted text-left"
+        className="product-image-canvas group relative block w-full aspect-[4/3] overflow-hidden rounded-xl text-left"
         aria-label={`View ${product.name} product details`}
       >
         <Image
@@ -52,7 +52,7 @@ export default function SignatureCollection({ products, section = defaultSection
           fill
           quality={HOME_PHOTO_QUALITY}
           sizes="(max-width: 639px) 88vw, (max-width: 1023px) 68vw, 320px"
-          className="object-contain p-1 transition duration-500 group-hover:scale-[1.03]"
+          className="product-image-blend object-cover p-0 transition duration-500 group-hover:scale-[1.05]"
         />
         {product.showcaseFeatured ? (
           <span className="absolute right-3 top-3 rounded-full bg-accent px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-primary-dark">

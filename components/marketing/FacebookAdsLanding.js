@@ -2,191 +2,580 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useMemo, useState } from "react";
 import {
-  ArrowDownRight,
   ArrowRight,
+  ArrowUpRight,
   Check,
+  ChevronLeft,
   ChevronRight,
   MapPin,
   MessageCircle,
+  Search,
   ShieldCheck,
+  SlidersHorizontal,
   Sparkles,
+  X,
 } from "lucide-react";
 import ProductEnquiryModal from "@/components/ProductEnquiryModal";
 import { business } from "@/data/business";
 
-function galleryFor(product) {
-  const list = product?.images?.length ? product.images : product?.image ? [product.image] : [];
-  return [...new Set(list)].slice(0, 4);
+function fallbackFor(product) {
+  const category = product?.category || "";
+  if (/sofa|corner/i.test(category)) return "/homepage/collections/modern-blue-sofa.webp";
+  if (/chandelier/i.test(category)) return "/Lights_Products/LL-D5463.jpg";
+  if (/wall light/i.test(category)) return "/Lights_Products/LL-D6054.jpg";
+  if (/chair/i.test(category)) return "/chair-furniture (1).jpg";
+  if (/mattress/i.test(category)) return "/homepage/collections/luxury-bed-mattress.webp";
+  if (/bathroom/i.test(category)) return "/bathroom-fitting.png";
+  return "/homepage/hero/metro-luxury-hero-v2.webp";
 }
 
-export default function FacebookAdsLanding({ product, campaign = "facebook-instagram" }) {
-  const images = useMemo(() => galleryFor(product), [product]);
-  const [active, setActive] = useState(0);
-  const [enquiryOpen, setEnquiryOpen] = useState(false);
-  const [imageFailed, setImageFailed] = useState(false);
+function galleryFor(product) {
+  const list = product?.images?.length ? product.images : product?.image ? [product.image] : [];
+  return [...new Set(list)].filter(Boolean).slice(0, 4);
+}
 
-  if (!product) return null;
-  const featureList = (product.features || []).slice(0, 4);
-  const highlights = featureList.length ? featureList : [
-    "Premium finish and thoughtful design",
-    "Guidance on available colours and sizes",
-    "Product details confirmed by our showroom team",
-    "Personalised quote before you decide",
-  ];
-  const image = images[active] || product.image;
+function getProductPrice(product) {
+  if (product?.priceLabel && !product?.onRequest) return product.priceLabel;
+  if (Number.isFinite(product?.price) && !product?.onRequest) {
+    return "₹" + Number(product.price).toLocaleString("en-IN");
+  }
+  return null;
+}
+
+function ProductCard({ product, index, onQuickView }) {
+  const [imageFailed, setImageFailed] = useState(false);
+  const price = getProductPrice(product);
+  const image = imageFailed ? fallbackFor(product) : product.image;
+
+  useEffect(() => {
+    setImageFailed(false);
+  }, [product.image]);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#f8f5ef] text-[#20201f]">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute -left-32 top-28 h-96 w-96 rounded-full bg-[#e9d7b0]/40 blur-[100px]" />
-        <div className="absolute -right-24 top-[35rem] h-96 w-96 rounded-full bg-[#d8c5ab]/40 blur-[110px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,.55),transparent_40%,rgba(210,189,148,.10))]" />
-      </div>
+    <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-[24px] border border-[#e8dece] bg-white shadow-[0_12px_32px_rgba(43,32,18,.055)] transition duration-300 hover:-translate-y-1 hover:border-[#c8a96a]/70 hover:shadow-[0_24px_55px_rgba(43,32,18,.13)] sm:rounded-[28px]">
+      <button
+        type="button"
+        onClick={() => onQuickView(product)}
+        aria-label={"Quick view " + product.name}
+        className="relative block w-full text-left"
+      >
+        <div className="relative aspect-[4/3] overflow-hidden bg-[linear-gradient(145deg,#fffdf9,#f0e5d4)]">
+          <Image
+            src={image}
+            alt={product.imageAlt || product.name}
+            fill
+            sizes="(max-width: 639px) 50vw, (max-width: 1023px) 33vw, 25vw"
+            className="object-contain p-3 transition duration-700 ease-out group-hover:scale-[1.045] sm:p-5"
+            onError={() => {
+              if (!imageFailed) setImageFailed(true);
+            }}
+          />
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#f3e7d6]/60 to-transparent" />
+          <div className="absolute left-3 top-3 flex flex-wrap gap-1.5 sm:left-4 sm:top-4">
+            {product.upcoming ? (
+              <span className="rounded-full border border-white/70 bg-[#29251e]/85 px-2.5 py-1.5 text-[9px] font-bold uppercase tracking-[.12em] text-white backdrop-blur-md sm:text-[10px]">
+                Coming soon
+              </span>
+            ) : product.featured ? (
+              <span className="inline-flex items-center gap-1 rounded-full border border-[#e4d0a1]/70 bg-[#fff9eb]/95 px-2.5 py-1.5 text-[9px] font-bold uppercase tracking-[.12em] text-[#7b5a26] shadow-sm sm:text-[10px]">
+                <Sparkles className="h-3 w-3" /> Signature pick
+              </span>
+            ) : null}
+          </div>
+          <span className="absolute bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full border border-white/75 bg-white/90 text-[#372c1c] shadow-md transition group-hover:bg-[#25221d] group-hover:text-[#efd9a8] sm:bottom-4 sm:right-4">
+            <ArrowUpRight className="h-4 w-4" />
+          </span>
+          <span className="absolute bottom-4 left-4 hidden text-[10px] font-semibold uppercase tracking-[.14em] text-[#7c6035] sm:block">
+            View piece
+          </span>
+        </div>
+      </button>
 
-      <div className="relative mx-auto w-full max-w-[1440px] px-4 pb-24 pt-4 sm:px-6 sm:pt-6 lg:px-10 lg:pb-12">
-        <header className="flex items-center justify-between gap-3 rounded-[22px] border border-white/75 bg-white/65 px-4 py-3 shadow-[0_12px_38px_rgba(37,30,19,.06)] backdrop-blur-2xl sm:px-6">
-          <Link href="/" aria-label="Metro Furniture homepage" className="inline-flex items-center gap-3">
-            <Image src={business.navLogo} alt={business.name} width={398} height={136} priority className="h-8 w-auto max-w-[155px] object-contain sm:h-10 sm:max-w-[190px]" />
-            <span className="hidden h-7 w-px bg-[#c9b998] sm:block" />
-            <span className="hidden text-[10px] font-semibold uppercase tracking-[.18em] text-[#76684f] sm:block">Curated living</span>
-          </Link>
-          <button type="button" onClick={() => setEnquiryOpen(true)} className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[#c7a96d]/50 bg-[#201f1c] px-4 py-2.5 text-xs font-semibold text-[#f7e6bd] shadow-[0_8px_22px_rgba(32,31,28,.16)] transition hover:-translate-y-0.5 hover:bg-black sm:px-5 sm:text-sm">
-            <MessageCircle className="h-4 w-4" /> Get exact price
+      <div className="flex flex-1 flex-col p-3.5 sm:p-5">
+        <p className="text-[9px] font-bold uppercase tracking-[.16em] text-[#9b793d] sm:text-[10px]">
+          {product.category}{product.model ? " · " + product.model : ""}
+        </p>
+        <button
+          type="button"
+          onClick={() => onQuickView(product)}
+          className="mt-1.5 text-left font-heading text-base font-semibold leading-snug text-[#27231d] transition hover:text-[#94703a] sm:text-lg"
+        >
+          {product.name}
+        </button>
+        <p className="mt-2 line-clamp-2 min-h-[2.5rem] text-[11px] leading-5 text-[#756d61] sm:text-xs">
+          {product.tagline || product.description || "Explore this piece and ask our showroom team about available options."}
+        </p>
+        <div className="mt-3 flex min-h-6 flex-wrap items-center gap-1.5">
+          {product.color ? (
+            <span className="rounded-full border border-[#e8dece] bg-[#fbf8f2] px-2.5 py-1 text-[9px] font-medium text-[#6f6556] sm:text-[10px]">
+              {product.color}
+            </span>
+          ) : null}
+          {product.upcoming ? (
+            <span className="rounded-full border border-[#e8dece] bg-[#fbf8f2] px-2.5 py-1 text-[9px] font-medium text-[#6f6556] sm:text-[10px]">
+              Ask for availability
+            </span>
+          ) : null}
+        </div>
+        <div className="mt-auto pt-4">
+          <div className="flex min-h-8 items-end justify-between gap-2">
+            <div>
+              <p className="text-[9px] font-semibold uppercase tracking-[.12em] text-[#92836a]">
+                {price ? "Catalogue price" : "Personalised quote"}
+              </p>
+              <p className="mt-0.5 font-heading text-lg font-semibold text-[#29241d] sm:text-xl">
+                {price || "Ask us"}
+              </p>
+            </div>
+            <span className="mb-1 hidden text-[10px] text-[#8c806e] sm:block">No online payment</span>
+          </div>
+          <button
+            type="button"
+            onClick={() => onQuickView(product)}
+            className="mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-[#c6a56a]/70 bg-[linear-gradient(120deg,#ecd8a9,#c8a15c_58%,#ad813e)] px-3 py-3 text-[11px] font-bold text-[#231d14] shadow-[0_8px_18px_rgba(168,124,54,.14)] transition hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(168,124,54,.24)] sm:text-xs"
+          >
+            View details & options <ArrowRight className="h-3.5 w-3.5" />
           </button>
-        </header>
+        </div>
+      </div>
+    </article>
+  );
+}
 
-        <div className="mt-5 flex flex-wrap items-center gap-2 px-1 text-[10px] font-semibold uppercase tracking-[.16em] text-[#817258] sm:mt-7 sm:text-[11px]">
-          <span>Metro Furniture</span><ChevronRight className="h-3 w-3" /><span>{product.category}</span><ChevronRight className="h-3 w-3" /><span className="text-[#24221e]">{product.name}</span>
+function ProductQuickView({ product, campaign, onClose, onGetQuote }) {
+  const [active, setActive] = useState(0);
+  const [imageFailed, setImageFailed] = useState(false);
+  const images = useMemo(() => galleryFor(product), [product]);
+  const currentImage = imageFailed ? fallbackFor(product) : (images[active] || product.image);
+  const price = getProductPrice(product);
+
+  useEffect(() => {
+    setActive(0);
+    setImageFailed(false);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [product, onClose]);
+
+  const specifications = [
+    product.color ? { label: "Colour", value: product.color } : null,
+    product.model ? { label: "Model", value: product.model } : null,
+    product.material && !/to be confirmed/i.test(product.material) ? { label: "Material", value: product.material } : null,
+    product.configuration ? { label: "Configuration", value: product.configuration } : null,
+    product.seating ? { label: "Seating", value: product.seating } : null,
+  ].filter(Boolean);
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        key="facebook-ads-quickview-backdrop"
+        className="fixed inset-0 z-[70] bg-[#100f0d]/70 backdrop-blur-md"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={onClose}
+      />
+      <motion.div
+        key="facebook-ads-quickview-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label={"Quick view: " + product.name}
+        className="fixed left-1/2 top-1/2 z-[71] flex max-h-[94dvh] w-[calc(100%-1rem)] max-w-5xl -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-[26px] border border-[#dfcfb3] bg-[#f8f3eb] shadow-[0_38px_120px_rgba(0,0,0,.4)] sm:w-[calc(100%-2rem)] sm:rounded-[32px] lg:grid lg:grid-cols-[1.02fr_.98fr]"
+        initial={{ opacity: 0, y: 20, scale: 0.985 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 14, scale: 0.985 }}
+        transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close product preview"
+          className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-[#e7dbc8] bg-white/95 text-[#2b261d] shadow-md transition hover:bg-[#25221d] hover:text-white sm:right-4 sm:top-4"
+        >
+          <X className="h-4 w-4" />
+        </button>
+
+        <div className="min-h-0 overflow-y-auto bg-[linear-gradient(145deg,#f4ebdc,#e8dbc7)] p-3 sm:p-5 lg:p-6">
+          <div className="relative overflow-hidden rounded-[20px] border border-white/80 bg-[linear-gradient(145deg,#fffdfa,#f4e9d8)] shadow-[0_18px_46px_rgba(43,32,18,.10)] sm:rounded-[24px]">
+            <div className="relative aspect-[4/3]">
+              <Image
+                src={currentImage}
+                alt={product.imageAlt || product.name}
+                fill
+                sizes="(max-width: 1023px) 100vw, 48vw"
+                className="object-contain p-5 sm:p-8"
+                priority
+                onError={() => {
+                  if (!imageFailed) setImageFailed(true);
+                }}
+              />
+              <div className="absolute left-3 top-3 rounded-full border border-white/70 bg-white/85 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[.14em] text-[#71562c] shadow-sm sm:left-4 sm:top-4 sm:text-[10px]">
+                {product.upcoming ? "Coming soon" : "Metro selection"}
+              </div>
+            </div>
+          </div>
+          {images.length > 1 ? (
+            <div className="mt-3 grid grid-cols-4 gap-2 sm:gap-3">
+              {images.map((src, index) => (
+                <button
+                  type="button"
+                  key={src + "-" + index}
+                  onClick={() => { setActive(index); setImageFailed(false); }}
+                  aria-label={"Show " + product.name + " image " + (index + 1)}
+                  aria-pressed={active === index}
+                  className={"relative aspect-[4/3] overflow-hidden rounded-xl border-2 bg-white transition " + (active === index ? "border-[#b38b4a] shadow-md" : "border-white/80 opacity-80 hover:opacity-100")}
+                >
+                  <Image src={src} alt="" fill sizes="120px" className="object-contain p-1" />
+                </button>
+              ))}
+            </div>
+          ) : null}
+          <div className="mt-4 grid grid-cols-3 gap-2">
+            <div className="rounded-xl border border-white/70 bg-white/55 p-3 text-center">
+              <ShieldCheck className="mx-auto h-4 w-4 text-[#9a783c]" />
+              <p className="mt-1.5 text-[9px] font-semibold text-[#40382a] sm:text-[10px]">Showroom guidance</p>
+            </div>
+            <div className="rounded-xl border border-white/70 bg-white/55 p-3 text-center">
+              <Sparkles className="mx-auto h-4 w-4 text-[#9a783c]" />
+              <p className="mt-1.5 text-[9px] font-semibold text-[#40382a] sm:text-[10px]">Style options</p>
+            </div>
+            <div className="rounded-xl border border-white/70 bg-white/55 p-3 text-center">
+              <MapPin className="mx-auto h-4 w-4 text-[#9a783c]" />
+              <p className="mt-1.5 text-[9px] font-semibold text-[#40382a] sm:text-[10px]">Dharmapuri</p>
+            </div>
+          </div>
         </div>
 
-        <section className="grid items-start gap-5 py-5 md:gap-7 lg:grid-cols-[1.05fr_.95fr] lg:py-7 xl:gap-10">
-          <div className="space-y-3">
-            <div className="group relative overflow-hidden rounded-[28px] border border-white/80 bg-[linear-gradient(145deg,rgba(255,255,255,.92),rgba(237,227,211,.9))] p-2 shadow-[0_22px_65px_rgba(46,35,20,.12)] backdrop-blur-xl sm:rounded-[34px] sm:p-3">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] bg-[#eee6da] sm:rounded-[27px]">
-                {!imageFailed && image ? (
-                  <Image src={image} alt={product.imageAlt || `${product.name} furniture at Metro Furniture Dharmapuri`} fill priority sizes="(max-width: 1024px) 100vw, 58vw" className="object-contain p-3 transition duration-700 group-hover:scale-[1.02] sm:p-7" onError={() => setImageFailed(true)} />
-                ) : (
-                  <div className="absolute inset-0 flex items-center justify-center p-8 text-center text-sm text-[#71644f]">Product photo available from our showroom team</div>
-                )}
-                <div className="absolute left-3 top-3 flex items-center gap-2 rounded-full border border-white/60 bg-white/75 px-3 py-2 text-[10px] font-semibold uppercase tracking-[.13em] text-[#5f4c2c] shadow-sm backdrop-blur-xl sm:left-5 sm:top-5">
-                  <Sparkles className="h-3.5 w-3.5" /> Signature selection
-                </div>
-                {product.model ? <div className="absolute bottom-3 right-3 rounded-full border border-white/50 bg-[#1c1b18]/75 px-3 py-1.5 text-[10px] font-medium tracking-[.12em] text-white backdrop-blur-xl sm:bottom-5 sm:right-5">{product.model}</div> : null}
-              </div>
-              {images.length > 1 ? (
-                <div className="grid grid-cols-4 gap-2 p-1 pt-3 sm:gap-3 sm:p-2 sm:pt-4">
-                  {images.map((item, index) => (
-                    <button key={`${item}-${index}`} type="button" onClick={() => { setActive(index); setImageFailed(false); }} aria-label={`View ${product.name} image ${index + 1}`} aria-pressed={active === index} className={`relative aspect-[4/3] overflow-hidden rounded-xl border bg-white/85 transition sm:rounded-2xl ${active === index ? "border-[#b89551] ring-2 ring-[#c8a96a]/35" : "border-[#e8dece] opacity-80 hover:opacity-100"}`}>
-                      <Image src={item} alt={`${product.name} view ${index + 1}`} fill sizes="160px" className="object-contain p-1" />
-                    </button>
-                  ))}
-                </div>
-              ) : null}
+        <div className="min-h-0 overflow-y-auto bg-white p-5 sm:p-7 lg:p-9">
+          <p className="text-[10px] font-bold uppercase tracking-[.19em] text-[#94723a]">
+            {product.category}{product.model ? " / " + product.model : ""}
+          </p>
+          <h2 className="mt-3 max-w-lg pr-7 font-heading text-[1.8rem] font-medium leading-[1.1] tracking-[-.03em] text-[#28231b] sm:text-4xl">
+            {product.name}
+          </h2>
+          <p className="mt-4 text-sm leading-6 text-[#777064]">
+            {product.tagline || product.description || "Ask our showroom team about product details and current availability."}
+          </p>
+
+          <div className="mt-5 rounded-[20px] border border-[#e6d9c4] bg-[linear-gradient(135deg,#fffdf7,#f8f0e2)] p-4 sm:p-5">
+            <p className="text-[9px] font-bold uppercase tracking-[.17em] text-[#9a7a43]">
+              {price ? "Listed catalogue price" : "Made for your next home update"}
+            </p>
+            <div className="mt-1 flex flex-wrap items-end justify-between gap-2">
+              <p className="font-heading text-2xl font-semibold text-[#29241d] sm:text-3xl">{price || "Request a quote"}</p>
+              {product.upcoming ? <span className="rounded-full border border-[#d8c5a1] bg-white/75 px-2.5 py-1 text-[9px] font-semibold text-[#79613a]">Availability on request</span> : null}
             </div>
-            <div className="grid grid-cols-3 gap-2 sm:gap-3">
-              <TrustTile icon={ShieldCheck} title="Quality-focused" caption="Selected materials" />
-              <TrustTile icon={Sparkles} title="Personalised" caption="Style guidance" />
-              <TrustTile icon={MapPin} title="Visit in person" caption="Dharmapuri showroom" />
-            </div>
+            <p className="mt-2 text-xs leading-5 text-[#7c7365]">
+              {price ? "Confirm current availability, delivery and finish options with our showroom team." : "Ask about availability, options and a personalised quote before you decide."}
+            </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-[28px] border border-white/80 bg-[linear-gradient(145deg,rgba(255,255,255,.91),rgba(255,252,246,.78))] p-5 shadow-[0_22px_65px_rgba(46,35,20,.10)] backdrop-blur-2xl sm:rounded-[34px] sm:p-7 lg:p-8 xl:p-10">
-            <div className="pointer-events-none absolute -right-14 -top-14 h-40 w-40 rounded-full border border-[#c8a96a]/20" aria-hidden="true" />
-            <div className="relative">
-              <p className="inline-flex items-center gap-2 rounded-full border border-[#c8a96a]/30 bg-[#fbf4e6] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[.17em] text-[#856b3d]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#b89551]" /> Made for your space
+          {specifications.length ? (
+            <div className="mt-5 grid grid-cols-2 gap-2.5">
+              {specifications.map((item) => (
+                <div key={item.label} className="rounded-xl border border-[#eee6da] bg-[#fcfaf6] p-3">
+                  <p className="text-[9px] font-semibold uppercase tracking-[.12em] text-[#a08a69]">{item.label}</p>
+                  <p className="mt-1 text-xs font-semibold leading-5 text-[#4b4234]">{item.value}</p>
+                </div>
+              ))}
+            </div>
+          ) : null}
+
+          {product.features?.length ? (
+            <div className="mt-5">
+              <p className="text-xs font-bold uppercase tracking-[.13em] text-[#6c604d]">Worth a closer look</p>
+              <ul className="mt-3 space-y-2.5">
+                {product.features.slice(0, 4).map((feature) => (
+                  <li key={feature} className="flex items-start gap-2.5 text-xs leading-5 text-[#726a5e]">
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#f2e6d0] text-[#8a6937]"><Check className="h-3 w-3" /></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          <div className="mt-6 grid gap-2.5 sm:grid-cols-2">
+            <button
+              type="button"
+              onClick={() => onGetQuote(product)}
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[linear-gradient(120deg,#e9d4a5,#c49a54_60%,#a77a35)] px-4 py-3 text-xs font-bold text-[#231d14] shadow-[0_10px_24px_rgba(168,124,54,.2)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(168,124,54,.29)]"
+            >
+              <MessageCircle className="h-4 w-4" /> Get exact price & options
+            </button>
+            <Link
+              href={"/product/" + product.slug}
+              onClick={onClose}
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#d9cbb5] bg-white px-4 py-3 text-xs font-bold text-[#453a28] transition hover:border-[#b18a49] hover:bg-[#fbf5e9]"
+            >
+              Full product details <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <p className="mt-3 text-center text-[10px] leading-4 text-[#948a7b]">No payment now · Just an enquiry · WhatsApp follow-up available</p>
+        </div>
+      </motion.div>
+    </AnimatePresence>
+  );
+}
+
+export default function FacebookAdsLanding({
+  products: catalogProducts = [],
+  product: initialProduct,
+  campaign = "facebook-instagram",
+}) {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [search, setSearch] = useState("");
+  const [sort, setSort] = useState("featured");
+  const [quickViewProduct, setQuickViewProduct] = useState(null);
+  const [enquiryProduct, setEnquiryProduct] = useState(null);
+
+  const primaryProduct = initialProduct || catalogProducts[0];
+
+  const categories = useMemo(() => {
+    return ["All", ...new Set(catalogProducts.map((item) => item.category).filter(Boolean))];
+  }, [catalogProducts]);
+
+  const visibleProducts = useMemo(() => {
+    const searchTerm = search.trim().toLowerCase();
+    let list = catalogProducts.filter((item) => {
+      if (activeCategory !== "All" && item.category !== activeCategory) return false;
+      if (!searchTerm) return true;
+      const text = [
+        item.name, item.model, item.category, item.color, item.material,
+        item.tagline, item.description, ...(item.tags || []),
+      ].filter(Boolean).join(" ").toLowerCase();
+      return text.includes(searchTerm);
+    });
+
+    if (sort === "price-low") {
+      list.sort((a, b) => (a.price ?? Number.MAX_SAFE_INTEGER) - (b.price ?? Number.MAX_SAFE_INTEGER));
+    } else if (sort === "price-high") {
+      list.sort((a, b) => (b.price ?? -1) - (a.price ?? -1));
+    } else if (sort === "name") {
+      list.sort((a, b) => a.name.localeCompare(b.name));
+    } else {
+      list.sort((a, b) => {
+        if (a.id === initialProduct?.id) return -1;
+        if (b.id === initialProduct?.id) return 1;
+        return Number(Boolean(b.featured)) - Number(Boolean(a.featured));
+      });
+    }
+    return list;
+  }, [catalogProducts, activeCategory, search, sort, initialProduct?.id]);
+
+  if (!catalogProducts.length) return null;
+
+  return (
+    <div className="min-h-screen overflow-hidden bg-[#f7f3eb] text-[#27231d]">
+      <div className="pointer-events-none fixed inset-0 -z-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute -left-32 top-64 h-96 w-96 rounded-full bg-[#ddc69b]/20 blur-[100px]" />
+        <div className="absolute -right-24 top-[60rem] h-96 w-96 rounded-full bg-[#d7c6ae]/30 blur-[110px]" />
+      </div>
+
+      <div className="relative z-10 mx-auto w-full max-w-[1600px] px-3 pb-28 pt-3 sm:px-5 sm:pt-5 lg:px-9 lg:pb-14">
+        <header className="flex items-center justify-between gap-3 rounded-[20px] border border-white/80 bg-white/80 px-3.5 py-3 shadow-[0_12px_36px_rgba(43,32,18,.055)] backdrop-blur-2xl sm:rounded-[25px] sm:px-6 sm:py-4">
+          <Link href="/" aria-label="Metro Furniture homepage" className="inline-flex min-w-0 items-center gap-2.5 sm:gap-4">
+            <Image src={business.navLogo} alt={business.name} width={398} height={136} priority className="h-8 w-auto max-w-[132px] object-contain sm:h-10 sm:max-w-[190px]" />
+            <span className="hidden h-8 w-px bg-[#dfd0b7] sm:block" />
+            <span className="hidden text-[10px] font-bold uppercase tracking-[.18em] text-[#7f6b4a] sm:block">Furniture · Lighting · Living</span>
+          </Link>
+          <a
+            href={business.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-[#24211c] px-3.5 py-2.5 text-[10px] font-bold text-[#f4dfad] shadow-[0_8px_22px_rgba(32,31,28,.16)] transition hover:-translate-y-0.5 hover:bg-black sm:gap-2 sm:px-5 sm:py-3 sm:text-xs"
+          >
+            <MessageCircle className="h-4 w-4" /> <span className="hidden xs:inline">Ask our showroom</span><span className="xs:hidden">Enquire</span>
+          </a>
+        </header>
+
+        <section className="mt-4 overflow-hidden rounded-[26px] bg-[#201d18] text-white shadow-[0_24px_70px_rgba(43,32,18,.16)] sm:mt-6 sm:rounded-[34px] lg:rounded-[40px]">
+          <div className="grid min-h-[360px] lg:grid-cols-[.88fr_1.12fr]">
+            <div className="relative z-10 flex flex-col justify-center px-5 py-8 sm:px-8 sm:py-10 lg:px-10 xl:px-14 xl:py-14">
+              <p className="inline-flex w-fit items-center gap-2 rounded-full border border-[#d6b777]/30 bg-white/[.06] px-3 py-2 text-[9px] font-bold uppercase tracking-[.19em] text-[#e6ca8f] sm:text-[10px]">
+                <Sparkles className="h-3.5 w-3.5" /> The Metro edit
               </p>
-              <h1 className="mt-4 max-w-xl font-heading text-[2.15rem] font-medium leading-[1.1] tracking-[-.035em] text-[#25231f] sm:text-4xl xl:text-[3.2rem]">{product.name}<span className="mt-1 block text-[#9a7a42]">Designed to live beautifully.</span></h1>
-              <p className="mt-4 text-sm leading-7 text-[#716a5e] sm:text-[15px]">{product.tagline || product.description || `Discover ${product.name} at Metro Furniture, Dharmapuri. Talk with our team about the details and options for your home.`}</p>
-
-              <div className="mt-5 flex flex-wrap items-center gap-2 text-[11px] text-[#716a5e]">
-                <span className="rounded-full border border-[#e9dfcf] bg-white/80 px-3 py-1.5">{product.category}</span>
-                {product.model ? <span className="rounded-full border border-[#e9dfcf] bg-white/80 px-3 py-1.5">Model {product.model}</span> : null}
-                {product.color ? <span className="rounded-full border border-[#e9dfcf] bg-white/80 px-3 py-1.5">{product.color}</span> : null}
-              </div>
-
-              <div className="mt-6 rounded-[22px] border border-[#d9c9a9]/60 bg-white/60 p-4 backdrop-blur-xl sm:p-5">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-[.15em] text-[#91784e]">Personalised product quote</p>
-                    <p className="mt-1.5 font-heading text-2xl font-medium text-[#27241e]">Get the right price for your needs</p>
-                    <p className="mt-1 text-xs leading-5 text-[#7b7366]">Ask about available sizes, finishes, colours and current availability.</p>
-                  </div>
-                  <span className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#211f1b] text-[#e5cb92] sm:flex"><ArrowDownRight className="h-5 w-5" /></span>
-                </div>
-                <button type="button" onClick={() => setEnquiryOpen(true)} className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(120deg,#d9c28f,#b18e4c)] px-5 py-4 text-sm font-semibold text-[#211f1a] shadow-[0_10px_30px_rgba(169,131,62,.22)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(169,131,62,.3)]">
-                  Request my exact quote <ArrowRight className="h-4 w-4" />
+              <h1 className="mt-5 max-w-xl font-heading text-[2.35rem] font-medium leading-[1.04] tracking-[-.04em] sm:mt-6 sm:text-5xl xl:text-[4rem]">
+                Find the piece that feels like <span className="text-[#ddc18a]">home.</span>
+              </h1>
+              <p className="mt-4 max-w-lg text-sm leading-6 text-white/70 sm:mt-5 sm:text-base sm:leading-7">
+                Discover furniture and lighting selected for everyday living. Explore the details, compare your favourites, and ask our showroom team about the options that suit your space.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3 sm:mt-8">
+                <a href="#all-products" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[linear-gradient(120deg,#edd9aa,#c49b54_60%,#aa7c38)] px-5 py-3 text-xs font-bold text-[#211c13] shadow-[0_10px_28px_rgba(176,136,65,.2)] transition hover:-translate-y-0.5 sm:px-6 sm:text-sm">
+                  Explore the collection <ArrowRight className="h-4 w-4" />
+                </a>
+                <button type="button" onClick={() => setEnquiryProduct(primaryProduct)} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/[.06] px-5 py-3 text-xs font-semibold text-white transition hover:bg-white/10 sm:px-6 sm:text-sm">
+                  <MessageCircle className="h-4 w-4 text-[#ddc18a]" /> Ask for a quote
                 </button>
-                <p className="mt-3 text-center text-[10px] leading-4 text-[#81796d]">No payment now · Quick form · Continue on WhatsApp</p>
               </div>
-
-              <div className="mt-6">
-                <h2 className="font-heading text-xl font-medium">Details worth knowing</h2>
-                <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                  {highlights.map((feature) => (
-                    <div key={feature} className="flex items-start gap-2.5 rounded-2xl border border-white/80 bg-white/55 p-3 text-xs leading-5 text-[#625b50]">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#9b793d]" />{feature}
-                    </div>
-                  ))}
+              <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2 border-t border-white/10 pt-5 text-[10px] text-white/55 sm:mt-9 sm:gap-x-7 sm:pt-6 sm:text-xs">
+                <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-[#dfc38b]" /> Showroom guidance</span>
+                <span className="inline-flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-[#dfc38b]" /> Dharmapuri</span>
+                <span className="inline-flex items-center gap-1.5"><MessageCircle className="h-3.5 w-3.5 text-[#dfc38b]" /> Easy enquiry</span>
+              </div>
+            </div>
+            <div className="relative min-h-[230px] overflow-hidden lg:min-h-[460px]">
+              <Image
+                src="/homepage/hero/metro-luxury-hero-v2.webp"
+                alt="Premium living room inspiration at Metro Furniture"
+                fill
+                priority
+                sizes="(max-width: 1023px) 100vw, 58vw"
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#201d18] via-[#201d18]/35 to-transparent lg:from-[#201d18]/85 lg:via-[#201d18]/15" />
+              <div className="absolute bottom-4 left-4 right-4 rounded-[18px] border border-white/20 bg-[#171511]/55 p-4 backdrop-blur-xl sm:bottom-7 sm:left-7 sm:right-7 sm:p-5">
+                <p className="text-[9px] font-bold uppercase tracking-[.17em] text-[#e4c98f]">Considered choices, personal service</p>
+                <div className="mt-2 flex items-end justify-between gap-3">
+                  <p className="max-w-xs font-heading text-xl leading-tight sm:text-2xl">Look closer. Find your favourite.</p>
+                  <a href="#all-products" aria-label="Explore all products" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#e0c48c] text-[#242018] transition hover:scale-105"><ArrowDownRightIcon /></a>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="grid gap-4 rounded-[28px] border border-white/80 bg-white/55 p-5 shadow-[0_15px_44px_rgba(46,35,20,.06)] backdrop-blur-2xl sm:grid-cols-[.8fr_1.2fr] sm:items-center sm:p-7">
-          <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[.17em] text-[#967742]">A simple next step</p>
-            <h2 className="mt-2 font-heading text-2xl font-medium leading-tight sm:text-3xl">See it. Ask questions. Decide confidently.</h2>
+        <section id="all-products" className="scroll-mt-5 pt-9 sm:pt-12 lg:pt-16">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#9b793e] sm:text-[11px]">Browse the collection</p>
+              <h2 className="mt-2 font-heading text-3xl font-medium tracking-[-.035em] text-[#2b251d] sm:text-4xl lg:text-[2.8rem]">Pieces worth a closer look</h2>
+              <p className="mt-2 max-w-2xl text-xs leading-6 text-[#786f61] sm:text-sm">
+                Open any piece for more photos, product details and a personalised enquiry. Listed prices are shown where available.
+              </p>
+            </div>
+            <div className="flex shrink-0 items-center gap-2 self-start rounded-full border border-[#e6d9c6] bg-white/75 px-4 py-2.5 text-xs text-[#726754] shadow-sm lg:self-auto">
+              <Sparkles className="h-4 w-4 text-[#aa8348]" />
+              <span><strong className="font-semibold text-[#382f22]">{catalogProducts.length}</strong> pieces in the catalogue</span>
+            </div>
           </div>
-          <div className="grid gap-3 sm:grid-cols-3">
-            <StepCard number="01" title="Share your details" description="Tell us your name, phone and city." />
-            <StepCard number="02" title="Discuss your needs" description="Ask about finish, size and current availability." />
-            <StepCard number="03" title="Get the quote" description="Our team continues the conversation on WhatsApp." />
+
+          <div className="mt-6 rounded-[22px] border border-white/80 bg-white/70 p-3 shadow-[0_12px_30px_rgba(43,32,18,.04)] backdrop-blur-xl sm:mt-8 sm:rounded-[26px] sm:p-4">
+            <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+              <div className="relative min-w-0 flex-1 lg:max-w-md">
+                <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#99886f]" />
+                <input
+                  type="search"
+                  value={search}
+                  onChange={(event) => setSearch(event.target.value)}
+                  placeholder="Search sofas, lights, colours..."
+                  aria-label="Search products"
+                  className="h-12 w-full rounded-full border border-[#e8dece] bg-[#fbf9f5] pl-11 pr-4 text-sm text-[#30291f] outline-none transition placeholder:text-[#a39887] focus:border-[#bd9855] focus:bg-white focus:ring-4 focus:ring-[#bd9855]/10"
+                />
+              </div>
+              <label className="flex min-w-0 items-center gap-2 rounded-full border border-[#e8dece] bg-[#fbf9f5] px-4 py-2.5 text-xs text-[#776b58] lg:w-[220px]">
+                <SlidersHorizontal className="h-4 w-4 shrink-0 text-[#a1814a]" />
+                <span className="shrink-0">Sort by</span>
+                <select value={sort} onChange={(event) => setSort(event.target.value)} className="min-w-0 flex-1 bg-transparent text-xs font-semibold text-[#393125] outline-none">
+                  <option value="featured">Featured</option>
+                  <option value="price-low">Price: low to high</option>
+                  <option value="price-high">Price: high to low</option>
+                  <option value="name">Name: A–Z</option>
+                </select>
+              </label>
+            </div>
+
+            <div className="mt-3 flex gap-2 overflow-x-auto pb-1 no-scrollbar" aria-label="Filter by category">
+              {categories.map((category) => {
+                const active = activeCategory === category;
+                const count = category === "All" ? catalogProducts.length : catalogProducts.filter((item) => item.category === category).length;
+                return (
+                  <button
+                    type="button"
+                    key={category}
+                    onClick={() => setActiveCategory(category)}
+                    aria-pressed={active}
+                    className={"inline-flex shrink-0 items-center gap-2 rounded-full border px-3.5 py-2.5 text-[10px] font-semibold transition sm:px-4 sm:text-xs " + (active ? "border-[#25211b] bg-[#25211b] text-[#f0d9a5] shadow-md" : "border-[#e5d9c7] bg-white/80 text-[#685d4a] hover:border-[#c4a269] hover:bg-[#fbf4e6]")}
+                  >
+                    {category}
+                    <span className={"rounded-full px-1.5 py-0.5 text-[9px] " + (active ? "bg-white/10 text-[#f0d9a5]" : "bg-[#f2eadc] text-[#8a7758]")}>{count}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="mb-4 mt-6 flex items-center justify-between gap-3 sm:mb-5 sm:mt-7">
+            <p className="text-xs text-[#7f7462] sm:text-sm"><strong className="text-[#322b21]">{visibleProducts.length}</strong> {visibleProducts.length === 1 ? "result" : "results"}{activeCategory !== "All" ? " in " + activeCategory : ""}</p>
+            {search || activeCategory !== "All" ? (
+              <button type="button" onClick={() => { setSearch(""); setActiveCategory("All"); }} className="text-xs font-semibold text-[#876a37] underline decoration-[#d4bd91] underline-offset-4">Clear filters</button>
+            ) : null}
+          </div>
+
+          {visibleProducts.length ? (
+            <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:grid-cols-3 xl:grid-cols-4 xl:gap-5">
+              {visibleProducts.map((item, index) => (
+                <ProductCard key={item.id} product={item} index={index} onQuickView={setQuickViewProduct} />
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-[28px] border border-[#e8dece] bg-white/70 px-6 py-16 text-center">
+              <Search className="mx-auto h-7 w-7 text-[#b29460]" />
+              <h3 className="mt-4 font-heading text-2xl text-[#30291f]">No matching pieces yet</h3>
+              <p className="mt-2 text-sm text-[#817665]">Try another search or browse all categories.</p>
+              <button type="button" onClick={() => { setSearch(""); setActiveCategory("All"); }} className="mt-5 rounded-full bg-[#29241d] px-5 py-3 text-xs font-semibold text-[#f0d9a5]">Show all products</button>
+            </div>
+          )}
+        </section>
+
+        <section className="mt-10 overflow-hidden rounded-[26px] bg-[#24211c] px-5 py-7 text-white shadow-[0_22px_54px_rgba(43,32,18,.13)] sm:mt-14 sm:rounded-[32px] sm:px-8 sm:py-9 lg:flex lg:items-center lg:justify-between lg:gap-8 lg:px-10">
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-[.19em] text-[#ddc187]">Need a little guidance?</p>
+            <h2 className="mt-2 max-w-2xl font-heading text-2xl font-medium leading-tight sm:text-3xl">Tell us about your space. We’ll help you choose.</h2>
+            <p className="mt-3 max-w-2xl text-xs leading-6 text-white/65 sm:text-sm">Ask about dimensions, finishes, current availability and delivery before making your decision.</p>
+          </div>
+          <div className="mt-5 flex flex-wrap gap-2.5 lg:mt-0 lg:shrink-0">
+            <a href={business.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#e2c58c] px-5 py-3 text-xs font-bold text-[#262015] transition hover:bg-[#f0d9a9] sm:text-sm"><MessageCircle className="h-4 w-4" /> Chat on WhatsApp</a>
+            <Link href="/contact" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-xs font-semibold text-white transition hover:bg-white/10 sm:text-sm"><MapPin className="h-4 w-4 text-[#e2c58c]" /> Visit showroom</Link>
           </div>
         </section>
 
-        <section className="mt-5 flex flex-col gap-4 rounded-[26px] border border-[#d9c8a5]/45 bg-[#211f1b] p-5 text-white shadow-[0_16px_42px_rgba(26,24,20,.16)] sm:flex-row sm:items-center sm:justify-between sm:px-7 sm:py-6">
-          <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[.18em] text-[#dfc58e]">Visit our showroom</p>
-            <h2 className="mt-1 font-heading text-xl font-medium sm:text-2xl">Explore Metro Furniture in Dharmapuri</h2>
-            <p className="mt-1 max-w-2xl text-xs leading-5 text-white/65">No. 1860, Salem Main Road, Senthil Nagar, near Vincent Kalyana Mandapam · {business.hours}</p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <a href="https://www.google.com/maps/search/?api=1&query=Metro+Furniture+Senthil+Nagar+Salem+Main+Road+Dharmapuri" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-3 text-xs font-semibold transition hover:bg-white/10"><MapPin className="h-4 w-4 text-[#dfc58e]" /> Get directions</a>
-            <button type="button" onClick={() => setEnquiryOpen(true)} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#d8bd80] px-4 py-3 text-xs font-semibold text-[#211f1b] transition hover:bg-[#e9d7ad]"><MessageCircle className="h-4 w-4" /> Enquire now</button>
-          </div>
-        </section>
-
-        <footer className="mt-6 flex flex-col gap-2 border-t border-[#d8c9b1] pt-4 text-center text-[10px] text-[#82796b] sm:flex-row sm:items-center sm:justify-between sm:text-left">
-          <span>© {new Date().getFullYear()} Metro Furniture · Dharmapuri, Tamil Nadu</span>
-          <Link href={`/product/${product.slug}`} className="inline-flex items-center justify-center gap-1 font-semibold text-[#856b3d] hover:underline">View full product details <ArrowRight className="h-3 w-3" /></Link>
+        <footer className="mt-6 flex flex-col gap-2 border-t border-[#ded0ba] pt-4 text-center text-[10px] text-[#857a68] sm:flex-row sm:items-center sm:justify-between sm:text-left">
+          <span>© {new Date().getFullYear()} {business.name} · Dharmapuri, Tamil Nadu</span>
+          <span>Thoughtful choices for everyday living.</span>
         </footer>
       </div>
 
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/30 bg-[#f8f5ef]/90 p-3 backdrop-blur-2xl sm:hidden">
-        <button type="button" onClick={() => setEnquiryOpen(true)} className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(120deg,#d9c28f,#b18e4c)] px-5 py-3.5 text-sm font-semibold text-[#211f1a] shadow-md"><MessageCircle className="h-4 w-4" /> Get exact price</button>
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#e2d5bf] bg-[#f8f4ec]/95 p-3 backdrop-blur-xl sm:hidden">
+        <div className="mx-auto flex max-w-lg gap-2">
+          <a href="#all-products" className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full border border-[#d9cbb5] bg-white px-4 text-xs font-semibold text-[#423725]">Explore pieces <ChevronRight className="h-4 w-4" /></a>
+          <button type="button" onClick={() => setEnquiryProduct(primaryProduct)} className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[linear-gradient(120deg,#e9d4a5,#c49a54)] px-4 text-xs font-bold text-[#211c13]"><MessageCircle className="h-4 w-4" /> Get a quote</button>
+        </div>
       </div>
 
-      <ProductEnquiryModal product={product} open={enquiryOpen} onClose={() => setEnquiryOpen(false)} source={`Facebook / Instagram Ads (${campaign})`} />
+      {quickViewProduct ? (
+        <ProductQuickView
+          product={quickViewProduct}
+          campaign={campaign}
+          onClose={() => setQuickViewProduct(null)}
+          onGetQuote={(selected) => {
+            setQuickViewProduct(null);
+            setEnquiryProduct(selected);
+          }}
+        />
+      ) : null}
+
+      <ProductEnquiryModal
+        product={enquiryProduct || primaryProduct}
+        open={Boolean(enquiryProduct)}
+        onClose={() => setEnquiryProduct(null)}
+        source={"Facebook / Instagram Ads (" + campaign + ")"}
+      />
     </div>
   );
 }
 
-function TrustTile({ icon: Icon, title, caption }) {
-  return <div className="rounded-2xl border border-white/80 bg-white/55 px-2 py-3 text-center shadow-sm backdrop-blur-xl sm:px-3 sm:py-4">
-    <Icon className="mx-auto h-4 w-4 text-[#a48144] sm:h-5 sm:w-5" />
-    <p className="mt-1.5 text-[10px] font-semibold text-[#38342c] sm:text-xs">{title}</p>
-    <p className="mt-0.5 text-[9px] leading-4 text-[#877e70] sm:text-[10px]">{caption}</p>
-  </div>;
-}
-
-function StepCard({ number, title, description }) {
-  return <div className="rounded-2xl border border-[#e8dece] bg-white/65 p-4 backdrop-blur-lg">
-    <span className="font-heading text-2xl text-[#ac8a4d]">{number}</span>
-    <h3 className="mt-1 text-xs font-semibold text-[#292720]">{title}</h3>
-    <p className="mt-1 text-[10px] leading-4 text-[#776f62]">{description}</p>
-  </div>;
+function ArrowDownRightIcon() {
+  return <ArrowUpRight className="h-5 w-5 rotate-45" />;
 }

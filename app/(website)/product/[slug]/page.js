@@ -39,14 +39,15 @@ export async function generateMetadata({ params }) {
   }
 
   const category = getCategoryById(product.category);
-  const localDesc = `${product.name} at Metro Furniture Dharmapuri — ${product.description} View in showroom on Salem Main Road or enquire on WhatsApp.`;
+  const localDesc = product.seoDescription || `${product.name} at Metro Furniture Dharmapuri — ${product.description} View in showroom on Salem Main Road or enquire on WhatsApp.`;
 
   return buildMetadata({
-    title: `${product.name} in Dharmapuri`,
+    title: product.seoTitle || `${product.name} in Dharmapuri | Metro Furniture`,
     description: localDesc.slice(0, 160),
     path: `/product/${product.slug}`,
-    keywords: getProductSeoTargets(product),
+    keywords: [...new Set([...(product.seoKeywords || []), ...getProductSeoTargets(product)])].slice(0, 20),
     ogImage: absoluteImage(product.image),
+    ogImageAlt: product.imageAlt || `${product.name} at Metro Furniture, Dharmapuri`,
   });
 }
 

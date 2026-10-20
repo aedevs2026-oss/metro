@@ -13,6 +13,7 @@ export default function ProductPageClient({ product, gallery }) {
       <ProductGallery
         images={gallery}
         name={product.name}
+        imageAlt={product.imageAlt}
         offer={product.offer}
         onViewInRoom={openRoomPreview}
       />

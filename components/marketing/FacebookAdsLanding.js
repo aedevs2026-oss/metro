@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import ProductEnquiryModal from "@/components/ProductEnquiryModal";
 import { business } from "@/data/business";
+import { getProductPromotion } from "@/lib/format";
 
 function fallbackFor(product) {
   const category = product?.category || "";
@@ -49,31 +50,9 @@ function getProductPrice(product) {
   return null;
 }
 
-// Facebook campaign offers apply only to products with a published numeric price.
-// The current catalogue price is the regular price; the campaign price is calculated
-// for this landing page only, leaving normal shop pricing unchanged.
+// Facebook Ads uses the same product promotion as the home, shop and detail pages.
 function getFacebookOffer(product) {
-  if (
-    !product ||
-    product.upcoming ||
-    product.onRequest ||
-    !Number.isFinite(product.price) ||
-    product.price <= 0
-  ) {
-    return null;
-  }
-
-  const numericId = Number(String(product.id || "").match(/\d+/)?.[0] || 0);
-  const targetDiscount = 20 + (numericId % 11);
-  const offerPrice = Math.round((product.price * (100 - targetDiscount) / 100) / 10) * 10;
-  const discountPercent = Math.round(((product.price - offerPrice) / product.price) * 100);
-
-  return {
-    originalPrice: product.price,
-    offerPrice,
-    discountPercent,
-    savings: product.price - offerPrice,
-  };
+  return getProductPromotion(product);
 }
 
 function swatchColorFor(color) {

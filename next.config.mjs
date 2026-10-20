@@ -4,6 +4,9 @@ const nextConfig = {
     root: process.cwd(),
   },
   images: {
+    // Serve the optimised, pre-sized local WebP/JPEG assets directly. This avoids
+    // production image-optimizer failures while preserving Next/Image layout and lazy loading.
+    unoptimized: true,
     qualities: [75, 90],
     remotePatterns: [
       {

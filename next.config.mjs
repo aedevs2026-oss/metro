@@ -35,6 +35,20 @@ const nextConfig = {
       { source: "/offers", destination: "/shop", permanent: true },
       { source: "/custom-design", destination: "/contact", permanent: true },
       { source: "/branches", destination: "/contact", permanent: true },
+      // Legacy product URLs after the refreshed sofa catalogue naming.
+      { source: "/product/dollar-corner", destination: "/product/zara-corner", permanent: true },
+      { source: "/product/cairo-sofa", destination: "/product/sagar-corner", permanent: true },
+      { source: "/product/stuart-sofa", destination: "/product/stuart-sofa-44999", permanent: true },
+      { source: "/product/dinesh-sofa", destination: "/product/samson-sofa", permanent: true },
+      { source: "/product/rolex-sofa", destination: "/product/stuart-sofa-44999", permanent: true },
+      { source: "/product/monaco-corner", destination: "/product/venus-sofa", permanent: true },
+      { source: "/product/sierra-sofa", destination: "/product/atlas-sofa", permanent: true },
+      { source: "/product/windsor-recliner-sofa", destination: "/product/kisan-sofa", permanent: true },
+      { source: "/product/oxford-corner", destination: "/product/metro-sofa", permanent: true },
+      { source: "/product/ruby-velvet-sofa", destination: "/product/stuart-sofa-43999", permanent: true },
+      { source: "/product/nova-corner", destination: "/product/unique-sofa", permanent: true },
+      { source: "/product/grand-bay-corner", destination: "/product/alaska-corner", permanent: true },
+      { source: "/product/onyx-leather-sofa", destination: "/product/rocker-sofa", permanent: true },
     ];
   },
 };

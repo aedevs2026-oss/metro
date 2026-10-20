@@ -25,7 +25,7 @@ export default function ShopProductCard({ product }) {
           <div className="product-image-canvas relative aspect-[4/3] overflow-hidden">
             <Image
               src={product.image}
-              alt={`${product.name} ${product.category} at Metro Furniture Dharmapuri`}
+              alt={product.imageAlt || `${product.name} ${product.category} at Metro Furniture Dharmapuri`}
               fill
               sizes="(max-width: 1024px) 50vw, 33vw"
               className="product-image-blend object-contain p-1.5 transition duration-700 group-hover:scale-[1.035] sm:p-2.5"

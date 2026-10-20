@@ -157,7 +157,7 @@ export default function CollectionsPage() {
                     fill
                     sizes="(max-width:639px) 50vw, (max-width:1023px) 50vw, 25vw"
                     className={`collections-category-image transition duration-700 ease-out group-hover:scale-[1.04] ${
-                      isProductImage ? "object-contain p-2.5 mix-blend-multiply sm:p-4" : "object-cover"
+                      isProductImage ? "object-cover p-0 mix-blend-multiply" : "object-cover"
                     }`}
                   />
                   <span className="absolute left-3 top-3 rounded-full border border-white/70 bg-white/80 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[.13em] text-[#6f542f] shadow-sm backdrop-blur-md sm:left-4 sm:top-4 sm:text-[10px]">

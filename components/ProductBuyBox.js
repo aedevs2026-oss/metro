@@ -21,6 +21,7 @@ import { branches } from "@/data/business";
 import { getColorOptions } from "@/lib/product-highlights";
 import { buildWhatsAppUrl, productEnquiryMessage } from "@/lib/whatsapp";
 import { colorToHex } from "@/data/shop";
+import { formatPrice, getProductPromotion } from "@/lib/format";
 
 function tagFromMaterial(material) {
   if (!material) return null;
@@ -63,35 +64,28 @@ function ProductPriceBlock({ product }) {
   }
 
   const unit = product.priceUnit === "set" ? "set" : "pc";
+  const promotion = getProductPromotion(product);
+  const currentPrice = promotion ? formatPrice(promotion.offerPrice) : product.priceLabel;
 
   return (
     <div className="product-price-card grid min-w-0 gap-4 p-4 sm:gap-5 sm:p-5 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-center xl:gap-6">
-      <div>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-accent-dark">
-          Catalogue Price
-        </p>
-        <div className="mt-2 flex flex-wrap items-baseline gap-x-2 gap-y-1">
-          <span className="font-heading text-3xl font-semibold tracking-tight text-foreground md:text-[2rem]">
-            {product.priceLabel}
-          </span>
-          <span className="text-sm font-medium text-body/80">/ {unit}</span>
-        </div>
-        {Number.isFinite(product.mrp) &&
-        Number.isFinite(product.price) &&
-        product.mrp > product.price &&
-        product.price > 0 ? (
-          <div className="mt-2 flex flex-wrap items-center gap-2">
-            <p className="text-base font-medium text-body/55 line-through">
-              MRP ₹{product.mrp.toLocaleString("en-IN")}
-            </p>
-            <span className="inline-flex items-center rounded-full bg-[#f4e4cb] px-2.5 py-1 text-xs font-bold text-[#86541d]">
-              {Math.round(((product.mrp - product.price) / product.mrp) * 100)}% OFF
+      <div className="min-w-0">
+        {promotion ? (
+          <div className="flex flex-wrap items-center gap-x-2.5 gap-y-2">
+            <span className="text-sm font-medium text-[#8b8173] line-through decoration-[#a77b45] sm:text-base">
+              {formatPrice(promotion.originalPrice)}
+            </span>
+            <span className="inline-flex items-center rounded-full bg-[#f4e4cb] px-2.5 py-1 text-[10px] font-bold text-[#86541d] sm:text-xs">
+              {promotion.discountPercent}% OFF
             </span>
           </div>
         ) : null}
-        {product.offer ? (
-          <span className="product-sale-badge mt-2">{product.offer}</span>
-        ) : null}
+        <div className="mt-2 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+          <span className="font-heading text-3xl font-semibold tracking-tight text-foreground md:text-[2rem]">
+            {currentPrice}
+          </span>
+          <span className="text-sm font-medium text-body/80">/ {unit}</span>
+        </div>
       </div>
 
       <ul className="grid min-w-0 gap-3 border-t border-accent/20 pt-4 xl:grid-cols-1 xl:border-l xl:border-t-0 xl:pl-6 xl:pt-0">

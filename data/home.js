@@ -90,7 +90,7 @@ export const signatureCollectionSection = {
 /** Homepage signature carousel: use the actual catalogue sofa products and their product-specific gallery images. */
 export function getHomeSignatureProducts(limit = 8) {
   return products
-    .filter((product) => /^mtc-\\d+$/.test(product.id) && !product.upcoming)
+    .filter((product) => /^mtc-\d+$/.test(product.id) && !product.upcoming)
     .slice(0, Math.max(1, limit))
     .map((product, index) => ({
       ...product,

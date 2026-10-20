@@ -39,9 +39,9 @@ export default function ProductGallery({
   if (!current) return null;
 
   return (
-    <div className="space-y-3 md:space-y-4">
+    <div className="min-w-0 space-y-3 sm:space-y-4">
       <div
-        className="product-gallery-canvas group relative aspect-[4/3] overflow-hidden rounded-[28px] border border-white/80 shadow-[0_18px_55px_rgba(30,25,17,.10)] md:aspect-[5/4]"
+        className="product-gallery-canvas group relative aspect-[4/3] min-w-0 overflow-hidden rounded-[18px] border border-white/80 shadow-[0_18px_55px_rgba(30,25,17,.10)] sm:rounded-[24px] md:aspect-[5/4] md:rounded-[28px]"
         onMouseEnter={() => setZooming(true)}
         onMouseLeave={() => setZooming(false)}
         onMouseMove={onMove}
@@ -98,7 +98,7 @@ export default function ProductGallery({
         ) : null}
       </div>
 
-      <ul className="flex gap-2 overflow-x-auto pb-1 no-scrollbar" aria-label="Product thumbnails">
+      <ul className="flex min-w-0 gap-2 overflow-x-auto pb-1 no-scrollbar" aria-label="Product thumbnails">
         {slides.map((image, index) => {
           const selected = index === active;
           return (
@@ -108,7 +108,7 @@ export default function ProductGallery({
                 onClick={() => setActive(index)}
                 aria-label={`Show image ${index + 1}`}
                 aria-current={selected ? "true" : undefined}
-                className={`relative block h-[4.25rem] w-[4.25rem] overflow-hidden rounded-xl border-2 transition md:h-[5rem] md:w-[5rem] ${
+                className={`relative block h-14 w-14 overflow-hidden rounded-xl border-2 transition sm:h-[4.25rem] sm:w-[4.25rem] md:h-[5rem] md:w-[5rem] ${
                   selected ? "border-accent shadow-md" : "border-[#e5d9c8] bg-white"
                 }`}
               >
@@ -122,7 +122,7 @@ export default function ProductGallery({
             type="button"
             onClick={onViewInRoom}
             aria-label="Open room preview"
-            className="relative flex h-[4.25rem] w-[4.25rem] items-center justify-center overflow-hidden rounded-md border-2 border-[#e5d9c8] bg-[#f3ebe0] md:h-[5rem] md:w-[5rem]"
+            className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-[#e5d9c8] bg-[#f3ebe0] sm:h-[4.25rem] sm:w-[4.25rem] md:h-[5rem] md:w-[5rem]"
           >
             <span className="absolute inset-0 bg-black/20" aria-hidden />
             <Play className="relative z-[1] h-6 w-6 fill-white text-white" aria-hidden />

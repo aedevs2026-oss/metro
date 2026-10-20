@@ -36,12 +36,44 @@ function galleryFor(product) {
   return [...new Set(list)].filter(Boolean).slice(0, 4);
 }
 
+function formatCurrency(value) {
+  if (!Number.isFinite(value) || value <= 0) return null;
+  return "₹" + Math.round(value).toLocaleString("en-IN");
+}
+
 function getProductPrice(product) {
   if (product?.priceLabel && !product?.onRequest) return product.priceLabel;
   if (Number.isFinite(product?.price) && !product?.onRequest) {
-    return "₹" + Number(product.price).toLocaleString("en-IN");
+    return formatCurrency(product.price);
   }
   return null;
+}
+
+// Facebook campaign offers apply only to products with a published numeric price.
+// The current catalogue price is the regular price; the campaign price is calculated
+// for this landing page only, leaving normal shop pricing unchanged.
+function getFacebookOffer(product) {
+  if (
+    !product ||
+    product.upcoming ||
+    product.onRequest ||
+    !Number.isFinite(product.price) ||
+    product.price <= 0
+  ) {
+    return null;
+  }
+
+  const numericId = Number(String(product.id || "").match(/\\d+/)?.[0] || 0);
+  const targetDiscount = 20 + (numericId % 11);
+  const offerPrice = Math.round((product.price * (100 - targetDiscount) / 100) / 100) * 100;
+  const discountPercent = Math.round(((product.price - offerPrice) / product.price) * 100);
+
+  return {
+    originalPrice: product.price,
+    offerPrice,
+    discountPercent,
+    savings: product.price - offerPrice,
+  };
 }
 
 function swatchColorFor(color) {
@@ -63,6 +95,7 @@ function swatchColorFor(color) {
 function ProductCard({ product, onQuickView }) {
   const [imageFailed, setImageFailed] = useState(false);
   const price = getProductPrice(product);
+  const offer = getFacebookOffer(product);
   const image = imageFailed ? fallbackFor(product) : product.image;
   const colorName = product.color || "Finish options on request";
 
@@ -135,12 +168,36 @@ function ProductCard({ product, onQuickView }) {
         <div className="mt-auto pt-3 sm:pt-4">
           <div className="mb-2 flex min-h-8 items-end justify-between gap-1.5 sm:mb-3">
             <div className="min-w-0">
-              <p className="text-[8px] font-semibold uppercase tracking-[.11em] text-[#92836a] sm:text-[9px] sm:tracking-[.13em]">
-                {price ? "Catalogue price" : "Personalised quote"}
-              </p>
-              <p className="mt-0.5 truncate font-heading text-[15px] font-semibold leading-tight text-[#29241d] sm:text-lg md:text-xl">
-                {price || "Ask us"}
-              </p>
+              {offer ? (
+                <>
+                  <p className="text-[8px] font-semibold uppercase tracking-[.11em] text-[#92836a] sm:text-[9px] sm:tracking-[.13em]">
+                    Facebook special price
+                  </p>
+                  <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
+                    <span className="text-[10px] font-medium text-[#8b8173] line-through decoration-[#a77b45] sm:text-xs">
+                      {formatCurrency(offer.originalPrice)}
+                    </span>
+                    <span className="rounded-full bg-[#f3e5cb] px-2 py-0.5 text-[8px] font-bold text-[#85551d] sm:text-[9px]">
+                      {offer.discountPercent}% OFF
+                    </span>
+                  </div>
+                  <p className="mt-0.5 truncate font-heading text-[17px] font-bold leading-tight text-[#29241d] sm:text-xl md:text-2xl">
+                    {formatCurrency(offer.offerPrice)}
+                  </p>
+                  <p className="mt-1 text-[9px] font-semibold text-[#8b672d] sm:text-[10px]">
+                    You save {formatCurrency(offer.savings)}
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="text-[8px] font-semibold uppercase tracking-[.11em] text-[#92836a] sm:text-[9px] sm:tracking-[.13em]">
+                    {price ? "Catalogue price" : "Personalised quote"}
+                  </p>
+                  <p className="mt-0.5 truncate font-heading text-[15px] font-semibold leading-tight text-[#29241d] sm:text-lg md:text-xl">
+                    {price || "Ask us"}
+                  </p>
+                </>
+              )}
             </div>
             <span className="mb-0.5 hidden shrink-0 text-[9px] text-[#8c806e] lg:block">No online payment</span>
           </div>
@@ -164,6 +221,7 @@ function ProductQuickView({ product, onClose, onGetQuote }) {
   const images = useMemo(() => galleryFor(product), [product]);
   const currentImage = imageFailed ? fallbackFor(product) : (images[active] || product.image);
   const price = getProductPrice(product);
+  const offer = getFacebookOffer(product);
 
   useEffect(() => {
     setActive(0);
@@ -282,14 +340,25 @@ function ProductQuickView({ product, onClose, onGetQuote }) {
 
           <div className="mt-5 rounded-[20px] border border-[#e6d9c4] bg-[linear-gradient(135deg,#fffdf7,#f8f0e2)] p-4 sm:p-5">
             <p className="text-[9px] font-bold uppercase tracking-[.17em] text-[#9a7a43]">
-              {price ? "Listed catalogue price" : "Made for your next home update"}
+              {offer ? "Exclusive Facebook offer" : price ? "Listed catalogue price" : "Made for your next home update"}
             </p>
-            <div className="mt-1 flex flex-wrap items-end justify-between gap-2">
-              <p className="font-heading text-2xl font-semibold text-[#29241d] sm:text-3xl">{price || "Request a quote"}</p>
-              {product.upcoming ? <span className="rounded-full border border-[#d8c5a1] bg-white/75 px-2.5 py-1 text-[9px] font-semibold text-[#79613a]">Availability on request</span> : null}
-            </div>
+            {offer ? (
+              <>
+                <div className="mt-2 flex flex-wrap items-center gap-2">
+                  <span className="text-sm font-medium text-[#8b8173] line-through decoration-[#a77b45]">{formatCurrency(offer.originalPrice)}</span>
+                  <span className="rounded-full bg-[#a66c27] px-2.5 py-1 text-[10px] font-bold text-white">{offer.discountPercent}% OFF</span>
+                </div>
+                <p className="mt-1 font-heading text-3xl font-bold text-[#29241d] sm:text-4xl">{formatCurrency(offer.offerPrice)}</p>
+                <p className="mt-1 text-xs font-semibold text-[#8a642b]">You save {formatCurrency(offer.savings)} on this Facebook offer.</p>
+              </>
+            ) : (
+              <div className="mt-1 flex flex-wrap items-end justify-between gap-2">
+                <p className="font-heading text-2xl font-semibold text-[#29241d] sm:text-3xl">{price || "Request a quote"}</p>
+                {product.upcoming ? <span className="rounded-full border border-[#d8c5a1] bg-white/75 px-2.5 py-1 text-[9px] font-semibold text-[#79613a]">Availability on request</span> : null}
+              </div>
+            )}
             <p className="mt-2 text-xs leading-5 text-[#7c7365]">
-              {price ? "Confirm current availability, delivery and finish options with our showroom team." : "Ask about availability, options and a personalised quote before you decide."}
+              {offer ? "Facebook campaign pricing applies to listed-price products. Confirm current availability, delivery and finish options with our showroom team." : price ? "Confirm current availability, delivery and finish options with our showroom team." : "Ask about availability, options and a personalised quote before you decide."}
             </p>
           </div>
 

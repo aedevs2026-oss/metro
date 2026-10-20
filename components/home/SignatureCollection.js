@@ -6,6 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { HOME_PHOTO_QUALITY } from "@/lib/home-images";
+import ProductCard from "@/components/ProductCard";
 
 const defaultSection = {
   eyebrow: "Our Premium Range",
@@ -39,50 +40,7 @@ export default function SignatureCollection({ products, section = defaultSection
 
   if (!products?.length) return null;
 
-  const ProductCard = ({ product }) => (
-    <article className="flex h-full min-w-0 flex-col overflow-hidden rounded-2xl bg-white p-2.5 text-foreground shadow-[0_16px_48px_rgba(0,0,0,0.25)] sm:p-3.5">
-      <Link
-        href={`/product/${product.slug}`}
-        className="product-image-canvas group relative block w-full aspect-[4/3] overflow-hidden rounded-xl text-left"
-        aria-label={`View ${product.name} product details`}
-      >
-        <Image
-          src={product.image}
-          alt={product.imageAlt || product.name}
-          fill
-          quality={HOME_PHOTO_QUALITY}
-          sizes="(max-width: 639px) 88vw, (max-width: 1023px) 68vw, 320px"
-          className="product-image-blend object-cover p-0 transition duration-500 group-hover:scale-[1.05]"
-        />
-        {product.showcaseFeatured ? (
-          <span className="absolute right-3 top-3 rounded-full bg-accent px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-primary-dark">
-            Best Seller
-          </span>
-        ) : product.offer ? (
-          <span className="absolute right-3 top-3 rounded-full bg-stone-600 px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
-            {product.offer}
-          </span>
-        ) : null}
-      </Link>
-      <div className="flex min-w-0 flex-1 flex-col px-1 pb-1 pt-3 sm:px-2 sm:pb-2 sm:pt-5">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-accent-dark">
-          {product.category}
-          {product.model ? ` · ${product.model}` : ""}
-        </p>
-        <h3 className="mt-1 break-words font-heading text-base font-semibold leading-snug text-foreground sm:text-lg">{product.name}</h3>
-        <p className="mt-2 line-clamp-2 flex-1 text-xs leading-relaxed text-body sm:text-sm">{product.tagline || product.material}</p>
-        {product.priceLabel && !product.onRequest ? (
-          <p className="mt-3 text-xs font-semibold text-foreground sm:text-sm">Price <span className="font-heading text-lg">{product.priceLabel}</span></p>
-        ) : null}
-        <Link
-          href={`/product/${product.slug}`}
-          className="btn-pill-primary mt-4 min-h-10 w-full justify-center text-center text-[11px] sm:text-sm"
-        >
-          View Product Details
-        </Link>
-      </div>
-    </article>
-  );
+
 
   const bgImage = section.backgroundImage;
 
@@ -142,7 +100,7 @@ export default function SignatureCollection({ products, section = defaultSection
                 {products.map((product) => (
                   <div
                     key={product.id}
-                    className="home-signature-slide min-w-0 flex-[0_0_88%] sm:flex-[0_0_72%] md:flex-[0_0_52%] lg:flex-[0_0_calc((100%-2.5rem)/3)]"
+                    className="home-signature-slide min-w-0 flex-[0_0_calc((100%-1rem)/2)] sm:flex-[0_0_calc((100%-1.25rem)/2)] lg:flex-[0_0_calc((100%-2.5rem)/3)]"
                   >
                     <ProductCard product={product} />
                   </div>

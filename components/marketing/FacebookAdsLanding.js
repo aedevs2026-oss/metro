@@ -123,17 +123,6 @@ function ProductCard({ product, onQuickView }) {
             }}
           />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#221b12]/20 to-transparent sm:h-20" />
-          <div className="absolute left-2.5 top-2.5 flex max-w-[calc(100%-3.5rem)] flex-wrap gap-1 sm:left-3.5 sm:top-3.5">
-            {product.upcoming ? (
-              <span className="rounded-full border border-white/70 bg-[#29251e]/85 px-2 py-1 text-[8px] font-bold uppercase tracking-[.1em] text-white backdrop-blur-md sm:px-2.5 sm:text-[9px]">
-                Coming soon
-              </span>
-            ) : product.featured ? (
-              <span className="inline-flex items-center gap-1 rounded-full border border-[#e4d0a1]/70 bg-[#fff9eb]/95 px-2 py-1 text-[8px] font-bold uppercase tracking-[.09em] text-[#7b5a26] shadow-sm sm:px-2.5 sm:text-[9px] sm:tracking-[.12em]">
-                <Sparkles className="h-2.5 w-2.5 sm:h-3 sm:w-3" /> Featured
-              </span>
-            ) : null}
-          </div>
           <span className="absolute bottom-2.5 right-2.5 flex h-8 w-8 items-center justify-center rounded-full border border-white/80 bg-white/95 text-[#372c1c] shadow-md transition group-hover:bg-[#25221d] group-hover:text-[#efd9a8] sm:bottom-3 sm:right-3 sm:h-9 sm:w-9">
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
           </span>
@@ -141,74 +130,32 @@ function ProductCard({ product, onQuickView }) {
       </button>
 
       <div className="flex min-w-0 flex-1 flex-col p-3 sm:p-3.5 md:p-4 lg:p-5">
-        <p className="truncate text-[8px] font-bold uppercase tracking-[.14em] text-[#9b793d] sm:text-[9px] md:text-[10px]">
-          {product.category}
-        </p>
         <button
           type="button"
           onClick={() => onQuickView(product)}
-          className="mt-1.5 line-clamp-2 min-h-[2.4em] text-left font-heading text-[15px] font-semibold leading-[1.18] tracking-[-.015em] text-[#27231d] transition hover:text-[#94703a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b88c45] sm:text-base md:mt-2 md:text-lg"
+          className="line-clamp-2 min-h-[2.4em] text-left font-heading text-[15px] font-semibold leading-[1.18] tracking-[-.015em] text-[#27231d] transition hover:text-[#94703a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b88c45] sm:text-base md:text-lg"
         >
           {product.name}
         </button>
-        <p className="mt-1.5 line-clamp-2 min-h-[2.7em] text-[10px] leading-[1.5] text-[#756d61] sm:mt-2 sm:text-[11px] sm:leading-[1.6] md:text-xs">
-          {product.tagline || product.description || "Explore this piece and ask our showroom team about available options."}
-        </p>
 
-        <div className="mt-2.5 flex min-w-0 items-center gap-2 sm:mt-3">
-          <span
-            className="h-4 w-4 shrink-0 rounded-full border border-black/10 shadow-[inset_0_0_0_1px_rgba(255,255,255,.35)] sm:h-[18px] sm:w-[18px]"
-            style={{ backgroundColor: product.color ? swatchColorFor(product.color) : "#d7c9b2" }}
-            aria-label={"Listed colour: " + colorName}
-            title={colorName}
-          />
-          <span className="min-w-0 truncate text-[10px] font-medium text-[#6f6556] sm:text-[11px]">{colorName}</span>
-        </div>
-
-        <div className="mt-auto pt-3 sm:pt-4">
-          <div className="mb-2 flex min-h-8 items-end justify-between gap-1.5 sm:mb-3">
-            <div className="min-w-0">
-              {offer ? (
-                <>
-                  <p className="text-[8px] font-semibold uppercase tracking-[.11em] text-[#92836a] sm:text-[9px] sm:tracking-[.13em]">
-                    Facebook special price
-                  </p>
-                  <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
-                    <span className="text-[10px] font-medium text-[#8b8173] line-through decoration-[#a77b45] sm:text-xs">
-                      {formatCurrency(offer.originalPrice)}
-                    </span>
-                    <span className="rounded-full bg-[#f3e5cb] px-2 py-0.5 text-[8px] font-bold text-[#85551d] sm:text-[9px]">
-                      {offer.discountPercent}% OFF
-                    </span>
-                  </div>
-                  <p className="mt-0.5 truncate font-heading text-[17px] font-bold leading-tight text-[#29241d] sm:text-xl md:text-2xl">
-                    {formatCurrency(offer.offerPrice)}
-                  </p>
-                  <p className="mt-1 text-[9px] font-semibold text-[#8b672d] sm:text-[10px]">
-                    You save {formatCurrency(offer.savings)}
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p className="text-[8px] font-semibold uppercase tracking-[.11em] text-[#92836a] sm:text-[9px] sm:tracking-[.13em]">
-                    {price ? "Catalogue price" : "Personalised quote"}
-                  </p>
-                  <p className="mt-0.5 truncate font-heading text-[15px] font-semibold leading-tight text-[#29241d] sm:text-lg md:text-xl">
-                    {price || "Ask us"}
-                  </p>
-                </>
-              )}
+        <div className="mt-auto border-t border-[#eadfce] pt-3 sm:pt-4">
+          {offer ? (
+            <div className="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1.5">
+              <span className="text-[11px] font-medium text-[#8b8173] line-through decoration-[#a77b45] sm:text-xs md:text-sm">
+                {formatCurrency(offer.originalPrice)}
+              </span>
+              <span className="rounded-full bg-[#f3e5cb] px-2 py-1 text-[9px] font-bold text-[#85551d] sm:text-[10px]">
+                {offer.discountPercent}% OFF
+              </span>
+              <p className="w-full truncate font-heading text-xl font-bold leading-tight text-[#29241d] sm:text-2xl md:text-[1.65rem]">
+                {formatCurrency(offer.offerPrice)}
+              </p>
             </div>
-            <span className="mb-0.5 hidden shrink-0 text-[9px] text-[#8c806e] lg:block">No online payment</span>
-          </div>
-          <button
-            type="button"
-            onClick={() => onQuickView(product)}
-            className="inline-flex min-h-10 w-full items-center justify-center gap-1.5 rounded-full border border-[#c6a56a]/65 bg-[linear-gradient(120deg,#ecd8a9,#c8a15c_58%,#ad813e)] px-2.5 py-2.5 text-[10px] font-bold text-[#231d14] shadow-[0_5px_13px_rgba(168,124,54,.16)] transition hover:shadow-[0_9px_20px_rgba(168,124,54,.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9e7335] focus-visible:ring-offset-2 sm:min-h-11 sm:gap-2 sm:px-3 sm:text-[11px] md:text-xs"
-          >
-            <span>View Details</span>
-            <ArrowRight className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" aria-hidden="true" />
-          </button>
+          ) : (
+            <p className="truncate font-heading text-lg font-semibold leading-tight text-[#29241d] sm:text-xl">
+              {price || "Ask us"}
+            </p>
+          )}
         </div>
       </div>
     </article>

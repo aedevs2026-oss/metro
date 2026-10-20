@@ -63,7 +63,7 @@ function getFacebookOffer(product) {
     return null;
   }
 
-  const numericId = Number(String(product.id || "").match(/\\d+/)?.[0] || 0);
+  const numericId = Number(String(product.id || "").match(/\d+/)?.[0] || 0);
   const targetDiscount = 20 + (numericId % 11);
   const offerPrice = Math.round((product.price * (100 - targetDiscount) / 100) / 100) * 100;
   const discountPercent = Math.round(((product.price - offerPrice) / product.price) * 100);

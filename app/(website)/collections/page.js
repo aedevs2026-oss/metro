@@ -35,7 +35,7 @@ export const metadata = buildMetadata({
 const categoryCopy = {
   "Corner Sofas": "Statement-making comfort for generous living spaces.",
   "Sofas": "Everyday seating, elevated with considered details.",
-  "Dining": "Gather around pieces made for shared moments.",
+  "Dining": "Ask our showroom about current dining sets, finishes and confirmed pricing.",
   "Chairs": "Supportive, sculptural seating for work and home.",
   "Mattresses": "Comfort-focused choices for a more restful night.",
   "Chandeliers": "Sculptural lighting to give a room its signature.",
@@ -167,7 +167,7 @@ export default function CollectionsPage() {
 
                 <div className="flex flex-1 flex-col bg-gradient-to-b from-[#fffdf8] to-[#f5ead9] p-3.5 sm:p-4">
                   <p className="text-[9px] font-semibold uppercase tracking-[.16em] text-[#98703a] sm:text-[10px]">
-                    {count} {count === 1 ? "listed product" : "listed products"}
+                    {count > 0 ? `${count} listed ${count === 1 ? "product" : "products"}` : "Showroom enquiry"}
                   </p>
                   <div className="mt-1.5 flex items-start justify-between gap-2">
                     <h3 className="min-w-0 font-heading text-[1.05rem] font-semibold leading-tight text-[#261d13] sm:text-xl">

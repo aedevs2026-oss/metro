@@ -66,7 +66,7 @@ export default function FacebookAdsLanding({ product, campaign = "facebook-insta
             <div className="group relative overflow-hidden rounded-[28px] border border-white/80 bg-[linear-gradient(145deg,rgba(255,255,255,.92),rgba(237,227,211,.9))] p-2 shadow-[0_22px_65px_rgba(46,35,20,.12)] backdrop-blur-xl sm:rounded-[34px] sm:p-3">
               <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] bg-[#eee6da] sm:rounded-[27px]">
                 {!imageFailed && image ? (
-                  <Image src={image} alt={`${product.name} furniture at Metro Furniture Dharmapuri`} fill priority sizes="(max-width: 1024px) 100vw, 58vw" className="object-contain p-3 transition duration-700 group-hover:scale-[1.02] sm:p-7" onError={() => setImageFailed(true)} />
+                  <Image src={image} alt={product.imageAlt || `${product.name} furniture at Metro Furniture Dharmapuri`} fill priority sizes="(max-width: 1024px) 100vw, 58vw" className="object-contain p-3 transition duration-700 group-hover:scale-[1.02] sm:p-7" onError={() => setImageFailed(true)} />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center p-8 text-center text-sm text-[#71644f]">Product photo available from our showroom team</div>
                 )}

@@ -7,13 +7,13 @@
     "category": "Corner Sofas",
     "tagline": "Warm ivory upholstered L-shaped corner sofa for a contemporary living room",
     "price": 47999,
-    "mrp": 47999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹47,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Warm ivory",
-    "configuration": "Corner / L-shape seating",
-    "upholstery": "Warm ivory premium upholstery with plush seat and back cushions",
+    "configuration": "Corner sofa; confirm exact layout with the showroom",
+    "upholstery": "Warm ivory upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-101/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-101/01-primary.webp",
@@ -25,30 +25,29 @@
     "onRequest": false,
     "featured": true,
     "offer": null,
-    "description": "Rolex Corner — a warm ivory upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Rolex Corner at Metro Furniture, Dharmapuri, listed at ₹47,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Warm ivory premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Warm ivory upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "Corner / L-shape seating"
+        "label": "Product",
+        "value": "Rolex Corner"
       },
       {
-        "label": "Upholstery",
-        "value": "Warm ivory premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Corner Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Warm ivory"
+      },
+      {
+        "label": "Price",
+        "value": "₹47,999"
       }
     ],
     "tags": [
@@ -64,9 +63,9 @@
       "mtc-111"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-101_Alaska_Corner.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-101/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Rolex Corner corner sofa in warm ivory at Metro Furniture, Dharmapuri",
+    "imageAlt": "Rolex Corner at Metro Furniture, Dharmapuri",
     "seoTitle": "Rolex Corner ₹47,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Rolex Corner corner sofa priced at ₹47,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -88,13 +87,13 @@
     "category": "Corner Sofas",
     "tagline": "Cool grey upholstered L-shaped corner sofa for a contemporary living room",
     "price": 45999,
-    "mrp": 45999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹45,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Cool grey",
-    "configuration": "Corner / L-shape seating",
-    "upholstery": "Cool grey premium upholstery with plush seat and back cushions",
+    "configuration": "Corner sofa; confirm exact layout with the showroom",
+    "upholstery": "Cool grey upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-102/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-102/01-primary.webp",
@@ -106,30 +105,29 @@
     "onRequest": false,
     "featured": true,
     "offer": null,
-    "description": "Zara Corner — a cool grey upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Zara Corner at Metro Furniture, Dharmapuri, listed at ₹45,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Cool grey premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Cool grey upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "Corner / L-shape seating"
+        "label": "Product",
+        "value": "Zara Corner"
       },
       {
-        "label": "Upholstery",
-        "value": "Cool grey premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Corner Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Cool grey"
+      },
+      {
+        "label": "Price",
+        "value": "₹45,999"
       }
     ],
     "tags": [
@@ -145,9 +143,9 @@
       "mtc-111"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-102_Dollar_Corner.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-102/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Zara Corner corner sofa in cool grey at Metro Furniture, Dharmapuri",
+    "imageAlt": "Zara Corner at Metro Furniture, Dharmapuri",
     "seoTitle": "Zara Corner ₹45,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Zara Corner corner sofa priced at ₹45,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -169,13 +167,13 @@
     "category": "Corner Sofas",
     "tagline": "Sand beige upholstered L-shaped corner sofa for a contemporary living room",
     "price": 37999,
-    "mrp": 37999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹37,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Sand beige",
-    "configuration": "Corner / L-shape seating",
-    "upholstery": "Sand beige premium upholstery with plush seat and back cushions",
+    "configuration": "Corner sofa; confirm exact layout with the showroom",
+    "upholstery": "Sand beige upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-103/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-103/01-primary.webp",
@@ -187,30 +185,29 @@
     "onRequest": false,
     "featured": true,
     "offer": null,
-    "description": "Venus Corner — a sand beige upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Venus Corner at Metro Furniture, Dharmapuri, listed at ₹37,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Sand beige premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Sand beige upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "Corner / L-shape seating"
+        "label": "Product",
+        "value": "Venus Corner"
       },
       {
-        "label": "Upholstery",
-        "value": "Sand beige premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Corner Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Sand beige"
+      },
+      {
+        "label": "Price",
+        "value": "₹37,999"
       }
     ],
     "tags": [
@@ -226,9 +223,9 @@
       "mtc-111"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-103_Sagar_Corner.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-103/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Venus Corner corner sofa in sand beige at Metro Furniture, Dharmapuri",
+    "imageAlt": "Venus Corner at Metro Furniture, Dharmapuri",
     "seoTitle": "Venus Corner ₹37,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Venus Corner corner sofa priced at ₹37,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -250,13 +247,13 @@
     "category": "Corner Sofas",
     "tagline": "Deep blue upholstered L-shaped corner sofa for a contemporary living room",
     "price": 46999,
-    "mrp": 46999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹46,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Deep blue",
-    "configuration": "Corner / L-shape seating",
-    "upholstery": "Deep blue premium upholstery with plush seat and back cushions",
+    "configuration": "Corner sofa; confirm exact layout with the showroom",
+    "upholstery": "Deep blue upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-104/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-104/01-primary.webp",
@@ -268,30 +265,29 @@
     "onRequest": false,
     "featured": true,
     "offer": null,
-    "description": "Sagar Corner — a deep blue upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Sagar Corner at Metro Furniture, Dharmapuri, listed at ₹46,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Deep blue premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Deep blue upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "Corner / L-shape seating"
+        "label": "Product",
+        "value": "Sagar Corner"
       },
       {
-        "label": "Upholstery",
-        "value": "Deep blue premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Corner Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Deep blue"
+      },
+      {
+        "label": "Price",
+        "value": "₹46,999"
       }
     ],
     "tags": [
@@ -307,9 +303,9 @@
       "mtc-109"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-104_Cairo_Sofa.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-104/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Sagar Corner corner sofa in deep blue at Metro Furniture, Dharmapuri",
+    "imageAlt": "Sagar Corner at Metro Furniture, Dharmapuri",
     "seoTitle": "Sagar Corner ₹46,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Sagar Corner corner sofa priced at ₹46,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -331,13 +327,13 @@
     "category": "Corner Sofas",
     "tagline": "Taupe brown upholstered L-shaped corner sofa for a contemporary living room",
     "price": 62999,
-    "mrp": 62999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹62,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Taupe brown",
-    "configuration": "Corner / L-shape seating",
-    "upholstery": "Taupe brown premium upholstery with plush seat and back cushions",
+    "configuration": "Corner sofa; confirm exact layout with the showroom",
+    "upholstery": "Taupe brown upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-105/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-105/01-primary.webp",
@@ -349,30 +345,29 @@
     "onRequest": false,
     "featured": true,
     "offer": null,
-    "description": "Sagar Corner with Recliner — a taupe brown upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Sagar Corner with Recliner at Metro Furniture, Dharmapuri, listed at ₹62,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Taupe brown premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Taupe brown upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "Corner / L-shape seating"
+        "label": "Product",
+        "value": "Sagar Corner with Recliner"
       },
       {
-        "label": "Upholstery",
-        "value": "Taupe brown premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Corner Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Taupe brown"
+      },
+      {
+        "label": "Price",
+        "value": "₹62,999"
       }
     ],
     "tags": [
@@ -388,9 +383,9 @@
       "mtc-109"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-105_Stuart_Sofa.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-105/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Sagar Corner with Recliner corner sofa in taupe brown at Metro Furniture, Dharmapuri",
+    "imageAlt": "Sagar Corner with Recliner at Metro Furniture, Dharmapuri",
     "seoTitle": "Sagar Corner with Recliner ₹62,999 | Metro Furniture Dharmapuri",
     "seoDescription": "Sagar Corner with Recliner corner sofa priced at ₹62,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -412,13 +407,13 @@
     "category": "Sofas",
     "tagline": "Cream upholstered sofa for a contemporary living room",
     "price": 42999,
-    "mrp": 42999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹42,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Cream",
-    "configuration": "3-seater sofa",
-    "upholstery": "Cream premium upholstery with plush seat and back cushions",
+    "configuration": "Sofa; confirm seating configuration with the showroom",
+    "upholstery": "Cream upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-106/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-106/01-primary.webp",
@@ -430,30 +425,29 @@
     "onRequest": false,
     "featured": false,
     "offer": null,
-    "description": "Samson Sofa — a cream upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Samson Sofa at Metro Furniture, Dharmapuri, listed at ₹42,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Cream premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Cream upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-seater sofa"
+        "label": "Product",
+        "value": "Samson Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Cream premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Cream"
+      },
+      {
+        "label": "Price",
+        "value": "₹42,999"
       }
     ],
     "tags": [
@@ -469,9 +463,9 @@
       "mtc-109"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-106_Dinesh_Sofa.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-106/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Samson Sofa sofa in cream at Metro Furniture, Dharmapuri",
+    "imageAlt": "Samson Sofa at Metro Furniture, Dharmapuri",
     "seoTitle": "Samson Sofa ₹42,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Samson Sofa sofa priced at ₹42,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -493,13 +487,13 @@
     "category": "Sofas",
     "tagline": "Light grey upholstered sofa for a contemporary living room",
     "price": 44999,
-    "mrp": 44999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹44,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Light grey",
-    "configuration": "3-seater sofa",
-    "upholstery": "Light grey premium upholstery with plush seat and back cushions",
+    "configuration": "Sofa; confirm seating configuration with the showroom",
+    "upholstery": "Light grey upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-107/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-107/01-primary.webp",
@@ -511,30 +505,29 @@
     "onRequest": false,
     "featured": false,
     "offer": null,
-    "description": "Stuart Sofa — a light grey upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Stuart Sofa at Metro Furniture, Dharmapuri, listed at ₹44,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Light grey premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Light grey upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-seater sofa"
+        "label": "Product",
+        "value": "Stuart Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Light grey premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Light grey"
+      },
+      {
+        "label": "Price",
+        "value": "₹44,999"
       }
     ],
     "tags": [
@@ -550,9 +543,9 @@
       "mtc-109"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-107_Rolex_Sofa.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-107/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Stuart Sofa sofa in light grey at Metro Furniture, Dharmapuri",
+    "imageAlt": "Stuart Sofa at Metro Furniture, Dharmapuri",
     "seoTitle": "Stuart Sofa ₹44,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Stuart Sofa sofa priced at ₹44,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -574,13 +567,13 @@
     "category": "Sofas",
     "tagline": "Ivory upholstered sofa for a contemporary living room",
     "price": 29999,
-    "mrp": 29999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹29,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Ivory",
-    "configuration": "3-seater sofa",
-    "upholstery": "Ivory premium upholstery with plush seat and back cushions",
+    "configuration": "Sofa; confirm seating configuration with the showroom",
+    "upholstery": "Ivory upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-108/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-108/01-primary.webp",
@@ -592,30 +585,29 @@
     "onRequest": false,
     "featured": false,
     "offer": null,
-    "description": "Venus Sofa — a ivory upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Venus Sofa at Metro Furniture, Dharmapuri, listed at ₹29,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Ivory premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Ivory upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-seater sofa"
+        "label": "Product",
+        "value": "Venus Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Ivory premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Ivory"
+      },
+      {
+        "label": "Price",
+        "value": "₹29,999"
       }
     ],
     "tags": [
@@ -631,9 +623,9 @@
       "mtc-111"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-108_Monaco_Corner.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-108/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Venus Sofa sofa in ivory at Metro Furniture, Dharmapuri",
+    "imageAlt": "Venus Sofa at Metro Furniture, Dharmapuri",
     "seoTitle": "Venus Sofa ₹29,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Venus Sofa sofa priced at ₹29,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -655,13 +647,13 @@
     "category": "Sofas",
     "tagline": "Deep blue upholstered sofa for a contemporary living room",
     "price": 42999,
-    "mrp": 42999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹42,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Deep blue",
-    "configuration": "3-seater sofa",
-    "upholstery": "Deep blue premium upholstery with plush seat and back cushions",
+    "configuration": "Sofa; confirm seating configuration with the showroom",
+    "upholstery": "Deep blue upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-109/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-109/01-primary.webp",
@@ -673,30 +665,29 @@
     "onRequest": false,
     "featured": false,
     "offer": null,
-    "description": "Atlas Sofa — a deep blue upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Atlas Sofa at Metro Furniture, Dharmapuri, listed at ₹42,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Deep blue premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Deep blue upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-seater sofa"
+        "label": "Product",
+        "value": "Atlas Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Deep blue premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Deep blue"
+      },
+      {
+        "label": "Price",
+        "value": "₹42,999"
       }
     ],
     "tags": [
@@ -712,9 +703,9 @@
       "mtc-107"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-109_Sierra_Sofa.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-109/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Atlas Sofa sofa in deep blue at Metro Furniture, Dharmapuri",
+    "imageAlt": "Atlas Sofa at Metro Furniture, Dharmapuri",
     "seoTitle": "Atlas Sofa ₹42,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Atlas Sofa sofa priced at ₹42,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -736,13 +727,13 @@
     "category": "Sofas",
     "tagline": "Sage green upholstered sofa for a contemporary living room",
     "price": 41999,
-    "mrp": 41999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹41,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Sage green",
-    "configuration": "3-seater sofa",
-    "upholstery": "Sage green premium upholstery with plush seat and back cushions",
+    "configuration": "Sofa; confirm seating configuration with the showroom",
+    "upholstery": "Sage green upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-110/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-110/01-primary.webp",
@@ -754,30 +745,29 @@
     "onRequest": false,
     "featured": false,
     "offer": null,
-    "description": "Kisan Sofa — a sage green upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Kisan Sofa at Metro Furniture, Dharmapuri, listed at ₹41,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Sage green premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Sage green upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-seater sofa"
+        "label": "Product",
+        "value": "Kisan Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Sage green premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Sage green"
+      },
+      {
+        "label": "Price",
+        "value": "₹41,999"
       }
     ],
     "tags": [
@@ -793,9 +783,9 @@
       "mtc-107"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-110_Windsor_Recliner_Sofa.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-110/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Kisan Sofa sofa in sage green at Metro Furniture, Dharmapuri",
+    "imageAlt": "Kisan Sofa at Metro Furniture, Dharmapuri",
     "seoTitle": "Kisan Sofa ₹41,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Kisan Sofa sofa priced at ₹41,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -817,13 +807,13 @@
     "category": "Sofas",
     "tagline": "Camel tan upholstered sofa for a contemporary living room",
     "price": 43999,
-    "mrp": 43999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹43,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Camel tan",
-    "configuration": "3-seater sofa",
-    "upholstery": "Camel tan premium upholstery with plush seat and back cushions",
+    "configuration": "Sofa; confirm seating configuration with the showroom",
+    "upholstery": "Camel tan upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-111/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-111/01-primary.webp",
@@ -835,30 +825,29 @@
     "onRequest": false,
     "featured": false,
     "offer": null,
-    "description": "Metro Sofa — a camel tan upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Metro Sofa at Metro Furniture, Dharmapuri, listed at ₹43,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Camel tan premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Camel tan upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-seater sofa"
+        "label": "Product",
+        "value": "Metro Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Camel tan premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Camel tan"
+      },
+      {
+        "label": "Price",
+        "value": "₹43,999"
       }
     ],
     "tags": [
@@ -874,9 +863,9 @@
       "mtc-108"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-111_Oxford_Corner.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-111/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Metro Sofa sofa in camel tan at Metro Furniture, Dharmapuri",
+    "imageAlt": "Metro Sofa at Metro Furniture, Dharmapuri",
     "seoTitle": "Metro Sofa ₹43,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Metro Sofa sofa priced at ₹43,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -898,13 +887,13 @@
     "category": "Sofas",
     "tagline": "Grey upholstered sofa for a contemporary living room",
     "price": 43999,
-    "mrp": 43999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹43,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Grey",
-    "configuration": "3-seater sofa",
-    "upholstery": "Grey premium upholstery with plush seat and back cushions",
+    "configuration": "Sofa; confirm seating configuration with the showroom",
+    "upholstery": "Grey upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-112/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-112/01-primary.webp",
@@ -916,30 +905,29 @@
     "onRequest": false,
     "featured": false,
     "offer": null,
-    "description": "Stuart Sofa — a grey upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Stuart Sofa at Metro Furniture, Dharmapuri, listed at ₹43,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Grey premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Grey upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-seater sofa"
+        "label": "Product",
+        "value": "Stuart Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Grey premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Grey"
+      },
+      {
+        "label": "Price",
+        "value": "₹43,999"
       }
     ],
     "tags": [
@@ -955,9 +943,9 @@
       "mtc-107"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-112_Ruby_Velvet_Sofa.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-112/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Stuart Sofa sofa in grey at Metro Furniture, Dharmapuri",
+    "imageAlt": "Stuart Sofa at Metro Furniture, Dharmapuri",
     "seoTitle": "Stuart Sofa ₹43,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Stuart Sofa sofa priced at ₹43,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -979,13 +967,13 @@
     "category": "Sofas",
     "tagline": "Teal upholstered sofa for a contemporary living room",
     "price": 46999,
-    "mrp": 46999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹46,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Teal",
-    "configuration": "3-seater sofa",
-    "upholstery": "Teal premium upholstery with plush seat and back cushions",
+    "configuration": "Sofa; confirm seating configuration with the showroom",
+    "upholstery": "Teal upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-113/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-113/01-primary.webp",
@@ -997,30 +985,29 @@
     "onRequest": false,
     "featured": false,
     "offer": null,
-    "description": "Unique Sofa — a teal upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Unique Sofa at Metro Furniture, Dharmapuri, listed at ₹46,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Teal premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Teal upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-seater sofa"
+        "label": "Product",
+        "value": "Unique Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Teal premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Teal"
+      },
+      {
+        "label": "Price",
+        "value": "₹46,999"
       }
     ],
     "tags": [
@@ -1036,9 +1023,9 @@
       "mtc-108"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-113_Nova_Corner.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-113/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Unique Sofa sofa in teal at Metro Furniture, Dharmapuri",
+    "imageAlt": "Unique Sofa at Metro Furniture, Dharmapuri",
     "seoTitle": "Unique Sofa ₹46,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Unique Sofa sofa priced at ₹46,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -1060,13 +1047,13 @@
     "category": "Corner Sofas",
     "tagline": "Warm ivory upholstered L-shaped corner sofa for a contemporary living room",
     "price": 45999,
-    "mrp": 45999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹45,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Warm ivory",
-    "configuration": "Corner / L-shape seating",
-    "upholstery": "Warm ivory premium upholstery with plush seat and back cushions",
+    "configuration": "Corner sofa; confirm exact layout with the showroom",
+    "upholstery": "Warm ivory upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-114/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-114/01-primary.webp",
@@ -1078,30 +1065,29 @@
     "onRequest": false,
     "featured": true,
     "offer": null,
-    "description": "Alaska Corner — a warm ivory upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Alaska Corner at Metro Furniture, Dharmapuri, listed at ₹45,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Warm ivory premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Warm ivory upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "Corner / L-shape seating"
+        "label": "Product",
+        "value": "Alaska Corner"
       },
       {
-        "label": "Upholstery",
-        "value": "Warm ivory premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Corner Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Warm ivory"
+      },
+      {
+        "label": "Price",
+        "value": "₹45,999"
       }
     ],
     "tags": [
@@ -1117,9 +1103,9 @@
       "mtc-108"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-114_Grand_Bay_Corner.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-114/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Alaska Corner corner sofa in warm ivory at Metro Furniture, Dharmapuri",
+    "imageAlt": "Alaska Corner at Metro Furniture, Dharmapuri",
     "seoTitle": "Alaska Corner ₹45,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Alaska Corner corner sofa priced at ₹45,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -1141,13 +1127,13 @@
     "category": "Sofas",
     "tagline": "Charcoal grey upholstered sofa for a contemporary living room",
     "price": 49999,
-    "mrp": 49999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹49,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Charcoal grey",
-    "configuration": "3-seater sofa",
-    "upholstery": "Charcoal grey premium upholstery with plush seat and back cushions",
+    "configuration": "Sofa; confirm seating configuration with the showroom",
+    "upholstery": "Charcoal grey upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-115/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-115/01-primary.webp",
@@ -1159,30 +1145,29 @@
     "onRequest": false,
     "featured": false,
     "offer": null,
-    "description": "Rocker Sofa — a charcoal grey upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Rocker Sofa at Metro Furniture, Dharmapuri, listed at ₹49,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Charcoal grey premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Charcoal grey upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-seater sofa"
+        "label": "Product",
+        "value": "Rocker Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Charcoal grey premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Charcoal grey"
+      },
+      {
+        "label": "Price",
+        "value": "₹49,999"
       }
     ],
     "tags": [
@@ -1198,9 +1183,9 @@
       "mtc-107"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-115_Onyx_Leather_Sofa.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-115/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Rocker Sofa sofa in charcoal grey at Metro Furniture, Dharmapuri",
+    "imageAlt": "Rocker Sofa at Metro Furniture, Dharmapuri",
     "seoTitle": "Rocker Sofa ₹49,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Rocker Sofa sofa priced at ₹49,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [
@@ -1222,13 +1207,13 @@
     "category": "Sofas",
     "tagline": "Dusty rose upholstered sofa for a contemporary living room",
     "price": 41999,
-    "mrp": 41999,
+    "mrp": null,
     "priceUnit": "set",
     "priceLabel": "₹41,999",
-    "material": "Engineered hardwood frame with premium upholstered cushioning",
+    "material": "Material options to be confirmed with the showroom",
     "color": "Dusty rose",
-    "configuration": "3-seater sofa",
-    "upholstery": "Dusty rose premium upholstery with plush seat and back cushions",
+    "configuration": "Sofa; confirm seating configuration with the showroom",
+    "upholstery": "Dusty rose upholstery; please confirm fabric options with the showroom",
     "image": "/Metro_Product_Galleries/mtc-116/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-116/01-primary.webp",
@@ -1240,30 +1225,29 @@
     "onRequest": false,
     "featured": false,
     "offer": null,
-    "description": "Lilly Sofa — a dusty rose upholstered furniture piece designed for comfortable everyday living. Available to view at Metro Furniture, Dharmapuri.",
+    "description": "Lilly Sofa at Metro Furniture, Dharmapuri, listed at ₹41,999. Enquire with the showroom to confirm current availability, dimensions, materials, upholstery options and delivery.",
     "features": [
-      "Comfortable cushioned seating",
-      "Dusty rose premium upholstery",
-      "Engineered hardwood frame",
-      "Contemporary living-room styling",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Dusty rose upholstery appearance",
+      "Ask the showroom to confirm available sizes and configurations",
+      "Ask about upholstery, material and finish options",
+      "Showroom enquiry and delivery details available on request"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-seater sofa"
+        "label": "Product",
+        "value": "Lilly Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Dusty rose premium upholstery with plush seat and back cushions"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
-        "label": "Frame",
-        "value": "Engineered hardwood frame"
-      },
-      {
-        "label": "Colour",
+        "label": "Displayed colour",
         "value": "Dusty rose"
+      },
+      {
+        "label": "Price",
+        "value": "₹41,999"
       }
     ],
     "tags": [
@@ -1278,9 +1262,9 @@
       "mtc-112"
     ],
     "source": "catalog",
-    "originalImage": "/Metro_Product_Images/MTC-115_Onyx_Leather_Sofa.jpg",
+    "originalImage": "/Metro_Product_Galleries/mtc-116/01-primary.webp",
     "galleryGeneratedFromOriginal": true,
-    "imageAlt": "Lilly Sofa sofa in dusty rose at Metro Furniture, Dharmapuri",
+    "imageAlt": "Lilly Sofa at Metro Furniture, Dharmapuri",
     "seoTitle": "Lilly Sofa ₹41,999 in Dharmapuri | Metro Furniture",
     "seoDescription": "Lilly Sofa sofa priced at ₹41,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
     "seoKeywords": [

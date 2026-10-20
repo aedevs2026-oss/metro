@@ -76,10 +76,18 @@ function ProductPriceBlock({ product }) {
           </span>
           <span className="text-sm font-medium text-body/80">/ {unit}</span>
         </div>
-        {product.mrp ? (
-          <p className="mt-1 text-base font-medium text-body/55 line-through">
-            MRP ₹{product.mrp.toLocaleString("en-IN")}
-          </p>
+        {Number.isFinite(product.mrp) &&
+        Number.isFinite(product.price) &&
+        product.mrp > product.price &&
+        product.price > 0 ? (
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <p className="text-base font-medium text-body/55 line-through">
+              MRP ₹{product.mrp.toLocaleString("en-IN")}
+            </p>
+            <span className="inline-flex items-center rounded-full bg-[#f4e4cb] px-2.5 py-1 text-xs font-bold text-[#86541d]">
+              {Math.round(((product.mrp - product.price) / product.mrp) * 100)}% OFF
+            </span>
+          </div>
         ) : null}
         {product.offer ? (
           <span className="product-sale-badge mt-2">{product.offer}</span>

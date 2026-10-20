@@ -116,9 +116,13 @@ export default function ShopCollectionLayout({
 
   const filters = useMemo(() => readFilters(searchParams), [searchParams]);
 
+  // The unfiltered /shop route must always start from the complete catalogue.
+  // Use the category/search result only when the user intentionally narrowed the list.
+  const sourceProducts = categoryId || query ? products : (allProducts || products);
+
   const filtered = useMemo(
-    () => applyShopFilters(products, filters),
-    [products, filters]
+    () => applyShopFilters(sourceProducts, filters),
+    [sourceProducts, filters]
   );
   const sorted = useMemo(() => sortProducts(filtered, sort), [filtered, sort]);
   const totalPages = Math.max(1, Math.ceil(sorted.length / PAGE_SIZE));
@@ -135,7 +139,7 @@ export default function ShopCollectionLayout({
   return (
     <div className="grid min-w-0 grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[280px_minmax(0,1fr)]">
       <ShopFilters
-        products={products}
+        products={sourceProducts}
         allProducts={allProducts}
         categoryId={categoryId}
       />

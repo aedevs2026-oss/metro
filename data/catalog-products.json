@@ -1,19 +1,19 @@
 [
   {
     "id": "mtc-101",
-    "slug": "alaska-corner",
+    "slug": "rolex-corner",
     "model": "MTC-101",
-    "name": "Alaska Corner",
+    "name": "Rolex Corner",
     "category": "Corner Sofas",
-    "tagline": "Contemporary L-shape corner sofa with built-in storage consoles",
-    "price": 38999,
-    "mrp": 52990,
+    "tagline": "Warm ivory corner sofa for a contemporary living room",
+    "price": 47999,
+    "mrp": 47999,
     "priceUnit": "set",
-    "priceLabel": "₹38,999",
-    "material": "Engineered hardwood frame, tapered metal legs",
-    "color": "Teal",
-    "configuration": "6-Seater L-Shape Corner (3+2+1 modular)",
-    "upholstery": "Premium teal velvet-finish fabric, channel tufted backrests",
+    "priceLabel": "₹47,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Warm ivory",
+    "configuration": "Corner / L-shape seating",
+    "upholstery": "Warm ivory upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-101/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-101/01-primary.webp",
@@ -24,39 +24,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": true,
-    "offer": "26% OFF",
-    "description": "Contemporary L-shape corner sofa with built-in storage consoles. 6-Seater L-Shape Corner (3+2+1 modular). Premium teal velvet-finish fabric, channel tufted backrests.",
+    "offer": null,
+    "description": "Rolex Corner in warm ivory upholstery, available from Metro Furniture in Dharmapuri for ₹47,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "6-Seater L-Shape Corner (3+2+1 modular)",
-      "Premium teal velvet-finish fabric, channel tufted backrests",
-      "Engineered hardwood frame, tapered metal legs",
-      "Fold-down side consoles with drawer storage",
-      "Built-in USB charging port",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Warm ivory upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "6-Seater L-Shape Corner (3+2+1 modular)"
+        "label": "Product",
+        "value": "Rolex Corner"
       },
       {
-        "label": "Upholstery",
-        "value": "Premium teal velvet-finish fabric, channel tufted backrests"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Engineered hardwood frame, tapered metal legs"
+        "label": "Category",
+        "value": "Corner Sofas"
       },
       {
         "label": "Colour",
-        "value": "Teal"
+        "value": "Warm ivory"
+      },
+      {
+        "label": "Price",
+        "value": "₹47,999"
       }
     ],
     "tags": [
+      "corner sofa",
       "corner sofas",
-      "teal",
-      "sofa",
-      "furniture"
+      "warm ivory",
+      "rolex corner",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-102",
@@ -66,23 +66,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-101_Alaska_Corner.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Rolex Corner corner sofa in warm ivory at Metro Furniture, Dharmapuri",
+    "seoTitle": "Rolex Corner ₹47,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Rolex Corner corner sofa priced at ₹47,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Rolex Corner in Dharmapuri",
+      "Rolex Corner price",
+      "Rolex Corner price in Dharmapuri",
+      "Corner Sofas Dharmapuri",
+      "Warm ivory corner sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-102",
-    "slug": "dollar-corner",
+    "slug": "zara-corner",
     "model": "MTC-102",
-    "name": "Dollar Corner",
+    "name": "Zara Corner",
     "category": "Corner Sofas",
-    "tagline": "Classic Chesterfield-style tufted corner sofa",
-    "price": 33499,
-    "mrp": 47990,
+    "tagline": "Cool grey corner sofa for a contemporary living room",
+    "price": 45999,
+    "mrp": 45999,
     "priceUnit": "set",
-    "priceLabel": "₹33,499",
-    "material": "Solid wood trim armrests, wooden block legs",
-    "color": "Caramel Brown",
-    "configuration": "6-Seater L-Shape Corner",
-    "upholstery": "Caramel brown suede-touch fabric, deep button tufting",
+    "priceLabel": "₹45,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Cool grey",
+    "configuration": "Corner / L-shape seating",
+    "upholstery": "Cool grey upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-102/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-102/01-primary.webp",
@@ -93,39 +106,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": true,
-    "offer": "30% OFF",
-    "description": "Classic Chesterfield-style tufted corner sofa. 6-Seater L-Shape Corner. Caramel brown suede-touch fabric, deep button tufting.",
+    "offer": null,
+    "description": "Zara Corner in cool grey upholstery, available from Metro Furniture in Dharmapuri for ₹45,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "6-Seater L-Shape Corner",
-      "Caramel brown suede-touch fabric, deep button tufting",
-      "Solid wood trim armrests, wooden block legs",
-      "Adjustable pillow headrests",
-      "Box-cushion seating for extra depth",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Cool grey upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "6-Seater L-Shape Corner"
+        "label": "Product",
+        "value": "Zara Corner"
       },
       {
-        "label": "Upholstery",
-        "value": "Caramel brown suede-touch fabric, deep button tufting"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Solid wood trim armrests, wooden block legs"
+        "label": "Category",
+        "value": "Corner Sofas"
       },
       {
         "label": "Colour",
-        "value": "Caramel Brown"
+        "value": "Cool grey"
+      },
+      {
+        "label": "Price",
+        "value": "₹45,999"
       }
     ],
     "tags": [
+      "corner sofa",
       "corner sofas",
-      "caramel brown",
-      "sofa",
-      "furniture"
+      "cool grey",
+      "zara corner",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-101",
@@ -135,23 +148,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-102_Dollar_Corner.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Zara Corner corner sofa in cool grey at Metro Furniture, Dharmapuri",
+    "seoTitle": "Zara Corner ₹45,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Zara Corner corner sofa priced at ₹45,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Zara Corner in Dharmapuri",
+      "Zara Corner price",
+      "Zara Corner price in Dharmapuri",
+      "Corner Sofas Dharmapuri",
+      "Cool grey corner sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-103",
-    "slug": "sagar-corner",
+    "slug": "venus-corner",
     "model": "MTC-103",
-    "name": "Sagar Corner",
+    "name": "Venus Corner",
     "category": "Corner Sofas",
-    "tagline": "Reclining corner sofa in rich wine upholstery",
-    "price": 39999,
-    "mrp": 54990,
+    "tagline": "Sand beige corner sofa for a contemporary living room",
+    "price": 37999,
+    "mrp": 37999,
     "priceUnit": "set",
-    "priceLabel": "₹39,999",
-    "material": "Reinforced steel recliner mechanism, engineered wood base",
-    "color": "Wine Red",
-    "configuration": "6-Seater L-Shape Corner with 2 manual recliners",
-    "upholstery": "Wine-red textured fabric, stitched panel backrests",
+    "priceLabel": "₹37,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Sand beige",
+    "configuration": "Corner / L-shape seating",
+    "upholstery": "Sand beige upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-103/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-103/01-primary.webp",
@@ -162,39 +188,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": true,
-    "offer": "27% OFF",
-    "description": "Reclining corner sofa in rich wine upholstery. 6-Seater L-Shape Corner with 2 manual recliners. Wine-red textured fabric, stitched panel backrests.",
+    "offer": null,
+    "description": "Venus Corner in sand beige upholstery, available from Metro Furniture in Dharmapuri for ₹37,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "6-Seater L-Shape Corner with 2 manual recliners",
-      "Wine-red textured fabric, stitched panel backrests",
-      "Reinforced steel recliner mechanism, engineered wood base",
-      "Dual pull-out footrests",
-      "Deep-cushion tufted seating",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Sand beige upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "6-Seater L-Shape Corner with 2 manual recliners"
+        "label": "Product",
+        "value": "Venus Corner"
       },
       {
-        "label": "Upholstery",
-        "value": "Wine-red textured fabric, stitched panel backrests"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Reinforced steel recliner mechanism, engineered wood base"
+        "label": "Category",
+        "value": "Corner Sofas"
       },
       {
         "label": "Colour",
-        "value": "Wine Red"
+        "value": "Sand beige"
+      },
+      {
+        "label": "Price",
+        "value": "₹37,999"
       }
     ],
     "tags": [
+      "corner sofa",
       "corner sofas",
-      "wine red",
-      "sofa",
-      "furniture"
+      "sand beige",
+      "venus corner",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-101",
@@ -204,23 +230,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-103_Sagar_Corner.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Venus Corner corner sofa in sand beige at Metro Furniture, Dharmapuri",
+    "seoTitle": "Venus Corner ₹37,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Venus Corner corner sofa priced at ₹37,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Venus Corner in Dharmapuri",
+      "Venus Corner price",
+      "Venus Corner price in Dharmapuri",
+      "Corner Sofas Dharmapuri",
+      "Sand beige corner sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-104",
-    "slug": "cairo-sofa",
+    "slug": "sagar-corner",
     "model": "MTC-104",
-    "name": "Cairo Sofa",
-    "category": "Sofas",
-    "tagline": "Diamond-quilted 3+1+1 sofa set with polished wood arms",
-    "price": 31999,
-    "mrp": 44990,
+    "name": "Sagar Corner",
+    "category": "Corner Sofas",
+    "tagline": "Deep blue corner sofa for a contemporary living room",
+    "price": 46999,
+    "mrp": 46999,
     "priceUnit": "set",
-    "priceLabel": "₹31,999",
-    "material": "Glossy walnut-finish wooden armrests, block legs",
-    "color": "Taupe Brown",
-    "configuration": "3-Seater + 2 Single Recliners (5-Seater set)",
-    "upholstery": "Taupe-brown fabric with diamond quilted backrests",
+    "priceLabel": "₹46,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Deep blue",
+    "configuration": "Corner / L-shape seating",
+    "upholstery": "Deep blue upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-104/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-104/01-primary.webp",
@@ -231,39 +270,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": true,
-    "offer": "29% OFF",
-    "description": "Diamond-quilted 3+1+1 sofa set with polished wood arms. 3-Seater + 2 Single Recliners (5-Seater set). Taupe-brown fabric with diamond quilted backrests.",
+    "offer": null,
+    "description": "Sagar Corner in deep blue upholstery, available from Metro Furniture in Dharmapuri for ₹46,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "3-Seater + 2 Single Recliners (5-Seater set)",
-      "Taupe-brown fabric with diamond quilted backrests",
-      "Glossy walnut-finish wooden armrests, block legs",
-      "Matching armchair pair",
-      "Quilted cushion detailing",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Deep blue upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-Seater + 2 Single Recliners (5-Seater set)"
+        "label": "Product",
+        "value": "Sagar Corner"
       },
       {
-        "label": "Upholstery",
-        "value": "Taupe-brown fabric with diamond quilted backrests"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Glossy walnut-finish wooden armrests, block legs"
+        "label": "Category",
+        "value": "Corner Sofas"
       },
       {
         "label": "Colour",
-        "value": "Taupe Brown"
+        "value": "Deep blue"
+      },
+      {
+        "label": "Price",
+        "value": "₹46,999"
       }
     ],
     "tags": [
-      "sofas",
-      "taupe brown",
-      "sofa",
-      "furniture"
+      "corner sofa",
+      "corner sofas",
+      "deep blue",
+      "sagar corner",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-105",
@@ -273,23 +312,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-104_Cairo_Sofa.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Sagar Corner corner sofa in deep blue at Metro Furniture, Dharmapuri",
+    "seoTitle": "Sagar Corner ₹46,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Sagar Corner corner sofa priced at ₹46,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Sagar Corner in Dharmapuri",
+      "Sagar Corner price",
+      "Sagar Corner price in Dharmapuri",
+      "Corner Sofas Dharmapuri",
+      "Deep blue corner sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-105",
-    "slug": "stuart-sofa",
+    "slug": "sagar-corner-with-recliner",
     "model": "MTC-105",
-    "name": "Stuart Sofa",
-    "category": "Sofas",
-    "tagline": "Soft-blush recliner sofa set for a warm, elegant living room",
-    "price": 29999,
-    "mrp": 41990,
+    "name": "Sagar Corner with Recliner",
+    "category": "Corner Sofas",
+    "tagline": "Taupe brown corner sofa for a contemporary living room",
+    "price": 62999,
+    "mrp": 62999,
     "priceUnit": "set",
-    "priceLabel": "₹29,999",
-    "material": "Wooden armrest trim, manual recliner mechanism",
-    "color": "Dusty Rose",
-    "configuration": "3-Seater + 2 Single Recliners (5-Seater set)",
-    "upholstery": "Dusty rose fabric, box-tufted seat and back cushions",
+    "priceLabel": "₹62,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Taupe brown",
+    "configuration": "Corner / L-shape seating",
+    "upholstery": "Taupe brown upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-105/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-105/01-primary.webp",
@@ -300,39 +352,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": true,
-    "offer": "29% OFF",
-    "description": "Soft-blush recliner sofa set for a warm, elegant living room. 3-Seater + 2 Single Recliners (5-Seater set). Dusty rose fabric, box-tufted seat and back cushions.",
+    "offer": null,
+    "description": "Sagar Corner with Recliner in taupe brown upholstery, available from Metro Furniture in Dharmapuri for ₹62,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "3-Seater + 2 Single Recliners (5-Seater set)",
-      "Dusty rose fabric, box-tufted seat and back cushions",
-      "Wooden armrest trim, manual recliner mechanism",
-      "Extendable footrests on both armchairs",
-      "Plush pillow-top arms",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Taupe brown upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-Seater + 2 Single Recliners (5-Seater set)"
+        "label": "Product",
+        "value": "Sagar Corner with Recliner"
       },
       {
-        "label": "Upholstery",
-        "value": "Dusty rose fabric, box-tufted seat and back cushions"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Wooden armrest trim, manual recliner mechanism"
+        "label": "Category",
+        "value": "Corner Sofas"
       },
       {
         "label": "Colour",
-        "value": "Dusty Rose"
+        "value": "Taupe brown"
+      },
+      {
+        "label": "Price",
+        "value": "₹62,999"
       }
     ],
     "tags": [
-      "sofas",
-      "dusty rose",
-      "sofa",
-      "furniture"
+      "corner sofa",
+      "corner sofas",
+      "taupe brown",
+      "sagar corner with recliner",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-104",
@@ -342,23 +394,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-105_Stuart_Sofa.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Sagar Corner with Recliner corner sofa in taupe brown at Metro Furniture, Dharmapuri",
+    "seoTitle": "Sagar Corner with Recliner ₹62,999 | Metro Furniture Dharmapuri",
+    "seoDescription": "Sagar Corner with Recliner corner sofa priced at ₹62,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Sagar Corner with Recliner in Dharmapuri",
+      "Sagar Corner with Recliner price",
+      "Sagar Corner with Recliner price in Dharmapuri",
+      "Corner Sofas Dharmapuri",
+      "Taupe brown corner sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-106",
-    "slug": "dinesh-sofa",
+    "slug": "samson-sofa",
     "model": "MTC-106",
-    "name": "Dinesh Sofa",
+    "name": "Samson Sofa",
     "category": "Sofas",
-    "tagline": "Everyday-comfort sofa set with contrast stitching",
-    "price": 27499,
-    "mrp": 38990,
+    "tagline": "Cream sofa for a contemporary living room",
+    "price": 42999,
+    "mrp": 42999,
     "priceUnit": "set",
-    "priceLabel": "₹27,499",
-    "material": "Dark walnut base trim, sturdy engineered wood frame",
-    "color": "Camel Tan",
-    "configuration": "3-Seater + 2 Single Recliners (5-Seater set)",
-    "upholstery": "Camel-tan fabric with box-tufted cushions, contrast topstitch",
+    "priceLabel": "₹42,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Cream",
+    "configuration": "Sofa seating",
+    "upholstery": "Cream upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-106/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-106/01-primary.webp",
@@ -369,39 +434,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": false,
-    "offer": "29% OFF",
-    "description": "Everyday-comfort sofa set with contrast stitching. 3-Seater + 2 Single Recliners (5-Seater set). Camel-tan fabric with box-tufted cushions, contrast topstitch.",
+    "offer": null,
+    "description": "Samson Sofa in cream upholstery, available from Metro Furniture in Dharmapuri for ₹42,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "3-Seater + 2 Single Recliners (5-Seater set)",
-      "Camel-tan fabric with box-tufted cushions, contrast topstitch",
-      "Dark walnut base trim, sturdy engineered wood frame",
-      "Bolster armrest cushions",
-      "Medium-firm foam seating",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Cream upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-Seater + 2 Single Recliners (5-Seater set)"
+        "label": "Product",
+        "value": "Samson Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Camel-tan fabric with box-tufted cushions, contrast topstitch"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Dark walnut base trim, sturdy engineered wood frame"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
         "label": "Colour",
-        "value": "Camel Tan"
+        "value": "Cream"
+      },
+      {
+        "label": "Price",
+        "value": "₹42,999"
       }
     ],
     "tags": [
-      "sofas",
-      "camel tan",
       "sofa",
-      "furniture"
+      "sofas",
+      "cream",
+      "samson sofa",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-104",
@@ -411,23 +476,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-106_Dinesh_Sofa.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Samson Sofa sofa in cream at Metro Furniture, Dharmapuri",
+    "seoTitle": "Samson Sofa ₹42,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Samson Sofa sofa priced at ₹42,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Samson Sofa in Dharmapuri",
+      "Samson Sofa price",
+      "Samson Sofa price in Dharmapuri",
+      "Sofas Dharmapuri",
+      "Cream sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-107",
-    "slug": "rolex-sofa",
+    "slug": "stuart-sofa-44999",
     "model": "MTC-107",
-    "name": "Rolex Sofa",
+    "name": "Stuart Sofa",
     "category": "Sofas",
-    "tagline": "Petrol-blue channel-tufted sofa set, statement centrepiece",
-    "price": 28999,
-    "mrp": 40990,
+    "tagline": "Light grey sofa for a contemporary living room",
+    "price": 44999,
+    "mrp": 44999,
     "priceUnit": "set",
-    "priceLabel": "₹28,999",
-    "material": "Compact block legs, engineered wood frame",
-    "color": "Deep Teal",
-    "configuration": "3-Seater + 2 Single Recliners (5-Seater set)",
-    "upholstery": "Deep teal fabric, vertical channel tufting on back and seat",
+    "priceLabel": "₹44,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Light grey",
+    "configuration": "Sofa seating",
+    "upholstery": "Light grey upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-107/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-107/01-primary.webp",
@@ -438,39 +516,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": false,
-    "offer": "29% OFF",
-    "description": "Petrol-blue channel-tufted sofa set, statement centrepiece. 3-Seater + 2 Single Recliners (5-Seater set). Deep teal fabric, vertical channel tufting on back and seat.",
+    "offer": null,
+    "description": "Stuart Sofa in light grey upholstery, available from Metro Furniture in Dharmapuri for ₹44,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "3-Seater + 2 Single Recliners (5-Seater set)",
-      "Deep teal fabric, vertical channel tufting on back and seat",
-      "Compact block legs, engineered wood frame",
-      "Rolled bolster arms",
-      "Tailored piping along seams",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Light grey upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-Seater + 2 Single Recliners (5-Seater set)"
+        "label": "Product",
+        "value": "Stuart Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Deep teal fabric, vertical channel tufting on back and seat"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Compact block legs, engineered wood frame"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
         "label": "Colour",
-        "value": "Deep Teal"
+        "value": "Light grey"
+      },
+      {
+        "label": "Price",
+        "value": "₹44,999"
       }
     ],
     "tags": [
-      "sofas",
-      "deep teal",
       "sofa",
-      "furniture"
+      "sofas",
+      "light grey",
+      "stuart sofa",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-104",
@@ -480,23 +558,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-107_Rolex_Sofa.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Stuart Sofa sofa in light grey at Metro Furniture, Dharmapuri",
+    "seoTitle": "Stuart Sofa ₹44,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Stuart Sofa sofa priced at ₹44,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Stuart Sofa in Dharmapuri",
+      "Stuart Sofa price",
+      "Stuart Sofa price in Dharmapuri",
+      "Sofas Dharmapuri",
+      "Light grey sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-108",
-    "slug": "monaco-corner",
+    "slug": "venus-sofa",
     "model": "MTC-108",
-    "name": "Monaco Corner",
-    "category": "Corner Sofas",
-    "tagline": "Deep-tufted wine velvet L-shape corner with gold-band accents",
-    "price": 35499,
-    "mrp": 49990,
+    "name": "Venus Sofa",
+    "category": "Sofas",
+    "tagline": "Ivory sofa for a contemporary living room",
+    "price": 29999,
+    "mrp": 29999,
     "priceUnit": "set",
-    "priceLabel": "₹35,499",
-    "material": "Engineered wood frame, block legs",
-    "color": "Wine Velvet",
-    "configuration": "6-Seater L-Shape Corner",
-    "upholstery": "Wine velvet fabric, diamond-stitched backrests",
+    "priceLabel": "₹29,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Ivory",
+    "configuration": "Sofa seating",
+    "upholstery": "Ivory upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-108/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-108/01-primary.webp",
@@ -507,38 +598,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": false,
-    "offer": "29% OFF",
-    "description": "Deep-tufted wine velvet L-shape corner with gold-band accents. 6-Seater L-Shape Corner. Wine velvet fabric, diamond-stitched backrests.",
+    "offer": null,
+    "description": "Venus Sofa in ivory upholstery, available from Metro Furniture in Dharmapuri for ₹29,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "6-Seater L-Shape Corner",
-      "Wine velvet fabric, diamond-stitched backrests",
-      "Engineered wood frame, block legs",
-      "Gold-tone metallic accent band on bolster cushions",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Ivory upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "6-Seater L-Shape Corner"
+        "label": "Product",
+        "value": "Venus Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Wine velvet fabric, diamond-stitched backrests"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Engineered wood frame, block legs"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
         "label": "Colour",
-        "value": "Wine Velvet"
+        "value": "Ivory"
+      },
+      {
+        "label": "Price",
+        "value": "₹29,999"
       }
     ],
     "tags": [
-      "corner sofas",
-      "wine velvet",
       "sofa",
-      "furniture"
+      "sofas",
+      "ivory",
+      "venus sofa",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-101",
@@ -548,23 +640,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-108_Monaco_Corner.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Venus Sofa sofa in ivory at Metro Furniture, Dharmapuri",
+    "seoTitle": "Venus Sofa ₹29,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Venus Sofa sofa priced at ₹29,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Venus Sofa in Dharmapuri",
+      "Venus Sofa price",
+      "Venus Sofa price in Dharmapuri",
+      "Sofas Dharmapuri",
+      "Ivory sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-109",
-    "slug": "sierra-sofa",
+    "slug": "atlas-sofa",
     "model": "MTC-109",
-    "name": "Sierra Sofa",
+    "name": "Atlas Sofa",
     "category": "Sofas",
-    "tagline": "Warm beige sofa set with glossy wood armrest trim",
-    "price": 27999,
-    "mrp": 39990,
+    "tagline": "Deep blue sofa for a contemporary living room",
+    "price": 42999,
+    "mrp": 42999,
     "priceUnit": "set",
-    "priceLabel": "₹27,999",
-    "material": "Polished wood armrest trim, block legs",
-    "color": "Warm Beige",
-    "configuration": "3-Seater + 2 Single Recliners (5-Seater set)",
-    "upholstery": "Warm beige fabric, box-tufted cushions",
+    "priceLabel": "₹42,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Deep blue",
+    "configuration": "Sofa seating",
+    "upholstery": "Deep blue upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-109/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-109/01-primary.webp",
@@ -575,39 +680,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": false,
-    "offer": "30% OFF",
-    "description": "Warm beige sofa set with glossy wood armrest trim. 3-Seater + 2 Single Recliners (5-Seater set). Warm beige fabric, box-tufted cushions.",
+    "offer": null,
+    "description": "Atlas Sofa in deep blue upholstery, available from Metro Furniture in Dharmapuri for ₹42,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "3-Seater + 2 Single Recliners (5-Seater set)",
-      "Warm beige fabric, box-tufted cushions",
-      "Polished wood armrest trim, block legs",
-      "Matching armchair pair",
-      "Soft pillow-top backrests",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Deep blue upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-Seater + 2 Single Recliners (5-Seater set)"
+        "label": "Product",
+        "value": "Atlas Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Warm beige fabric, box-tufted cushions"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Polished wood armrest trim, block legs"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
         "label": "Colour",
-        "value": "Warm Beige"
+        "value": "Deep blue"
+      },
+      {
+        "label": "Price",
+        "value": "₹42,999"
       }
     ],
     "tags": [
-      "sofas",
-      "warm beige",
       "sofa",
-      "furniture"
+      "sofas",
+      "deep blue",
+      "atlas sofa",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-104",
@@ -617,23 +722,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-109_Sierra_Sofa.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Atlas Sofa sofa in deep blue at Metro Furniture, Dharmapuri",
+    "seoTitle": "Atlas Sofa ₹42,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Atlas Sofa sofa priced at ₹42,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Atlas Sofa in Dharmapuri",
+      "Atlas Sofa price",
+      "Atlas Sofa price in Dharmapuri",
+      "Sofas Dharmapuri",
+      "Deep blue sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-110",
-    "slug": "windsor-recliner-sofa",
+    "slug": "kisan-sofa",
     "model": "MTC-110",
-    "name": "Windsor Recliner Sofa",
+    "name": "Kisan Sofa",
     "category": "Sofas",
-    "tagline": "Rugged suede-finish reclining sofa with channel-stitched cushions",
-    "price": 25999,
-    "mrp": 36990,
+    "tagline": "Sage green sofa for a contemporary living room",
+    "price": 41999,
+    "mrp": 41999,
     "priceUnit": "set",
-    "priceLabel": "₹25,999",
-    "material": "Reinforced recliner mechanism, engineered wood base",
-    "color": "Warm Brown",
-    "configuration": "3-Seater manual recliner sofa",
-    "upholstery": "Warm brown suede-touch fabric, channel-stitched back and seat",
+    "priceLabel": "₹41,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Sage green",
+    "configuration": "Sofa seating",
+    "upholstery": "Sage green upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-110/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-110/01-primary.webp",
@@ -644,39 +762,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": false,
-    "offer": "30% OFF",
-    "description": "Rugged suede-finish reclining sofa with channel-stitched cushions. 3-Seater manual recliner sofa. Warm brown suede-touch fabric, channel-stitched back and seat.",
+    "offer": null,
+    "description": "Kisan Sofa in sage green upholstery, available from Metro Furniture in Dharmapuri for ₹41,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "3-Seater manual recliner sofa",
-      "Warm brown suede-touch fabric, channel-stitched back and seat",
-      "Reinforced recliner mechanism, engineered wood base",
-      "Extendable footrest",
-      "Contrast top-stitching along seams",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Sage green upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-Seater manual recliner sofa"
+        "label": "Product",
+        "value": "Kisan Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Warm brown suede-touch fabric, channel-stitched back and seat"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Reinforced recliner mechanism, engineered wood base"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
         "label": "Colour",
-        "value": "Warm Brown"
+        "value": "Sage green"
+      },
+      {
+        "label": "Price",
+        "value": "₹41,999"
       }
     ],
     "tags": [
-      "sofas",
-      "warm brown",
       "sofa",
-      "furniture"
+      "sofas",
+      "sage green",
+      "kisan sofa",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-104",
@@ -686,23 +804,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-110_Windsor_Recliner_Sofa.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Kisan Sofa sofa in sage green at Metro Furniture, Dharmapuri",
+    "seoTitle": "Kisan Sofa ₹41,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Kisan Sofa sofa priced at ₹41,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Kisan Sofa in Dharmapuri",
+      "Kisan Sofa price",
+      "Kisan Sofa price in Dharmapuri",
+      "Sofas Dharmapuri",
+      "Sage green sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-111",
-    "slug": "oxford-corner",
+    "slug": "metro-sofa",
     "model": "MTC-111",
-    "name": "Oxford Corner",
-    "category": "Corner Sofas",
-    "tagline": "Button-tufted grey corner sofa with built-in wooden tray tables",
-    "price": 36999,
-    "mrp": 51990,
+    "name": "Metro Sofa",
+    "category": "Sofas",
+    "tagline": "Camel tan sofa for a contemporary living room",
+    "price": 43999,
+    "mrp": 43999,
     "priceUnit": "set",
-    "priceLabel": "₹36,999",
-    "material": "Polished wood tray-table armrests, block legs",
-    "color": "Grey",
-    "configuration": "6-Seater L-Shape Corner",
-    "upholstery": "Grey fabric, deep button tufting throughout",
+    "priceLabel": "₹43,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Camel tan",
+    "configuration": "Sofa seating",
+    "upholstery": "Camel tan upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-111/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-111/01-primary.webp",
@@ -713,38 +844,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": false,
-    "offer": "29% OFF",
-    "description": "Button-tufted grey corner sofa with built-in wooden tray tables. 6-Seater L-Shape Corner. Grey fabric, deep button tufting throughout.",
+    "offer": null,
+    "description": "Metro Sofa in camel tan upholstery, available from Metro Furniture in Dharmapuri for ₹43,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "6-Seater L-Shape Corner",
-      "Grey fabric, deep button tufting throughout",
-      "Polished wood tray-table armrests, block legs",
-      "Built-in flip-out wooden side tables on both arms",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Camel tan upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "6-Seater L-Shape Corner"
+        "label": "Product",
+        "value": "Metro Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Grey fabric, deep button tufting throughout"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Polished wood tray-table armrests, block legs"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
         "label": "Colour",
-        "value": "Grey"
+        "value": "Camel tan"
+      },
+      {
+        "label": "Price",
+        "value": "₹43,999"
       }
     ],
     "tags": [
-      "corner sofas",
-      "grey",
       "sofa",
-      "furniture"
+      "sofas",
+      "camel tan",
+      "metro sofa",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-101",
@@ -754,23 +886,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-111_Oxford_Corner.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Metro Sofa sofa in camel tan at Metro Furniture, Dharmapuri",
+    "seoTitle": "Metro Sofa ₹43,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Metro Sofa sofa priced at ₹43,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Metro Sofa in Dharmapuri",
+      "Metro Sofa price",
+      "Metro Sofa price in Dharmapuri",
+      "Sofas Dharmapuri",
+      "Camel tan sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-112",
-    "slug": "ruby-velvet-sofa",
+    "slug": "stuart-sofa-43999",
     "model": "MTC-112",
-    "name": "Ruby Velvet Sofa",
+    "name": "Stuart Sofa",
     "category": "Sofas",
-    "tagline": "Statement red velvet sofa set with gold-band bolster cushions",
-    "price": 30999,
-    "mrp": 43990,
+    "tagline": "Grey sofa for a contemporary living room",
+    "price": 43999,
+    "mrp": 43999,
     "priceUnit": "set",
-    "priceLabel": "₹30,999",
-    "material": "Engineered wood frame, block legs",
-    "color": "Deep Red",
-    "configuration": "3-Seater sofa (matching armchairs available)",
-    "upholstery": "Deep red velvet fabric, gold-piped edges",
+    "priceLabel": "₹43,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Grey",
+    "configuration": "Sofa seating",
+    "upholstery": "Grey upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-112/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-112/01-primary.webp",
@@ -781,39 +926,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": false,
-    "offer": "30% OFF",
-    "description": "Statement red velvet sofa set with gold-band bolster cushions. 3-Seater sofa (matching armchairs available). Deep red velvet fabric, gold-piped edges.",
+    "offer": null,
+    "description": "Stuart Sofa in grey upholstery, available from Metro Furniture in Dharmapuri for ₹43,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "3-Seater sofa (matching armchairs available)",
-      "Deep red velvet fabric, gold-piped edges",
-      "Engineered wood frame, block legs",
-      "Gold metallic-band bolster cushions",
-      "Tailored box seating",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Grey upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-Seater sofa (matching armchairs available)"
+        "label": "Product",
+        "value": "Stuart Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Deep red velvet fabric, gold-piped edges"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Engineered wood frame, block legs"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
         "label": "Colour",
-        "value": "Deep Red"
+        "value": "Grey"
+      },
+      {
+        "label": "Price",
+        "value": "₹43,999"
       }
     ],
     "tags": [
-      "sofas",
-      "deep red",
       "sofa",
-      "furniture"
+      "sofas",
+      "grey",
+      "stuart sofa",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-104",
@@ -823,23 +968,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-112_Ruby_Velvet_Sofa.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Stuart Sofa sofa in grey at Metro Furniture, Dharmapuri",
+    "seoTitle": "Stuart Sofa ₹43,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Stuart Sofa sofa priced at ₹43,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Stuart Sofa in Dharmapuri",
+      "Stuart Sofa price",
+      "Stuart Sofa price in Dharmapuri",
+      "Sofas Dharmapuri",
+      "Grey sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-113",
-    "slug": "nova-corner",
+    "slug": "unique-sofa",
     "model": "MTC-113",
-    "name": "Nova Corner",
-    "category": "Corner Sofas",
-    "tagline": "Grey fabric corner sofa with a built-in cup-holder console",
-    "price": 34499,
-    "mrp": 48990,
+    "name": "Unique Sofa",
+    "category": "Sofas",
+    "tagline": "Teal sofa for a contemporary living room",
+    "price": 46999,
+    "mrp": 46999,
     "priceUnit": "set",
-    "priceLabel": "₹34,499",
-    "material": "Engineered wood frame, block legs",
-    "color": "Charcoal Grey",
-    "configuration": "6-Seater L-Shape Corner with center console",
-    "upholstery": "Charcoal-grey fabric, contrast top-stitching",
+    "priceLabel": "₹46,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Teal",
+    "configuration": "Sofa seating",
+    "upholstery": "Teal upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-113/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-113/01-primary.webp",
@@ -850,38 +1008,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": false,
-    "offer": "30% OFF",
-    "description": "Grey fabric corner sofa with a built-in cup-holder console. 6-Seater L-Shape Corner with center console. Charcoal-grey fabric, contrast top-stitching.",
+    "offer": null,
+    "description": "Unique Sofa in teal upholstery, available from Metro Furniture in Dharmapuri for ₹46,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "6-Seater L-Shape Corner with center console",
-      "Charcoal-grey fabric, contrast top-stitching",
-      "Engineered wood frame, block legs",
-      "Fold-down center console with twin cup holders",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Teal upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "6-Seater L-Shape Corner with center console"
+        "label": "Product",
+        "value": "Unique Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Charcoal-grey fabric, contrast top-stitching"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Engineered wood frame, block legs"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
         "label": "Colour",
-        "value": "Charcoal Grey"
+        "value": "Teal"
+      },
+      {
+        "label": "Price",
+        "value": "₹46,999"
       }
     ],
     "tags": [
-      "corner sofas",
-      "charcoal grey",
       "sofa",
-      "furniture"
+      "sofas",
+      "teal",
+      "unique sofa",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-101",
@@ -891,23 +1050,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-113_Nova_Corner.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Unique Sofa sofa in teal at Metro Furniture, Dharmapuri",
+    "seoTitle": "Unique Sofa ₹46,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Unique Sofa sofa priced at ₹46,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Unique Sofa in Dharmapuri",
+      "Unique Sofa price",
+      "Unique Sofa price in Dharmapuri",
+      "Sofas Dharmapuri",
+      "Teal sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-114",
-    "slug": "grand-bay-corner",
+    "slug": "alaska-corner",
     "model": "MTC-114",
-    "name": "Grand Bay Corner",
+    "name": "Alaska Corner",
     "category": "Corner Sofas",
-    "tagline": "Oversized U-shape sectional for large living rooms",
-    "price": 47999,
-    "mrp": 68990,
+    "tagline": "Warm ivory corner sofa for a contemporary living room",
+    "price": 45999,
+    "mrp": 45999,
     "priceUnit": "set",
-    "priceLabel": "₹47,999",
-    "material": "Wood-trim armrests, reinforced recliner mechanism",
-    "color": "Grey Brown",
-    "configuration": "8-Seater U-Shape Sectional with 2 recliner ends",
-    "upholstery": "Grey-brown textured fabric, box-tufted cushions",
+    "priceLabel": "₹45,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Warm ivory",
+    "configuration": "Corner / L-shape seating",
+    "upholstery": "Warm ivory upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-114/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-114/01-primary.webp",
@@ -918,40 +1090,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": true,
-    "offer": "30% OFF",
-    "description": "Oversized U-shape sectional for large living rooms. 8-Seater U-Shape Sectional with 2 recliner ends. Grey-brown textured fabric, box-tufted cushions.",
+    "offer": null,
+    "description": "Alaska Corner in warm ivory upholstery, available from Metro Furniture in Dharmapuri for ₹45,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "8-Seater U-Shape Sectional with 2 recliner ends",
-      "Grey-brown textured fabric, box-tufted cushions",
-      "Wood-trim armrests, reinforced recliner mechanism",
-      "Dual recliner ends",
-      "Deep bench seating",
-      "Center console",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Warm ivory upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "8-Seater U-Shape Sectional with 2 recliner ends"
+        "label": "Product",
+        "value": "Alaska Corner"
       },
       {
-        "label": "Upholstery",
-        "value": "Grey-brown textured fabric, box-tufted cushions"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Wood-trim armrests, reinforced recliner mechanism"
+        "label": "Category",
+        "value": "Corner Sofas"
       },
       {
         "label": "Colour",
-        "value": "Grey Brown"
+        "value": "Warm ivory"
+      },
+      {
+        "label": "Price",
+        "value": "₹45,999"
       }
     ],
     "tags": [
+      "corner sofa",
       "corner sofas",
-      "grey brown",
-      "sofa",
-      "furniture"
+      "warm ivory",
+      "alaska corner",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-101",
@@ -961,23 +1132,36 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-114_Grand_Bay_Corner.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Alaska Corner corner sofa in warm ivory at Metro Furniture, Dharmapuri",
+    "seoTitle": "Alaska Corner ₹45,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Alaska Corner corner sofa priced at ₹45,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Alaska Corner in Dharmapuri",
+      "Alaska Corner price",
+      "Alaska Corner price in Dharmapuri",
+      "Corner Sofas Dharmapuri",
+      "Warm ivory corner sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mtc-115",
-    "slug": "onyx-leather-sofa",
+    "slug": "rocker-sofa",
     "model": "MTC-115",
-    "name": "Onyx Leather Sofa",
+    "name": "Rocker Sofa",
     "category": "Sofas",
-    "tagline": "Sleek black leatherette sofa for a modern living room",
-    "price": 30499,
-    "mrp": 42990,
+    "tagline": "Charcoal grey sofa for a contemporary living room",
+    "price": 49999,
+    "mrp": 49999,
     "priceUnit": "set",
-    "priceLabel": "₹30,499",
-    "material": "Engineered wood frame, block legs",
-    "color": "Black",
-    "configuration": "3-Seater sofa",
-    "upholstery": "Black leatherette upholstery, box-cushion back",
+    "priceLabel": "₹49,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Charcoal grey",
+    "configuration": "Sofa seating",
+    "upholstery": "Charcoal grey upholstery with cushioned seating",
     "image": "/Metro_Product_Galleries/mtc-115/01-primary.webp",
     "images": [
       "/Metro_Product_Galleries/mtc-115/01-primary.webp",
@@ -988,39 +1172,39 @@
     "warranty": true,
     "onRequest": false,
     "featured": false,
-    "offer": "29% OFF",
-    "description": "Sleek black leatherette sofa for a modern living room. 3-Seater sofa. Black leatherette upholstery, box-cushion back.",
+    "offer": null,
+    "description": "Rocker Sofa in charcoal grey upholstery, available from Metro Furniture in Dharmapuri for ₹49,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
     "features": [
-      "3-Seater sofa",
-      "Black leatherette upholstery, box-cushion back",
-      "Engineered wood frame, block legs",
-      "Water-resistant leatherette finish",
-      "Easy-clean surface",
-      "Available at Metro Furniture showroom, Dharmapuri"
+      "Charcoal grey upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
     ],
     "specs": [
       {
-        "label": "Configuration",
-        "value": "3-Seater sofa"
+        "label": "Product",
+        "value": "Rocker Sofa"
       },
       {
-        "label": "Upholstery",
-        "value": "Black leatherette upholstery, box-cushion back"
-      },
-      {
-        "label": "Frame & Legs",
-        "value": "Engineered wood frame, block legs"
+        "label": "Category",
+        "value": "Sofas"
       },
       {
         "label": "Colour",
-        "value": "Black"
+        "value": "Charcoal grey"
+      },
+      {
+        "label": "Price",
+        "value": "₹49,999"
       }
     ],
     "tags": [
-      "sofas",
-      "black",
       "sofa",
-      "furniture"
+      "sofas",
+      "charcoal grey",
+      "rocker sofa",
+      "Metro Furniture",
+      "Dharmapuri furniture"
     ],
     "related": [
       "mtc-104",
@@ -1030,7 +1214,101 @@
     ],
     "source": "catalog",
     "originalImage": "/Metro_Product_Images/MTC-115_Onyx_Leather_Sofa.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Rocker Sofa sofa in charcoal grey at Metro Furniture, Dharmapuri",
+    "seoTitle": "Rocker Sofa ₹49,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Rocker Sofa sofa priced at ₹49,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Rocker Sofa in Dharmapuri",
+      "Rocker Sofa price",
+      "Rocker Sofa price in Dharmapuri",
+      "Sofas Dharmapuri",
+      "Charcoal grey sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
+  },
+  {
+    "id": "mtc-116",
+    "slug": "lilly-sofa",
+    "model": "MTC-116",
+    "name": "Lilly Sofa",
+    "category": "Sofas",
+    "tagline": "Dusty rose sofa for a contemporary living room",
+    "price": 41999,
+    "mrp": 41999,
+    "priceUnit": "set",
+    "priceLabel": "₹41,999",
+    "material": "Upholstered seating with a supportive frame",
+    "color": "Dusty rose",
+    "configuration": "Sofa seating",
+    "upholstery": "Dusty rose upholstery with cushioned seating",
+    "image": "/Metro_Product_Galleries/mtc-116/01-primary.webp",
+    "images": [
+      "/Metro_Product_Galleries/mtc-116/01-primary.webp",
+      "/Metro_Product_Galleries/mtc-116/02-detail.webp",
+      "/Metro_Product_Galleries/mtc-116/03-wide.webp",
+      "/Metro_Product_Galleries/mtc-116/04-portrait.webp"
+    ],
+    "warranty": true,
+    "onRequest": false,
+    "featured": false,
+    "offer": null,
+    "description": "Lilly Sofa in dusty rose upholstery, available from Metro Furniture in Dharmapuri for ₹41,999. Contact the showroom to confirm current stock, dimensions, fabric options and delivery details.",
+    "features": [
+      "Dusty rose upholstered seating",
+      "Comfortable seat and back cushions",
+      "Ask the showroom about available configurations",
+      "Available at Metro Furniture, Dharmapuri"
+    ],
+    "specs": [
+      {
+        "label": "Product",
+        "value": "Lilly Sofa"
+      },
+      {
+        "label": "Category",
+        "value": "Sofas"
+      },
+      {
+        "label": "Colour",
+        "value": "Dusty rose"
+      },
+      {
+        "label": "Price",
+        "value": "₹41,999"
+      }
+    ],
+    "tags": [
+      "sofa",
+      "sofas",
+      "dusty rose",
+      "lilly sofa",
+      "Metro Furniture",
+      "Dharmapuri furniture"
+    ],
+    "related": [
+      "mtc-101",
+      "mtc-106",
+      "mtc-112"
+    ],
+    "source": "catalog",
+    "originalImage": "/Metro_Product_Images/MTC-115_Onyx_Leather_Sofa.jpg",
+    "galleryGeneratedFromOriginal": true,
+    "imageAlt": "Lilly Sofa sofa in dusty rose at Metro Furniture, Dharmapuri",
+    "seoTitle": "Lilly Sofa ₹41,999 in Dharmapuri | Metro Furniture",
+    "seoDescription": "Lilly Sofa sofa priced at ₹41,999 at Metro Furniture, Dharmapuri. View product photos and enquire about showroom availability.",
+    "seoKeywords": [
+      "Lilly Sofa in Dharmapuri",
+      "Lilly Sofa price",
+      "Lilly Sofa price in Dharmapuri",
+      "Sofas Dharmapuri",
+      "Dusty rose sofa",
+      "sofa showroom Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-1",
@@ -1094,7 +1372,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL-D6054.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Cosmo Ring Wall Sconce — Astronaut Edition ₹1,737 | Metro Furniture Dharmapuri",
+    "seoDescription": "Cosmo Ring Wall Sconce — Astronaut Edition at Metro Furniture, Dharmapuri. Listed price ₹1,737. View product details and enquire about showroom availability.",
+    "imageAlt": "Cosmo Ring Wall Sconce — Astronaut Edition at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Cosmo Ring Wall Sconce — Astronaut Edition",
+      "Cosmo Ring Wall Sconce — Astronaut Edition Dharmapuri",
+      "Wall Lights Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-2",
@@ -1158,7 +1446,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL-D6056.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Cosmo Ring Wall Sconce — Golden Bear Edition ₹1,737 | Metro Furniture Dharmapuri",
+    "seoDescription": "Cosmo Ring Wall Sconce — Golden Bear Edition at Metro Furniture, Dharmapuri. Listed price ₹1,737. View product details and enquire about showroom availability.",
+    "imageAlt": "Cosmo Ring Wall Sconce — Golden Bear Edition at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Cosmo Ring Wall Sconce — Golden Bear Edition",
+      "Cosmo Ring Wall Sconce — Golden Bear Edition Dharmapuri",
+      "Wall Lights Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-3",
@@ -1218,7 +1516,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL-D5463.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Bubble Drop Chandelier — 16 Strand | Metro Furniture Dharmapuri",
+    "seoDescription": "Bubble Drop Chandelier — 16 Strand at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Bubble Drop Chandelier — 16 Strand at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Bubble Drop Chandelier — 16 Strand",
+      "Bubble Drop Chandelier — 16 Strand Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-4",
@@ -1278,7 +1586,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL-D5464.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Bubble Drop Chandelier — 25 Strand Grand | Metro Furniture Dharmapuri",
+    "seoDescription": "Bubble Drop Chandelier — 25 Strand Grand at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Bubble Drop Chandelier — 25 Strand Grand at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Bubble Drop Chandelier — 25 Strand Grand",
+      "Bubble Drop Chandelier — 25 Strand Grand Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-5",
@@ -1338,7 +1656,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL-D5462.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Icicle Cascade Chandelier | Metro Furniture Dharmapuri",
+    "seoDescription": "Icicle Cascade Chandelier at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Icicle Cascade Chandelier at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Icicle Cascade Chandelier",
+      "Icicle Cascade Chandelier Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-6",
@@ -1398,7 +1726,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL-D5221.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Orbit Ring Spiral Pendant | Metro Furniture Dharmapuri",
+    "seoDescription": "Orbit Ring Spiral Pendant at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Orbit Ring Spiral Pendant at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Orbit Ring Spiral Pendant",
+      "Orbit Ring Spiral Pendant Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-7",
@@ -1458,7 +1796,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL-D5246.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Feather Leaf Spiral Pendant | Metro Furniture Dharmapuri",
+    "seoDescription": "Feather Leaf Spiral Pendant at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Feather Leaf Spiral Pendant at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Feather Leaf Spiral Pendant",
+      "Feather Leaf Spiral Pendant Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-8",
@@ -1517,7 +1865,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL-D5460.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Petal Bloom Crystal Chandelier | Metro Furniture Dharmapuri",
+    "seoDescription": "Petal Bloom Crystal Chandelier at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Petal Bloom Crystal Chandelier at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Petal Bloom Crystal Chandelier",
+      "Petal Bloom Crystal Chandelier Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-9",
@@ -1577,7 +1935,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LLA1707.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Empire Tiered Crystal Chandelier | Metro Furniture Dharmapuri",
+    "seoDescription": "Empire Tiered Crystal Chandelier at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Empire Tiered Crystal Chandelier at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Empire Tiered Crystal Chandelier",
+      "Empire Tiered Crystal Chandelier Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-10",
@@ -1636,7 +2004,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL-D5461.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Double-Tier Crystal Drum Chandelier | Metro Furniture Dharmapuri",
+    "seoDescription": "Double-Tier Crystal Drum Chandelier at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Double-Tier Crystal Drum Chandelier at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Double-Tier Crystal Drum Chandelier",
+      "Double-Tier Crystal Drum Chandelier Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-11",
@@ -1695,7 +2073,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL-D5459.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Peacock Leaf Crystal Chandelier — Small | Metro Furniture Dharmapuri",
+    "seoDescription": "Peacock Leaf Crystal Chandelier — Small at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Peacock Leaf Crystal Chandelier — Small at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Peacock Leaf Crystal Chandelier — Small",
+      "Peacock Leaf Crystal Chandelier — Small Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-12",
@@ -1754,7 +2142,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL-D5458.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Peacock Leaf Crystal Chandelier — Grand | Metro Furniture Dharmapuri",
+    "seoDescription": "Peacock Leaf Crystal Chandelier — Grand at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Peacock Leaf Crystal Chandelier — Grand at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Peacock Leaf Crystal Chandelier — Grand",
+      "Peacock Leaf Crystal Chandelier — Grand Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-13",
@@ -1813,7 +2211,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL-D5457.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Botanical Leaf Crystal Chandelier | Metro Furniture Dharmapuri",
+    "seoDescription": "Botanical Leaf Crystal Chandelier at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Botanical Leaf Crystal Chandelier at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Botanical Leaf Crystal Chandelier",
+      "Botanical Leaf Crystal Chandelier Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-14",
@@ -1877,7 +2285,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL.A41700-11C-FGD.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Vortex Ring Cascade Chandelier — 11 Ring | Metro Furniture Dharmapuri",
+    "seoDescription": "Vortex Ring Cascade Chandelier — 11 Ring at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Vortex Ring Cascade Chandelier — 11 Ring at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Vortex Ring Cascade Chandelier — 11 Ring",
+      "Vortex Ring Cascade Chandelier — 11 Ring Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-15",
@@ -1941,7 +2359,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/LL.A41700-9C-FGD.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Vortex Ring Cascade Chandelier — 9 Ring | Metro Furniture Dharmapuri",
+    "seoDescription": "Vortex Ring Cascade Chandelier — 9 Ring at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Vortex Ring Cascade Chandelier — 9 Ring at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Vortex Ring Cascade Chandelier — 9 Ring",
+      "Vortex Ring Cascade Chandelier — 9 Ring Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-16",
@@ -2006,7 +2434,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/MODEL-7921.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Lantern Globe Wall Light | Metro Furniture Dharmapuri",
+    "seoDescription": "Lantern Globe Wall Light at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Lantern Globe Wall Light at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Lantern Globe Wall Light",
+      "Lantern Globe Wall Light Dharmapuri",
+      "Wall Lights Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-17",
@@ -2071,7 +2509,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/8206.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Twist Sphere Wall Light | Metro Furniture Dharmapuri",
+    "seoDescription": "Twist Sphere Wall Light at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Twist Sphere Wall Light at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Twist Sphere Wall Light",
+      "Twist Sphere Wall Light Dharmapuri",
+      "Wall Lights Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-18",
@@ -2136,7 +2584,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/8128.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Halo Orb Wall Light | Metro Furniture Dharmapuri",
+    "seoDescription": "Halo Orb Wall Light at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Halo Orb Wall Light at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Halo Orb Wall Light",
+      "Halo Orb Wall Light Dharmapuri",
+      "Wall Lights Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "light-19",
@@ -2201,7 +2659,17 @@
     ],
     "source": "catalog",
     "originalImage": "/Lights_Products/S185-50.jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Floral Bloom Cluster Chandelier | Metro Furniture Dharmapuri",
+    "seoDescription": "Floral Bloom Cluster Chandelier at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Floral Bloom Cluster Chandelier at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Floral Bloom Cluster Chandelier",
+      "Floral Bloom Cluster Chandelier Dharmapuri",
+      "Chandeliers Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "chair-1",
@@ -2261,7 +2729,17 @@
     ],
     "source": "catalog",
     "originalImage": "/chair-furniture (1).jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Executive Mesh Chair | Metro Furniture Dharmapuri",
+    "seoDescription": "Executive Mesh Chair at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Executive Mesh Chair at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Executive Mesh Chair",
+      "Executive Mesh Chair Dharmapuri",
+      "Chairs Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "chair-2",
@@ -2321,7 +2799,17 @@
     ],
     "source": "catalog",
     "originalImage": "/chair-furniture (2).jpg",
-    "galleryGeneratedFromOriginal": true
+    "galleryGeneratedFromOriginal": true,
+    "seoTitle": "Premium Lounge Chair | Metro Furniture Dharmapuri",
+    "seoDescription": "Premium Lounge Chair at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Premium Lounge Chair at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Premium Lounge Chair",
+      "Premium Lounge Chair Dharmapuri",
+      "Chairs Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mattress-1",
@@ -2376,7 +2864,17 @@
     "related": [
       "mattress-2"
     ],
-    "source": "catalog"
+    "source": "catalog",
+    "seoTitle": "Orthopaedic Memory Foam Mattress | Metro Furniture Dharmapuri",
+    "seoDescription": "Orthopaedic Memory Foam Mattress at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Orthopaedic Memory Foam Mattress at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Orthopaedic Memory Foam Mattress",
+      "Orthopaedic Memory Foam Mattress Dharmapuri",
+      "Mattresses Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "mattress-2",
@@ -2431,7 +2929,17 @@
     "related": [
       "mattress-1"
     ],
-    "source": "catalog"
+    "source": "catalog",
+    "seoTitle": "Pocket Spring Mattress | Metro Furniture Dharmapuri",
+    "seoDescription": "Pocket Spring Mattress at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Pocket Spring Mattress at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Pocket Spring Mattress",
+      "Pocket Spring Mattress Dharmapuri",
+      "Mattresses Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "upcoming-1",
@@ -2489,7 +2997,17 @@
       "upcoming-4",
       "upcoming-5"
     ],
-    "source": "upcoming"
+    "source": "upcoming",
+    "seoTitle": "Designer Wash Basin | Metro Furniture Dharmapuri",
+    "seoDescription": "Designer Wash Basin at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Designer Wash Basin at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Designer Wash Basin",
+      "Designer Wash Basin Dharmapuri",
+      "Bathroom Fittings Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "upcoming-2",
@@ -2547,7 +3065,17 @@
       "upcoming-4",
       "upcoming-5"
     ],
-    "source": "upcoming"
+    "source": "upcoming",
+    "seoTitle": "Chrome Basin Mixer Tap | Metro Furniture Dharmapuri",
+    "seoDescription": "Chrome Basin Mixer Tap at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Chrome Basin Mixer Tap at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Chrome Basin Mixer Tap",
+      "Chrome Basin Mixer Tap Dharmapuri",
+      "Bathroom Fittings Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "upcoming-3",
@@ -2605,7 +3133,17 @@
       "upcoming-4",
       "upcoming-5"
     ],
-    "source": "upcoming"
+    "source": "upcoming",
+    "seoTitle": "Wall Mixer Tap | Metro Furniture Dharmapuri",
+    "seoDescription": "Wall Mixer Tap at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Wall Mixer Tap at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Wall Mixer Tap",
+      "Wall Mixer Tap Dharmapuri",
+      "Bathroom Fittings Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "upcoming-4",
@@ -2663,7 +3201,17 @@
       "upcoming-3",
       "upcoming-5"
     ],
-    "source": "upcoming"
+    "source": "upcoming",
+    "seoTitle": "Pillar Cock Tap | Metro Furniture Dharmapuri",
+    "seoDescription": "Pillar Cock Tap at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Pillar Cock Tap at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Pillar Cock Tap",
+      "Pillar Cock Tap Dharmapuri",
+      "Bathroom Fittings Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "upcoming-5",
@@ -2721,7 +3269,17 @@
       "upcoming-3",
       "upcoming-4"
     ],
-    "source": "upcoming"
+    "source": "upcoming",
+    "seoTitle": "Health Faucet Jet Spray | Metro Furniture Dharmapuri",
+    "seoDescription": "Health Faucet Jet Spray at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Health Faucet Jet Spray at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Health Faucet Jet Spray",
+      "Health Faucet Jet Spray Dharmapuri",
+      "Bathroom Fittings Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "upcoming-6",
@@ -2779,7 +3337,17 @@
       "upcoming-3",
       "upcoming-4"
     ],
-    "source": "upcoming"
+    "source": "upcoming",
+    "seoTitle": "Concealed Shower Mixer | Metro Furniture Dharmapuri",
+    "seoDescription": "Concealed Shower Mixer at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Concealed Shower Mixer at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Concealed Shower Mixer",
+      "Concealed Shower Mixer Dharmapuri",
+      "Bathroom Fittings Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "upcoming-7",
@@ -2837,7 +3405,17 @@
       "upcoming-3",
       "upcoming-4"
     ],
-    "source": "upcoming"
+    "source": "upcoming",
+    "seoTitle": "Sensor Automatic Tap | Metro Furniture Dharmapuri",
+    "seoDescription": "Sensor Automatic Tap at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Sensor Automatic Tap at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Sensor Automatic Tap",
+      "Sensor Automatic Tap Dharmapuri",
+      "Bathroom Fittings Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   },
   {
     "id": "upcoming-8",
@@ -2895,6 +3473,16 @@
       "upcoming-3",
       "upcoming-4"
     ],
-    "source": "upcoming"
+    "source": "upcoming",
+    "seoTitle": "Rain Shower Head Set | Metro Furniture Dharmapuri",
+    "seoDescription": "Rain Shower Head Set at Metro Furniture, Dharmapuri. View product details and enquire about showroom availability.",
+    "imageAlt": "Rain Shower Head Set at Metro Furniture, Dharmapuri",
+    "seoKeywords": [
+      "Rain Shower Head Set",
+      "Rain Shower Head Set Dharmapuri",
+      "Bathroom Fittings Dharmapuri",
+      "Metro Furniture",
+      "furniture shop Dharmapuri"
+    ]
   }
 ]

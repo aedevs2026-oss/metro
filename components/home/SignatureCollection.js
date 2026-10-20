@@ -40,7 +40,7 @@ export default function SignatureCollection({ products, section = defaultSection
   if (!products?.length) return null;
 
   const ProductCard = ({ product }) => (
-    <article className="flex h-full flex-col overflow-hidden rounded-2xl bg-white p-3 text-foreground shadow-[0_16px_48px_rgba(0,0,0,0.35)] sm:p-3.5">
+    <article className="flex h-full min-w-0 flex-col overflow-hidden rounded-2xl bg-white p-2.5 text-foreground shadow-[0_16px_48px_rgba(0,0,0,0.25)] sm:p-3.5">
       <Link
         href={`/product/${product.slug}`}
         className="group relative block w-full aspect-[4/3] overflow-hidden rounded-xl bg-muted text-left"
@@ -48,10 +48,10 @@ export default function SignatureCollection({ products, section = defaultSection
       >
         <Image
           src={product.image}
-          alt={product.name}
+          alt={product.imageAlt || product.name}
           fill
           quality={HOME_PHOTO_QUALITY}
-          sizes="(max-width: 1024px) 88vw, 320px"
+          sizes="(max-width: 639px) 88vw, (max-width: 1023px) 68vw, 320px"
           className="object-contain p-1 transition duration-500 group-hover:scale-[1.03]"
         />
         {product.showcaseFeatured ? (
@@ -64,19 +64,19 @@ export default function SignatureCollection({ products, section = defaultSection
           </span>
         ) : null}
       </Link>
-      <div className="flex flex-1 flex-col px-1 pb-1 pt-4 sm:px-2 sm:pb-2 sm:pt-5">
+      <div className="flex min-w-0 flex-1 flex-col px-1 pb-1 pt-3 sm:px-2 sm:pb-2 sm:pt-5">
         <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-accent-dark">
           {product.category}
           {product.model ? ` · ${product.model}` : ""}
         </p>
-        <h3 className="mt-1 font-heading text-lg font-semibold leading-snug text-foreground">{product.name}</h3>
-        <p className="mt-2 line-clamp-2 flex-1 text-sm leading-relaxed text-body">{product.tagline || product.material}</p>
+        <h3 className="mt-1 break-words font-heading text-base font-semibold leading-snug text-foreground sm:text-lg">{product.name}</h3>
+        <p className="mt-2 line-clamp-2 flex-1 text-xs leading-relaxed text-body sm:text-sm">{product.tagline || product.material}</p>
         {product.priceLabel && !product.onRequest ? (
-          <p className="mt-3 text-sm font-semibold text-foreground">Starting from <span className="font-heading text-lg">{product.priceLabel}</span></p>
+          <p className="mt-3 text-xs font-semibold text-foreground sm:text-sm">Starting from <span className="font-heading text-lg">{product.priceLabel}</span></p>
         ) : null}
         <Link
           href={`/product/${product.slug}`}
-          className="btn-pill-primary mt-4 w-full justify-center text-center text-xs sm:text-sm"
+          className="btn-pill-primary mt-4 min-h-10 w-full justify-center text-center text-[11px] sm:text-sm"
         >
           View Product Details
         </Link>

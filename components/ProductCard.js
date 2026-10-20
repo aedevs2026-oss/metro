@@ -15,7 +15,7 @@ export default function ProductCard({ product }) {
       <div className="relative">
         <Link href={productUrl} className="block" aria-label={`View ${product.name} details`}>
           <div className="product-image-canvas relative aspect-[4/3] overflow-hidden">
-            <Image src={product.image} alt={`${product.name} ${product.category} at Metro Furniture Dharmapuri`} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="product-image-blend object-contain p-1.5 transition duration-700 ease-out group-hover:scale-[1.045]" loading="lazy" />
+            <Image src={product.image} alt={`${product.name} ${product.category} at Metro Furniture Dharmapuri`} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="product-image-blend object-cover p-0 transition duration-700 ease-out group-hover:scale-[1.05]" loading="lazy" />
             <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
               {product.featured ? <Badge>Premium</Badge> : null}
               {product.offer ? <Badge variant="secondary">{product.offer}</Badge> : null}

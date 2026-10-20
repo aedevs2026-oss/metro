@@ -28,7 +28,7 @@ export default function ShopProductCard({ product }) {
               alt={product.imageAlt || `${product.name} ${product.category} at Metro Furniture Dharmapuri`}
               fill
               sizes="(max-width: 1024px) 50vw, 33vw"
-              className="product-image-blend object-contain p-1.5 transition duration-700 group-hover:scale-[1.035] sm:p-2.5"
+              className="product-image-blend object-cover p-0 transition duration-700 group-hover:scale-[1.05]"
               loading="lazy"
             />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/35 to-transparent" />

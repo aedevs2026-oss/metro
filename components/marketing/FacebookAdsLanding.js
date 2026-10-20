@@ -8,7 +8,6 @@ import {
   ArrowRight,
   ArrowUpRight,
   Check,
-  ChevronLeft,
   ChevronRight,
   MapPin,
   MessageCircle,
@@ -45,7 +44,7 @@ function getProductPrice(product) {
   return null;
 }
 
-function ProductCard({ product, index, onQuickView }) {
+function ProductCard({ product, onQuickView }) {
   const [imageFailed, setImageFailed] = useState(false);
   const price = getProductPrice(product);
   const image = imageFailed ? fallbackFor(product) : product.image;
@@ -145,7 +144,7 @@ function ProductCard({ product, index, onQuickView }) {
   );
 }
 
-function ProductQuickView({ product, campaign, onClose, onGetQuote }) {
+function ProductQuickView({ product, onClose, onGetQuote }) {
   const [active, setActive] = useState(0);
   const [imageFailed, setImageFailed] = useState(false);
   const images = useMemo(() => galleryFor(product), [product]);
@@ -395,7 +394,7 @@ export default function FacebookAdsLanding({
             rel="noopener noreferrer"
             className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-[#24211c] px-3.5 py-2.5 text-[10px] font-bold text-[#f4dfad] shadow-[0_8px_22px_rgba(32,31,28,.16)] transition hover:-translate-y-0.5 hover:bg-black sm:gap-2 sm:px-5 sm:py-3 sm:text-xs"
           >
-            <MessageCircle className="h-4 w-4" /> <span className="hidden xs:inline">Ask our showroom</span><span className="xs:hidden">Enquire</span>
+            <MessageCircle className="h-4 w-4" /> <span className="hidden sm:inline">Ask our showroom</span><span className="sm:hidden">Enquire</span>
           </a>
         </header>
 
@@ -516,7 +515,7 @@ export default function FacebookAdsLanding({
           {visibleProducts.length ? (
             <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:grid-cols-3 xl:grid-cols-4 xl:gap-5">
               {visibleProducts.map((item, index) => (
-                <ProductCard key={item.id} product={item} index={index} onQuickView={setQuickViewProduct} />
+                <ProductCard key={item.id} product={item} onQuickView={setQuickViewProduct} />
               ))}
             </div>
           ) : (
@@ -557,7 +556,6 @@ export default function FacebookAdsLanding({
       {quickViewProduct ? (
         <ProductQuickView
           product={quickViewProduct}
-          campaign={campaign}
           onClose={() => setQuickViewProduct(null)}
           onGetQuote={(selected) => {
             setQuickViewProduct(null);

@@ -12,7 +12,7 @@ export const trustBadges = [
   {
     id: "range",
     title: "Signature Collection",
-    description: "15 sofa & corner models plus 19 designer light fixtures",
+    description: "16 sofa & corner models plus 19 designer light fixtures",
   },
   {
     id: "custom",

@@ -136,26 +136,50 @@ export default function CollectionsPage() {
           {categories.map((category, index) => {
             const count = products.filter((product) => product.category === category.id).length;
             const image = category.image || "/collections/metro-collections-hero.webp";
+            const isProductImage = /\/Metro_Product_Galleries\/|\/Metro_Product_Images\/|\/Lights_Products\//i.test(image);
+
             return (
               <Link
                 key={category.id}
                 href={`/shop/${category.slug}`}
-                className="collections-category-card group relative isolate min-h-[225px] overflow-hidden rounded-[1.2rem] border border-[#b99052]/18 bg-[#ebe0d0] shadow-[0_12px_28px_rgba(43,31,17,.07)] transition duration-500 hover:-translate-y-1 hover:border-[#b99052]/45 hover:shadow-[0_22px_44px_rgba(43,31,17,.15)] sm:min-h-[290px] sm:rounded-[1.5rem] lg:min-h-[330px]"
+                className="collections-category-card group relative isolate flex h-full min-h-[250px] flex-col overflow-hidden rounded-[1.2rem] border border-[#b99052]/22 bg-[#fcf8f0] shadow-[0_12px_28px_rgba(43,31,17,.07)] transition duration-500 hover:-translate-y-1 hover:border-[#b99052]/50 hover:shadow-[0_22px_44px_rgba(43,31,17,.14)] sm:min-h-[318px] sm:rounded-[1.5rem] lg:min-h-[342px]"
               >
-                <Image src={image} alt={`${category.name} furniture collection at Metro Furniture`} fill sizes="(max-width:639px) 50vw, (max-width:1023px) 50vw, 25vw" className="collections-category-image object-cover transition duration-700 group-hover:scale-[1.06]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#130f09]/90 via-[#130f09]/18 to-black/5 transition-colors duration-300 group-hover:from-[#130f09]/95" aria-hidden />
-                <span className="absolute left-3 top-3 rounded-full border border-white/30 bg-black/25 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[.13em] text-white backdrop-blur-md sm:left-4 sm:top-4 sm:text-[10px]">
-                  {String(index + 1).padStart(2, "0")} / {String(categories.length).padStart(2, "0")}
-                </span>
-                <div className="absolute inset-x-0 bottom-0 p-3 text-white sm:p-5">
-                  <p className="text-[9px] uppercase tracking-[.16em] text-[#edd4a1] sm:text-[10px]">
+                <div
+                  className={`collections-category-media relative h-[132px] shrink-0 overflow-hidden sm:h-[178px] lg:h-[195px] ${
+                    isProductImage
+                      ? "bg-[linear-gradient(145deg,#fffdf9_0%,#f8f0e4_48%,#efe1cf_100%)]"
+                      : "bg-[#e8dfd3]"
+                  }`}
+                >
+                  <Image
+                    src={image}
+                    alt={`${category.name} furniture collection at Metro Furniture`}
+                    fill
+                    sizes="(max-width:639px) 50vw, (max-width:1023px) 50vw, 25vw"
+                    className={`collections-category-image transition duration-700 ease-out group-hover:scale-[1.04] ${
+                      isProductImage ? "object-contain p-2.5 mix-blend-multiply sm:p-4" : "object-cover"
+                    }`}
+                  />
+                  <span className="absolute left-3 top-3 rounded-full border border-white/70 bg-white/80 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[.13em] text-[#6f542f] shadow-sm backdrop-blur-md sm:left-4 sm:top-4 sm:text-[10px]">
+                    {String(index + 1).padStart(2, "0")} / {String(categories.length).padStart(2, "0")}
+                  </span>
+                </div>
+
+                <div className="flex flex-1 flex-col bg-gradient-to-b from-[#fffdf8] to-[#f5ead9] p-3.5 sm:p-4">
+                  <p className="text-[9px] font-semibold uppercase tracking-[.16em] text-[#98703a] sm:text-[10px]">
                     {count} {count === 1 ? "listed product" : "listed products"}
                   </p>
-                  <h3 className="mt-1 font-heading text-xl leading-tight sm:text-2xl">{category.name}</h3>
-                  <p className="mt-1.5 hidden max-w-[25ch] text-xs leading-5 text-white/75 sm:block">{categoryCopy[category.id] || category.description}</p>
-                  <span className="mt-3 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 backdrop-blur-md transition group-hover:border-[#edcf8b] group-hover:bg-[#d4ad69] group-hover:text-[#1d160a] sm:mt-4 sm:h-9 sm:w-9">
-                    <ArrowUpRight className="h-4 w-4" aria-hidden />
-                  </span>
+                  <div className="mt-1.5 flex items-start justify-between gap-2">
+                    <h3 className="min-w-0 font-heading text-[1.05rem] font-semibold leading-tight text-[#261d13] sm:text-xl">
+                      {category.name}
+                    </h3>
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#b99052]/35 bg-white/80 text-[#855f2a] transition duration-300 group-hover:border-[#b99052] group-hover:bg-[#d4ad69] group-hover:text-[#1d160a] sm:h-9 sm:w-9">
+                      <ArrowUpRight className="h-4 w-4" aria-hidden />
+                    </span>
+                  </div>
+                  <p className="mt-2 hidden text-xs leading-5 text-[#756b5b] sm:block">
+                    {categoryCopy[category.id] || category.description}
+                  </p>
                 </div>
               </Link>
             );

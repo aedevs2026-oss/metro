@@ -6,16 +6,14 @@ import { ChevronLeft, ChevronRight, Eye, Play } from "lucide-react";
 import { OfferBadge } from "@/components/PriceTag";
 
 function buildSlides(images) {
-  const base = images?.length ? [...images] : [];
-  if (!base.length) return [];
-  const slides = [...base];
-  while (slides.length < 5) slides.push(base[slides.length % base.length]);
-  return slides.slice(0, 5);
+  const base = [...new Set((images || []).filter(Boolean))];
+  return base.slice(0, 5);
 }
 
 export default function ProductGallery({
   images,
   name,
+  imageAlt,
   offer,
   onViewInRoom,
 }) {
@@ -48,7 +46,7 @@ export default function ProductGallery({
       >
         <Image
           src={current}
-          alt={name}
+          alt={imageAlt || name}
           fill
           priority
           sizes="(max-width: 1024px) 100vw, 52vw"

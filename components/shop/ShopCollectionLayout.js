@@ -133,15 +133,15 @@ export default function ShopCollectionLayout({
   }, [searchParams, sort, products]);
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
+    <div className="grid min-w-0 grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[280px_minmax(0,1fr)]">
       <ShopFilters
         products={products}
         allProducts={allProducts}
         categoryId={categoryId}
       />
 
-      <div>
-        <div className="mb-6 flex flex-col gap-3 border-b border-border/60 pb-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="min-w-0">
+        <div className="mb-4 flex flex-col gap-3 border-b border-border/60 pb-4 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-body">
             <span className="font-semibold text-foreground">{sorted.length}</span> Products
             {query ? (
@@ -151,13 +151,13 @@ export default function ShopCollectionLayout({
               </>
             ) : null}
           </p>
-          <div className="flex items-center gap-2">
-            <label htmlFor="shop-sort" className="text-sm text-body">Sort by:</label>
+          <div className="flex w-full items-center gap-2 sm:w-auto">
+            <label htmlFor="shop-sort" className="shrink-0 text-sm text-body">Sort by:</label>
             <select
               id="shop-sort"
               value={sort}
               onChange={(e) => setSort(e.target.value)}
-              className="rounded-xl border border-border bg-surface px-3 py-2 text-sm font-medium outline-none focus:border-accent"
+              className="min-w-0 flex-1 rounded-xl border border-border bg-surface px-3 py-2 text-sm font-medium outline-none focus:border-accent sm:flex-none"
             >
               {SORT_OPTIONS.map((opt) => (
                 <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -167,7 +167,7 @@ export default function ShopCollectionLayout({
         </div>
 
         {pageItems.length ? (
-          <div className="grid grid-cols-2 gap-3 md:gap-4 lg:grid-cols-2 lg:gap-5 xl:grid-cols-3">
+          <div className="grid min-w-0 grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-2 lg:gap-5 xl:grid-cols-3">
             {pageItems.map((product) => (
               <ShopProductCard key={product.id} product={product} />
             ))}

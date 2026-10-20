@@ -91,7 +91,7 @@ export default function ShopFilters({ products, allProducts, categoryId }) {
       </button>
       <aside
         id="shop-filter-panel"
-        className={`${mobileOpen ? "block" : "hidden"} mb-4 grid grid-cols-1 gap-4 space-y-0 rounded-2xl border border-border/70 bg-surface p-4 shadow-sm sm:grid-cols-2 lg:sticky lg:top-28 lg:mb-0 lg:grid-cols-1 lg:gap-6 lg:p-5`}
+        className={`${mobileOpen ? "block" : "hidden"} mb-4 grid grid-cols-1 gap-4 space-y-0 rounded-2xl border border-border/70 bg-surface p-4 shadow-sm sm:grid-cols-2 lg:sticky lg:top-28 lg:mb-0 lg:block lg:grid-cols-1 lg:gap-6 lg:p-5`}
       >
       <div>
         <h3 className="text-sm font-semibold text-foreground">Categories</h3>

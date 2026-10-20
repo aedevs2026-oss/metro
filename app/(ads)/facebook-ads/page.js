@@ -1,5 +1,7 @@
 import { getProductBySlug, products } from "@/data/products";
-import { business } from "@/data/business";
+import { business, siteUrl } from "@/data/business";
+import { absoluteImage } from "@/data/seo-local";
+import { getProductSeoTargets } from "@/data/seo-targets";
 import FacebookAdsLanding from "@/components/marketing/FacebookAdsLanding";
 
 async function resolveProduct(searchParams) {
@@ -13,10 +15,41 @@ async function resolveProduct(searchParams) {
 
 export async function generateMetadata({ searchParams }) {
   const product = await resolveProduct(searchParams);
+  if (!product) {
+    return {
+      title: `Furniture Enquiry | ${business.name}`,
+      description: `Enquire about furniture at ${business.name}, Dharmapuri.`,
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const canonical = `${siteUrl}/product/${product.slug}`;
+  const priceText = product.priceLabel || (product.price != null
+    ? `₹${Number(product.price).toLocaleString("en-IN")}`
+    : "contact showroom for pricing");
+  const title = product.seoTitle || `${product.name} — ${priceText} | ${business.name}`;
+  const description = (product.seoDescription
+    || `${product.name} at ${business.name}, Dharmapuri. Listed price: ${priceText}. View product photos and enquire about options and availability.`).slice(0, 160);
+  const image = absoluteImage(product.image);
+  const keywords = [...new Set([...(product.seoKeywords || []), ...getProductSeoTargets(product)])].slice(0, 16);
+
   return {
-    title: `Get a Quote for ${product?.name || "Premium Furniture"} | ${business.name}`,
-    description: `Ask about ${product?.name || "premium furniture"} at Metro Furniture, Salem Main Road, Dharmapuri. Submit a quick enquiry and continue with our showroom team on WhatsApp.`,
-    robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
+    title,
+    description,
+    keywords,
+    alternates: { canonical },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: business.name,
+      locale: "en_IN",
+      type: "website",
+      images: [{ url: image, width: 1200, height: 900, alt: product.imageAlt || `${product.name} at ${business.name}, Dharmapuri` }],
+    },
+    twitter: { card: "summary_large_image", title, description, images: [image] },
+    // Campaign URLs should pass link equity to the canonical product detail page.
+    robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   };
 }
 

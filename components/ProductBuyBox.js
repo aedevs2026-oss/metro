@@ -65,7 +65,7 @@ function ProductPriceBlock({ product }) {
   const unit = product.priceUnit === "set" ? "set" : "pc";
 
   return (
-    <div className="product-price-card grid gap-5 p-5 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-6">
+    <div className="product-price-card grid min-w-0 gap-4 p-4 sm:gap-5 sm:p-5 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-6">
       <div>
         <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-accent-dark">
           Special Offer
@@ -86,7 +86,7 @@ function ProductPriceBlock({ product }) {
         ) : null}
       </div>
 
-      <ul className="grid gap-3 sm:border-l sm:border-accent/25 sm:pl-6">
+      <ul className="grid min-w-0 gap-3 border-t border-accent/20 pt-4 sm:grid-cols-3 sm:gap-2 lg:grid-cols-1 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0">
         {[
           { icon: Award, label: "Premium Quality" },
           { icon: Users, label: "Customization Available" },
@@ -149,7 +149,7 @@ export default function ProductBuyBox({ product }) {
   }
 
   return (
-    <div className="glass flex flex-col rounded-[28px] p-5 shadow-[0_22px_60px_rgba(30,25,17,.08)] backdrop-blur-2xl sm:p-6 lg:p-7">
+    <div className="glass flex min-w-0 flex-col rounded-[22px] p-4 shadow-[0_22px_60px_rgba(30,25,17,.08)] backdrop-blur-2xl sm:rounded-[26px] sm:p-5 md:p-6 lg:p-6">
       <div className="flex flex-wrap gap-2">
         <span className="product-pill-tag">{product.category}</span>
         {product.model ? <span className="product-pill-tag">{product.model}</span> : null}
@@ -167,7 +167,7 @@ export default function ProductBuyBox({ product }) {
       <div className="mt-4 flex items-start justify-between gap-4">
         <h1
           id="product-heading"
-          className="font-heading text-[1.75rem] font-semibold leading-tight tracking-tight text-foreground md:text-[2.35rem]"
+          className="min-w-0 flex-1 break-words font-heading text-[1.45rem] font-semibold leading-tight tracking-tight text-foreground sm:text-[1.75rem] md:text-[2.15rem] xl:text-[2.35rem]"
         >
           {product.name}
         </h1>
@@ -256,11 +256,11 @@ export default function ProductBuyBox({ product }) {
           />
           Prefer WhatsApp? Message the showroom directly
         </Link>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           <button
             type="button"
             onClick={handleAddToQuote}
-            className="inline-flex items-center justify-center gap-2 rounded-md bg-[#2a2a2a] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#1a1a1a]"
+            className="inline-flex min-w-0 items-center justify-center gap-1.5 whitespace-normal rounded-md bg-[#2a2a2a] px-2.5 py-3 text-center text-xs font-semibold text-white transition hover:bg-[#1a1a1a] sm:gap-2 sm:px-3 sm:text-sm"
           >
             <ClipboardList className="h-4 w-4" aria-hidden />
             Add to Quote
@@ -269,7 +269,7 @@ export default function ProductBuyBox({ product }) {
             href={branch?.mapUrl || "/contact"}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-md border border-accent/60 bg-white px-4 py-3 text-sm font-semibold text-foreground transition hover:border-accent"
+            className="inline-flex min-w-0 items-center justify-center gap-1.5 whitespace-normal rounded-md border border-accent/60 bg-white px-2.5 py-3 text-center text-xs font-semibold text-foreground transition hover:border-accent sm:gap-2 sm:px-3 sm:text-sm"
           >
             <MapPin className="h-4 w-4 text-accent" aria-hidden />
             Visit Showroom

@@ -72,7 +72,7 @@ export default function SignatureCollection({ products, section = defaultSection
         <h3 className="mt-1 break-words font-heading text-base font-semibold leading-snug text-foreground sm:text-lg">{product.name}</h3>
         <p className="mt-2 line-clamp-2 flex-1 text-xs leading-relaxed text-body sm:text-sm">{product.tagline || product.material}</p>
         {product.priceLabel && !product.onRequest ? (
-          <p className="mt-3 text-xs font-semibold text-foreground sm:text-sm">Starting from <span className="font-heading text-lg">{product.priceLabel}</span></p>
+          <p className="mt-3 text-xs font-semibold text-foreground sm:text-sm">Price <span className="font-heading text-lg">{product.priceLabel}</span></p>
         ) : null}
         <Link
           href={`/product/${product.slug}`}

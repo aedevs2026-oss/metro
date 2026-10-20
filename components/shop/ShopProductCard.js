@@ -56,7 +56,7 @@ export default function ShopProductCard({ product }) {
 
         <div className="mt-auto pt-4">
           {product.priceLabel && !product.onRequest ? (
-            <p className="text-sm font-semibold text-foreground">Starting from <span className="font-heading text-lg">{product.priceLabel}</span></p>
+            <p className="text-sm font-semibold text-foreground">Price <span className="font-heading text-lg">{product.priceLabel}</span></p>
           ) : <p className="text-sm font-semibold text-foreground">Personalised quote available</p>}
           <Link href={productUrl} className="metro-luxe-glint mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-white/35 bg-[linear-gradient(120deg,#ead5a6,#c49a56_58%,#a97834)] px-4 py-3 text-xs font-semibold text-[#211f1b] shadow-[0_8px_20px_rgba(168,124,54,.18),inset_0_1px_0_rgba(255,255,255,.48)] transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(168,124,54,.28)]">
             View Product Details <ArrowUpRight className="h-4 w-4" />

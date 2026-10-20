@@ -44,99 +44,113 @@ function getProductPrice(product) {
   return null;
 }
 
+function swatchColorFor(color) {
+  const value = String(color || "").toLowerCase();
+  if (/light grey|light gray|silver/.test(value)) return "#b9b6b0";
+  if (/grey|gray|slate/.test(value)) return "#777773";
+  if (/cream|ivory|white|off.white/.test(value)) return "#eee5d7";
+  if (/sand|beige|stone|oat/.test(value)) return "#d9c4a7";
+  if (/taupe|mushroom/.test(value)) return "#9b8776";
+  if (/brown|coffee|walnut|chocolate|tan|camel/.test(value)) return "#714a32";
+  if (/green|olive|sage/.test(value)) return "#315548";
+  if (/blue|navy/.test(value)) return "#315a78";
+  if (/black|charcoal/.test(value)) return "#292825";
+  if (/gold|brass/.test(value)) return "#b18a48";
+  if (/pink|blush|rose/.test(value)) return "#c99d9a";
+  return "#bda884";
+}
+
 function ProductCard({ product, onQuickView }) {
   const [imageFailed, setImageFailed] = useState(false);
   const price = getProductPrice(product);
   const image = imageFailed ? fallbackFor(product) : product.image;
+  const colorName = product.color || "Finish options on request";
 
   useEffect(() => {
     setImageFailed(false);
   }, [product.image]);
 
   return (
-    <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-[24px] border border-[#e8dece] bg-white shadow-[0_12px_32px_rgba(43,32,18,.055)] transition duration-300 hover:-translate-y-1 hover:border-[#c8a96a]/70 hover:shadow-[0_24px_55px_rgba(43,32,18,.13)] sm:rounded-[28px]">
+    <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-[17px] border border-[#e8dece] bg-[#fffdf9] shadow-[0_7px_22px_rgba(43,32,18,.065)] transition duration-300 sm:rounded-[22px] sm:shadow-[0_12px_32px_rgba(43,32,18,.06)] md:rounded-[24px] md:hover:-translate-y-1 md:hover:border-[#c8a96a]/70 md:hover:shadow-[0_22px_48px_rgba(43,32,18,.13)]">
       <button
         type="button"
         onClick={() => onQuickView(product)}
-        aria-label={"Quick view " + product.name}
-        className="relative block w-full text-left"
+        aria-label={"View details for " + product.name}
+        className="relative block w-full shrink-0 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#b88c45]"
       >
-        <div className="relative aspect-[4/3] overflow-hidden bg-[linear-gradient(145deg,#fffdf9,#f0e5d4)]">
+        <div className="relative aspect-[1.08/1] overflow-hidden bg-[linear-gradient(145deg,#fffdf9,#eee3d4)] sm:aspect-[1.12/1] md:aspect-[1.05/1] xl:aspect-[4/3]">
           <Image
             src={image}
             alt={product.imageAlt || product.name}
             fill
-            sizes="(max-width: 639px) 50vw, (max-width: 1023px) 33vw, 25vw"
-            className="object-contain p-3 transition duration-700 ease-out group-hover:scale-[1.045] sm:p-5"
+            sizes="(max-width: 639px) 48vw, (max-width: 1023px) 31vw, (max-width: 1279px) 23vw, 300px"
+            className="object-cover object-center transition duration-700 ease-out group-hover:scale-[1.035]"
             onError={() => {
               if (!imageFailed) setImageFailed(true);
             }}
           />
-          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#f3e7d6]/60 to-transparent" />
-          <div className="absolute left-3 top-3 flex flex-wrap gap-1.5 sm:left-4 sm:top-4">
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#221b12]/20 to-transparent sm:h-20" />
+          <div className="absolute left-2.5 top-2.5 flex max-w-[calc(100%-3.5rem)] flex-wrap gap-1 sm:left-3.5 sm:top-3.5">
             {product.upcoming ? (
-              <span className="rounded-full border border-white/70 bg-[#29251e]/85 px-2.5 py-1.5 text-[9px] font-bold uppercase tracking-[.12em] text-white backdrop-blur-md sm:text-[10px]">
+              <span className="rounded-full border border-white/70 bg-[#29251e]/85 px-2 py-1 text-[8px] font-bold uppercase tracking-[.1em] text-white backdrop-blur-md sm:px-2.5 sm:text-[9px]">
                 Coming soon
               </span>
             ) : product.featured ? (
-              <span className="inline-flex items-center gap-1 rounded-full border border-[#e4d0a1]/70 bg-[#fff9eb]/95 px-2.5 py-1.5 text-[9px] font-bold uppercase tracking-[.12em] text-[#7b5a26] shadow-sm sm:text-[10px]">
-                <Sparkles className="h-3 w-3" /> Signature pick
+              <span className="inline-flex items-center gap-1 rounded-full border border-[#e4d0a1]/70 bg-[#fff9eb]/95 px-2 py-1 text-[8px] font-bold uppercase tracking-[.09em] text-[#7b5a26] shadow-sm sm:px-2.5 sm:text-[9px] sm:tracking-[.12em]">
+                <Sparkles className="h-2.5 w-2.5 sm:h-3 sm:w-3" /> Featured
               </span>
             ) : null}
           </div>
-          <span className="absolute bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full border border-white/75 bg-white/90 text-[#372c1c] shadow-md transition group-hover:bg-[#25221d] group-hover:text-[#efd9a8] sm:bottom-4 sm:right-4">
-            <ArrowUpRight className="h-4 w-4" />
-          </span>
-          <span className="absolute bottom-4 left-4 hidden text-[10px] font-semibold uppercase tracking-[.14em] text-[#7c6035] sm:block">
-            View piece
+          <span className="absolute bottom-2.5 right-2.5 flex h-8 w-8 items-center justify-center rounded-full border border-white/80 bg-white/95 text-[#372c1c] shadow-md transition group-hover:bg-[#25221d] group-hover:text-[#efd9a8] sm:bottom-3 sm:right-3 sm:h-9 sm:w-9">
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
           </span>
         </div>
       </button>
 
-      <div className="flex flex-1 flex-col p-3.5 sm:p-5">
-        <p className="text-[9px] font-bold uppercase tracking-[.16em] text-[#9b793d] sm:text-[10px]">
-          {product.category}{product.model ? " · " + product.model : ""}
+      <div className="flex min-w-0 flex-1 flex-col p-3 sm:p-3.5 md:p-4 lg:p-5">
+        <p className="truncate text-[8px] font-bold uppercase tracking-[.14em] text-[#9b793d] sm:text-[9px] md:text-[10px]">
+          {product.category}
         </p>
         <button
           type="button"
           onClick={() => onQuickView(product)}
-          className="mt-1.5 text-left font-heading text-base font-semibold leading-snug text-[#27231d] transition hover:text-[#94703a] sm:text-lg"
+          className="mt-1.5 line-clamp-2 min-h-[2.4em] text-left font-heading text-[15px] font-semibold leading-[1.18] tracking-[-.015em] text-[#27231d] transition hover:text-[#94703a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b88c45] sm:text-base md:mt-2 md:text-lg"
         >
           {product.name}
         </button>
-        <p className="mt-2 line-clamp-2 min-h-[2.5rem] text-[11px] leading-5 text-[#756d61] sm:text-xs">
+        <p className="mt-1.5 line-clamp-2 min-h-[2.7em] text-[10px] leading-[1.5] text-[#756d61] sm:mt-2 sm:text-[11px] sm:leading-[1.6] md:text-xs">
           {product.tagline || product.description || "Explore this piece and ask our showroom team about available options."}
         </p>
-        <div className="mt-3 flex min-h-6 flex-wrap items-center gap-1.5">
-          {product.color ? (
-            <span className="rounded-full border border-[#e8dece] bg-[#fbf8f2] px-2.5 py-1 text-[9px] font-medium text-[#6f6556] sm:text-[10px]">
-              {product.color}
-            </span>
-          ) : null}
-          {product.upcoming ? (
-            <span className="rounded-full border border-[#e8dece] bg-[#fbf8f2] px-2.5 py-1 text-[9px] font-medium text-[#6f6556] sm:text-[10px]">
-              Ask for availability
-            </span>
-          ) : null}
+
+        <div className="mt-2.5 flex min-w-0 items-center gap-2 sm:mt-3">
+          <span
+            className="h-4 w-4 shrink-0 rounded-full border border-black/10 shadow-[inset_0_0_0_1px_rgba(255,255,255,.35)] sm:h-[18px] sm:w-[18px]"
+            style={{ backgroundColor: product.color ? swatchColorFor(product.color) : "#d7c9b2" }}
+            aria-label={"Listed colour: " + colorName}
+            title={colorName}
+          />
+          <span className="min-w-0 truncate text-[10px] font-medium text-[#6f6556] sm:text-[11px]">{colorName}</span>
         </div>
-        <div className="mt-auto pt-4">
-          <div className="flex min-h-8 items-end justify-between gap-2">
-            <div>
-              <p className="text-[9px] font-semibold uppercase tracking-[.12em] text-[#92836a]">
+
+        <div className="mt-auto pt-3 sm:pt-4">
+          <div className="mb-2 flex min-h-8 items-end justify-between gap-1.5 sm:mb-3">
+            <div className="min-w-0">
+              <p className="text-[8px] font-semibold uppercase tracking-[.11em] text-[#92836a] sm:text-[9px] sm:tracking-[.13em]">
                 {price ? "Catalogue price" : "Personalised quote"}
               </p>
-              <p className="mt-0.5 font-heading text-lg font-semibold text-[#29241d] sm:text-xl">
+              <p className="mt-0.5 truncate font-heading text-[15px] font-semibold leading-tight text-[#29241d] sm:text-lg md:text-xl">
                 {price || "Ask us"}
               </p>
             </div>
-            <span className="mb-1 hidden text-[10px] text-[#8c806e] sm:block">No online payment</span>
+            <span className="mb-0.5 hidden shrink-0 text-[9px] text-[#8c806e] lg:block">No online payment</span>
           </div>
           <button
             type="button"
             onClick={() => onQuickView(product)}
-            className="mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-[#c6a56a]/70 bg-[linear-gradient(120deg,#ecd8a9,#c8a15c_58%,#ad813e)] px-3 py-3 text-[11px] font-bold text-[#231d14] shadow-[0_8px_18px_rgba(168,124,54,.14)] transition hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(168,124,54,.24)] sm:text-xs"
+            className="inline-flex min-h-10 w-full items-center justify-center gap-1.5 rounded-full border border-[#c6a56a]/65 bg-[linear-gradient(120deg,#ecd8a9,#c8a15c_58%,#ad813e)] px-2.5 py-2.5 text-[10px] font-bold text-[#231d14] shadow-[0_5px_13px_rgba(168,124,54,.16)] transition hover:shadow-[0_9px_20px_rgba(168,124,54,.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9e7335] focus-visible:ring-offset-2 sm:min-h-11 sm:gap-2 sm:px-3 sm:text-[11px] md:text-xs"
           >
-            View details & options <ArrowRight className="h-3.5 w-3.5" />
+            <span>View Details</span>
+            <ArrowRight className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" aria-hidden="true" />
           </button>
         </div>
       </div>
@@ -189,7 +203,7 @@ function ProductQuickView({ product, onClose, onGetQuote }) {
         role="dialog"
         aria-modal="true"
         aria-label={"Quick view: " + product.name}
-        className="fixed left-1/2 top-1/2 z-[71] flex max-h-[94dvh] w-[calc(100%-1rem)] max-w-5xl -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-[26px] border border-[#dfcfb3] bg-[#f8f3eb] shadow-[0_38px_120px_rgba(0,0,0,.4)] sm:w-[calc(100%-2rem)] sm:rounded-[32px] lg:grid lg:grid-cols-[1.02fr_.98fr]"
+        className="fixed left-1/2 top-1/2 z-[71] flex max-h-[calc(100dvh-1rem)] w-[calc(100%-1rem)] max-w-5xl -translate-x-1/2 -translate-y-1/2 flex-col overflow-y-auto rounded-[22px] border border-[#dfcfb3] bg-[#f8f3eb] shadow-[0_38px_120px_rgba(0,0,0,.4)] sm:max-h-[calc(100dvh-2rem)] sm:w-[calc(100%-2rem)] sm:rounded-[28px] md:grid md:h-[min(92dvh,850px)] md:max-h-[92dvh] md:grid-cols-[.94fr_1.06fr] md:overflow-hidden md:rounded-[32px]"
         initial={{ opacity: 0, y: 20, scale: 0.985 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 14, scale: 0.985 }}
@@ -204,7 +218,7 @@ function ProductQuickView({ product, onClose, onGetQuote }) {
           <X className="h-4 w-4" />
         </button>
 
-        <div className="min-h-0 overflow-y-auto bg-[linear-gradient(145deg,#f4ebdc,#e8dbc7)] p-3 sm:p-5 lg:p-6">
+        <div className="relative bg-[linear-gradient(145deg,#f4ebdc,#e8dbc7)] p-3 sm:p-5 md:min-h-0 md:overflow-y-auto lg:p-6">
           <div className="relative overflow-hidden rounded-[20px] border border-white/80 bg-[linear-gradient(145deg,#fffdfa,#f4e9d8)] shadow-[0_18px_46px_rgba(43,32,18,.10)] sm:rounded-[24px]">
             <div className="relative aspect-[4/3]">
               <Image
@@ -255,7 +269,7 @@ function ProductQuickView({ product, onClose, onGetQuote }) {
           </div>
         </div>
 
-        <div className="min-h-0 overflow-y-auto bg-white p-5 sm:p-7 lg:p-9">
+        <div className="bg-white p-4 sm:p-6 md:min-h-0 md:overflow-y-auto md:p-7 lg:p-9">
           <p className="text-[10px] font-bold uppercase tracking-[.19em] text-[#94723a]">
             {product.category}{product.model ? " / " + product.model : ""}
           </p>

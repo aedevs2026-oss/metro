@@ -54,7 +54,7 @@ function ProductPriceBlock({ product }) {
     return (
       <div className="product-price-card p-5">
         <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-accent-dark">
-          Special Offer
+          Request a Quote
         </p>
         <p className="mt-2 font-heading text-3xl font-semibold text-accent">Get Best Price</p>
         <p className="mt-1 text-sm text-body">Enquire for size &amp; finish quote</p>
@@ -65,10 +65,10 @@ function ProductPriceBlock({ product }) {
   const unit = product.priceUnit === "set" ? "set" : "pc";
 
   return (
-    <div className="product-price-card grid min-w-0 gap-4 p-4 sm:gap-5 sm:p-5 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-6">
+    <div className="product-price-card grid min-w-0 gap-4 p-4 sm:gap-5 sm:p-5 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-center xl:gap-6">
       <div>
         <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-accent-dark">
-          Special Offer
+          Catalogue Price
         </p>
         <div className="mt-2 flex flex-wrap items-baseline gap-x-2 gap-y-1">
           <span className="font-heading text-3xl font-semibold tracking-tight text-foreground md:text-[2rem]">
@@ -86,7 +86,7 @@ function ProductPriceBlock({ product }) {
         ) : null}
       </div>
 
-      <ul className="grid min-w-0 gap-3 border-t border-accent/20 pt-4 sm:grid-cols-3 sm:gap-2 lg:grid-cols-1 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0">
+      <ul className="grid min-w-0 gap-3 border-t border-accent/20 pt-4 xl:grid-cols-1 xl:border-l xl:border-t-0 xl:pl-6 xl:pt-0">
         {[
           { icon: Award, label: "Premium Quality" },
           { icon: Users, label: "Customization Available" },

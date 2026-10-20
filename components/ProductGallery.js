@@ -49,7 +49,7 @@ export default function ProductGallery({
           alt={imageAlt || name}
           fill
           priority
-          sizes="(max-width: 1024px) 100vw, 52vw"
+          sizes="(max-width: 767px) 100vw, (max-width: 1279px) 48vw, 52vw"
           className={`product-image-blend object-contain p-2 transition duration-300 ${
             zooming ? "scale-125" : "scale-100"
           }`}

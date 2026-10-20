@@ -9,7 +9,7 @@ export default function ProductPageClient({ product, gallery }) {
   }
 
   return (
-    <div className="grid min-w-0 grid-cols-1 items-start gap-5 sm:gap-6 md:gap-7 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-7 xl:gap-10">
+    <div className="grid min-w-0 grid-cols-1 items-start gap-5 sm:gap-6 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:gap-5 lg:gap-7 xl:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] xl:gap-10">
       <ProductGallery
         images={gallery}
         name={product.name}

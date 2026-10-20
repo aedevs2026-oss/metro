@@ -51,7 +51,7 @@ const promiseItems = [
 ];
 
 export default function CollectionsPage() {
-  const featuredProducts = products.filter((product) => product.featured).slice(0, 4);
+  const featuredProducts = products.filter((product) => /^mtc-\d+$/.test(product.id) && !product.upcoming).slice(0, 4);
 
   return (
     <main className="collections-page">

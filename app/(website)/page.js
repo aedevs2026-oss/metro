@@ -40,7 +40,7 @@ export const metadata = buildMetadata({
 });
 
 export default function HomePage() {
-  const signatureProducts = getHomeSignatureProducts(8);
+  const signatureProducts = getHomeSignatureProducts(16);
 
   return (
     <div className="overflow-x-hidden bg-[var(--home-cream)]">

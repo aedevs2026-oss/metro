@@ -3,32 +3,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { getProductPromotion } from "@/lib/format";
 
 function formatPrice(value) {
   if (!Number.isFinite(value) || value <= 0) return null;
   return `₹${Number(value).toLocaleString("en-IN")}`;
 }
 
-function getPriceDetails(product) {
-  const currentPrice = formatPrice(product.price);
-  const mrpIsValid =
-    Number.isFinite(product.mrp) &&
-    Number.isFinite(product.price) &&
-    product.mrp > product.price &&
-    product.price > 0;
-
-  return {
-    currentPrice: product.onRequest ? (product.priceLabel || "Get Best Price") : (currentPrice || product.priceLabel || "Get Best Price"),
-    oldPrice: mrpIsValid ? formatPrice(product.mrp) : null,
-    discount: mrpIsValid
-      ? Math.round(((product.mrp - product.price) / product.mrp) * 100)
-      : null,
-  };
-}
-
 export default function ProductCard({ product }) {
   const productUrl = `/product/${product.slug}`;
-  const { currentPrice, oldPrice, discount } = getPriceDetails(product);
+  const promotion = getProductPromotion(product);
+  const priceLabel =
+    product.onRequest || !Number.isFinite(product.price)
+      ? product.priceLabel || "Get Best Price"
+      : formatPrice(product.price) || product.priceLabel || "Get Best Price";
 
   return (
     <motion.article
@@ -53,11 +41,6 @@ export default function ProductCard({ product }) {
             loading="lazy"
           />
         </div>
-        {discount ? (
-          <span className="absolute left-2.5 top-2.5 rounded-full border border-white/75 bg-[#a86f28] px-2.5 py-1.5 text-[9px] font-bold tracking-wide text-white shadow-md sm:left-3.5 sm:top-3.5 sm:px-3 sm:text-[10px]">
-            {discount}% OFF
-          </span>
-        ) : null}
       </Link>
 
       <div className="flex min-w-0 flex-1 flex-col gap-2.5 px-3 pb-3 pt-3 sm:gap-3 sm:px-4 sm:pb-4 sm:pt-4 md:px-5 md:pb-5">
@@ -67,20 +50,26 @@ export default function ProductCard({ product }) {
           </Link>
         </h3>
 
-        <div className="mt-auto flex min-w-0 flex-wrap items-baseline gap-x-2 gap-y-1 border-t border-[#eadfce] pt-2.5 sm:pt-3">
-          {oldPrice ? (
-            <span className="text-[11px] font-medium text-[#8b8173] line-through decoration-[#a77b45] sm:text-xs md:text-sm">
-              {oldPrice}
-            </span>
-          ) : null}
-          {discount ? (
-            <span className="rounded-md bg-[#f5e7cf] px-1.5 py-0.5 text-[9px] font-bold text-[#89551b] sm:text-[10px]">
-              Save {discount}%
-            </span>
-          ) : null}
-          <p className="w-full break-words font-heading text-lg font-bold leading-tight text-[#29241d] sm:text-xl md:text-2xl">
-            {currentPrice}
-          </p>
+        <div className="mt-auto min-w-0 border-t border-[#eadfce] pt-2.5 sm:pt-3">
+          {promotion ? (
+            <>
+              <div className="flex min-w-0 flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                <span className="whitespace-nowrap text-[11px] font-medium text-[#8b8173] line-through decoration-[#a77b45] sm:text-xs md:text-sm">
+                  {formatPrice(promotion.originalPrice)}
+                </span>
+                <span className="shrink-0 rounded-full bg-[#f3e5cb] px-2 py-1 text-[9px] font-bold text-[#85551d] sm:px-2.5 sm:text-[10px] md:text-[11px]">
+                  {promotion.discountPercent}% OFF
+                </span>
+              </div>
+              <p className="mt-1.5 break-words font-heading text-xl font-bold leading-tight text-[#29241d] sm:text-2xl md:text-[1.65rem]">
+                {formatPrice(promotion.offerPrice)}
+              </p>
+            </>
+          ) : (
+            <p className="break-words font-heading text-lg font-bold leading-tight text-[#29241d] sm:text-xl md:text-2xl">
+              {priceLabel}
+            </p>
+          )}
         </div>
       </div>
     </motion.article>

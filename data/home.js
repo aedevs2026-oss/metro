@@ -1,4 +1,4 @@
-import { getHomepageSignatureProducts } from "@/data/products";
+import { products } from "@/data/products";
 import { business } from "@/data/business";
 import { marketingImages } from "@/data/marketing-images";
 
@@ -79,23 +79,23 @@ export const heroContent = {
   },
 };
 
-const signatureHomeImages = [hp.products.sofa, hp.products.dining, hp.products.bed];
-
 export const signatureCollectionSection = {
-  eyebrow: "Our Premium Range",
-  title: "Signature Collection",
-  description: "Handpicked pieces that blend style, comfort and quality.",
-  cta: { label: "View All Products", href: "/shop" },
+  eyebrow: "16 Signature Sofa Designs",
+  title: "Explore Our Signature Sofas",
+  description: "Explore the latest sofa and corner-sofa collection with current catalogue pricing, product-specific photos and direct showroom enquiries.",
+  cta: { label: "View All Sofas", href: "/shop/sofas" },
   backgroundImage: hp.signatureBg,
 };
 
-/** Signature carousel — catalogue names, prices & links; homepage product photography for cards. */
-export function getHomeSignatureProducts(limit = 3) {
-  return getHomepageSignatureProducts(limit).map((product, index) => ({
-    ...product,
-    image: signatureHomeImages[index] ?? product.image,
-    showcaseFeatured: index === 0,
-  }));
+/** Homepage signature carousel: use the actual catalogue sofa products and their product-specific gallery images. */
+export function getHomeSignatureProducts(limit = 8) {
+  return products
+    .filter((product) => /^mtc-\\d+$/.test(product.id) && !product.upcoming)
+    .slice(0, Math.max(1, limit))
+    .map((product, index) => ({
+      ...product,
+      showcaseFeatured: index < 3,
+    }));
 }
 
 export const serviceHighlights = [
